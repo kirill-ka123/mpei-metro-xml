@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner_background"
+    android:padding="8dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/from_station_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_small_circle" />
+
+        <TextView
+            android:id="@+id/from_station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Парк культуры"
+            android:textColor="@color/black_green" />
+
+        <ImageView
+            android:id="@+id/image_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginStart="8dp" />
+
+        <ImageView
+            android:id="@+id/to_station_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_small_circle" />
+
+        <TextView
+            android:id="@+id/to_station_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Окружная"
+            android:textColor="@color/black_green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="9 авг | 4:30" />
+
+</LinearLayout>
+

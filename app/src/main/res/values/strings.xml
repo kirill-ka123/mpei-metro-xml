@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Metro</string>
+    <string name="select_city">Выберите город</string>
+    <string name="done">Готово</string>
+    <string name="continue_button">Продолжить</string>
+    <string name="refresh">Обновить</string>
+    <string name="moscow_city">Москва</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="from">Откуда</string>
+    <string name="to">Куда</string>
+    <string name="cancel">Отменить</string>
+    <string name="history">Иcтория</string>
+    <string name="close_stations">Ближайшие станции</string>
+    <string name="search">Поиск</string>
+    <string name="time_in_route">Время в пути:</string>
+    <string name="comfort_in_route">Комфортность:</string>
+    <string name="open_route_detail">Открыть детали маршрута</string>
+    <string name="route_title">Маршрут</string>
+    <string name="history_is_empty_title">История пуста</string>
+</resources>
