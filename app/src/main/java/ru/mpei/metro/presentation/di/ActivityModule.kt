@@ -1,7 +1,12 @@
 package ru.mpei.metro.presentation.di
 
+import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
+import dagger.Binds
 import dagger.Module
-import ru.mpei.metro.presentation.map.di.MapFragmentComponent
 
 @Module
-interface ActivityModule
+interface ActivityModule {
+    @Binds
+    fun bindActivity(i: AppCompatActivity): Activity
+}

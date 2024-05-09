@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
-import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.MotionEvent.INVALID_POINTER_ID
@@ -55,6 +54,9 @@ class MetroView @JvmOverloads constructor(
 
     private val gestureListener = object : GestureDetector.SimpleOnGestureListener() {
         override fun onSingleTapUp(event: MotionEvent): Boolean {
+            if (route != null) {
+                return true
+            }
             val clickPositionX = event.x / scale - posX * (1 / scale)
             val clickPositionY = event.y / scale - posY * (1 / scale)
             canvasLastClickPosition = Position(clickPositionX, clickPositionY)
@@ -81,7 +83,7 @@ class MetroView @JvmOverloads constructor(
         invalidate()
     }
 
-    fun setRoute(route: List<Road>) {
+    fun setRoute(route: List<Road>?) {
         this.route = route
         invalidate()
     }

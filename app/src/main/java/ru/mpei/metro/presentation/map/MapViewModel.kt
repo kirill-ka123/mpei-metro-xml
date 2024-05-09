@@ -1,10 +1,10 @@
 package ru.mpei.metro.presentation.map
 
+import android.location.Location
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ru.mpei.metro.domain.model.City
@@ -12,6 +12,7 @@ import ru.mpei.metro.domain.model.HistoryRoute
 import ru.mpei.metro.domain.model.Road
 import ru.mpei.metro.domain.model.Station
 import ru.mpei.metro.domain.states.SelectedStations
+import ru.mpei.metro.domain.usecases.GetCloseStationsUseCase
 import ru.mpei.metro.domain.usecases.GetHistoryRoutesUseCase
 import ru.mpei.metro.domain.usecases.GetRouteUseCase
 import ru.mpei.metro.domain.usecases.InsertHistoryRoutesUseCase
@@ -22,6 +23,7 @@ class MapViewModel(
     private val getRouteUseCase: GetRouteUseCase,
     getHistoryRoutesUseCase: GetHistoryRoutesUseCase,
     private val insertHistoryRoutesUseCase: InsertHistoryRoutesUseCase,
+    private val getCloseStationsUseCase: GetCloseStationsUseCase,
 ) : ViewModel() {
     private val _route: MutableLiveData<List<Road>?> = MutableLiveData()
     val route: LiveData<List<Road>?> = _route
@@ -118,5 +120,11 @@ class MapViewModel(
             currentSelectedStations
         }
         _selectedStations.value = newSelectedStations
+    }
+
+    fun onLocationChanged(city: City, location: Location) = viewModelScope.launch {
+        _closeStations.postValue(
+            getCloseStationsUseCase.getCloseStations(city, location)
+        )
     }
 }

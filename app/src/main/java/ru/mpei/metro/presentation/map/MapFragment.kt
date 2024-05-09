@@ -6,16 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import ru.mpei.metro.MetroApplication
 import ru.mpei.metro.R
-import ru.mpei.metro.data.calculateRoute
 import ru.mpei.metro.data.mock.CityMock
-import ru.mpei.metro.data.mock.StationMock
 import ru.mpei.metro.databinding.MapFragmentBinding
 import ru.mpei.metro.presentation.MainActivity
 import ru.mpei.metro.presentation.map.di.DaggerMapFragmentComponent
 import ru.mpei.metro.presentation.map.di.MapFragmentComponent
-import javax.inject.Inject
 
 class MapFragment : Fragment(R.layout.map_fragment) {
     private var mapFragmentComponent: MapFragmentComponent? = null
@@ -58,7 +54,7 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         super.onViewCreated(view, savedInstanceState)
         binding.metroView.setCity(CityMock.MOSCOW.value)
         mapViewModel.route.observe(viewLifecycleOwner) { route ->
-            route?.let { binding.metroView.setRoute(it) }
+            binding.metroView.setRoute(route)
         }
     }
 

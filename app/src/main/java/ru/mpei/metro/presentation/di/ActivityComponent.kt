@@ -2,9 +2,9 @@ package ru.mpei.metro.presentation.di
 
 import android.app.Activity
 import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import dagger.BindsInstance
 import dagger.Component
-import dagger.Subcomponent
 import ru.mpei.metro.presentation.di.scopes.ActivityScope
 import ru.mpei.metro.presentation.map.MapViewModelFactory
 
@@ -16,6 +16,8 @@ import ru.mpei.metro.presentation.map.MapViewModelFactory
 interface ActivityComponent {
     fun context(): Context
 
+    fun appCompatActivity(): AppCompatActivity
+
     fun activity(): Activity
 
     fun mapViewModelFactory(): MapViewModelFactory
@@ -25,7 +27,7 @@ interface ActivityComponent {
         fun applicationComponent(applicationComponent: ApplicationComponent): Builder
 
         @BindsInstance
-        fun activity(activity: Activity): Builder
+        fun activity(activity: AppCompatActivity): Builder
 
         fun build(): ActivityComponent
     }

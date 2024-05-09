@@ -7,7 +7,6 @@ import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import ru.mpei.metro.R
@@ -71,7 +70,7 @@ class RouteInfoView @JvmOverloads constructor(
     private val timeInfoTextBounds = Rect()
     private val stationNameTextBounds = Rect()
 
-    fun setRoute(route: List<Road>) {
+    fun setRoute(route: List<Road>?) {
         this.route = route
         requestLayout()
     }

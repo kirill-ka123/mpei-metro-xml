@@ -8,7 +8,6 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.mpei.metro.R
-import ru.mpei.metro.databinding.BottomSheetLayoutBinding
 import ru.mpei.metro.databinding.DetailBottomSheetLayoutBinding
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.map.MapViewModel
@@ -44,8 +43,7 @@ class DetailBottomSheetController @Inject constructor(
         }
 
         mapViewModel.route.observe(lifecycleOwner) { route ->
-            route?.let { binding.detailBottomSheetContent.routeInfoView.setRoute(route) }
-            route.get(0)
+            binding.detailBottomSheetContent.routeInfoView.setRoute(route)
         }
 
         mapViewModel.selectedStations.observe(lifecycleOwner) { selectedStations ->
