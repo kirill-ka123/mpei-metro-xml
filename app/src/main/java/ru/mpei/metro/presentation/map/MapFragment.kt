@@ -56,6 +56,9 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         mapViewModel.route.observe(viewLifecycleOwner) { route ->
             binding.metroView.setRoute(route)
         }
+        mapViewModel.selectedStations.observe(viewLifecycleOwner) { selectedStations ->
+            binding.metroView.setSelectedStations(selectedStations)
+        }
     }
 
     override fun onDestroyView() {

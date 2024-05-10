@@ -11,7 +11,7 @@ import ru.mpei.metro.domain.model.City
 import ru.mpei.metro.domain.model.HistoryRoute
 import ru.mpei.metro.domain.model.Road
 import ru.mpei.metro.domain.model.Station
-import ru.mpei.metro.domain.states.SelectedStations
+import ru.mpei.metro.presentation.map.model.SelectedStations
 import ru.mpei.metro.domain.usecases.GetCloseStationsUseCase
 import ru.mpei.metro.domain.usecases.GetHistoryRoutesUseCase
 import ru.mpei.metro.domain.usecases.GetRouteUseCase

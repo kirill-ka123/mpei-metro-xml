@@ -1,4 +1,4 @@
-package ru.mpei.metro.domain.states
+package ru.mpei.metro.presentation.map.model
 
 import ru.mpei.metro.domain.model.Station
 

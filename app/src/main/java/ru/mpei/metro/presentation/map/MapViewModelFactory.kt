@@ -1,6 +1,5 @@
 package ru.mpei.metro.presentation.map
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import ru.mpei.metro.domain.usecases.GetCloseStationsUseCase
