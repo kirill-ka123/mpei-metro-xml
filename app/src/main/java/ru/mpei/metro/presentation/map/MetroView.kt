@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
+import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.MotionEvent.INVALID_POINTER_ID
@@ -13,9 +14,10 @@ import android.view.ScaleGestureDetector
 import android.view.View
 import androidx.annotation.ColorInt
 import ru.mpei.metro.R
-import ru.mpei.metro.domain.model.City
+import ru.mpei.metro.domain.model.MetroGraph
 import ru.mpei.metro.domain.model.Position
 import ru.mpei.metro.domain.model.Road
+import ru.mpei.metro.domain.model.Route
 import ru.mpei.metro.domain.model.Station
 import ru.mpei.metro.domain.model.Transition
 import ru.mpei.metro.presentation.map.model.SelectedStations
@@ -35,6 +37,11 @@ private const val STATION_CIRCLE_STROKE_WIDTH = 3f
 private const val STATION_CLICKED_CIRCLE_RADIUS = 15f
 private const val CLICK_AREA = 25f
 private const val STATION_TEXT_SIZE = 25f
+private const val CLICKED_STATION_ACTIONS_LAYOUT_WIDTH = 200f
+private const val CLICKED_STATION_ACTIONS_LAYOUT_HEIGHT = 200f
+private const val CLICKED_STATION_ACTION_BUTTON_OFFSET = 20f
+private const val CLICKED_STATION_ACTION_BUTTON_WIDTH = CLICKED_STATION_ACTIONS_LAYOUT_WIDTH
+private const val CLICKED_STATION_ACTION_BUTTON_HEIGHT = CLICKED_STATION_ACTIONS_LAYOUT_HEIGHT / 2
 
 class MetroView @JvmOverloads constructor(
     context: Context,
@@ -42,8 +49,8 @@ class MetroView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
     defStyleRes: Int = 0,
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
-    private var city: City? = null
-    private var route: List<Road>? = null
+    private var metroGraph: MetroGraph? = null
+    private var route: Route? = null
     private var selectedStations: SelectedStations? = null
 
     private var scale = 1.0f
@@ -61,6 +68,18 @@ class MetroView @JvmOverloads constructor(
     }
     private val linesPath = Path()
     private val clickedStationPaint = Paint()
+    private val clickedStationActionsLayoutPaint: Paint = Paint().apply {
+        color = Color.WHITE
+        setShadowLayer(10f, 0f, 5f, Color.DKGRAY)
+    }
+    private val clickedStationActionButtonPaint = Paint().apply {
+        color = context.getColor(R.color.green_eagle)
+    }
+    private val clickedStationActionTextPaint = Paint().apply {
+        color = Color.WHITE
+        textSize = 40f
+    }
+
     private val stationsPaint = Paint()
     private val transitionPaint = Paint()
     private val transitionInsidePaint = Paint().apply {
@@ -107,12 +126,12 @@ class MetroView @JvmOverloads constructor(
         }
     private val scaleGestureDetector = ScaleGestureDetector(context, scaleGestureListener)
 
-    fun setCity(city: City) {
-        this.city = city
+    fun setMetroGraph(metroGraph: MetroGraph) {
+        this.metroGraph = metroGraph
         invalidate()
     }
 
-    fun setRoute(route: List<Road>?) {
+    fun setRoute(route: Route?) {
         this.route = route
         invalidate()
     }
@@ -175,14 +194,15 @@ class MetroView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        city?.let { city ->
+        metroGraph?.let { metroGraph ->
             canvas.scale(scale, scale)
             canvas.translate(posX * (1 / scale), posY * (1 / scale))
 
-            city.branches.forEach { branch ->
-                val branchColor = Color.parseColor(branch.color)
+            metroGraph.branches.forEach { branch ->
+                Log.d("qwer", branch.hexColor.toString())
+                val branchColor = Color.parseColor(branch.hexColor)
                 val branchStations = branch.stationsIds.mapNotNull { stationId ->
-                    city.stations.find { it.id == stationId }
+                    metroGraph.stations.find { it.id == stationId }
                 }
                 canvas.drawLines(
                     branchStations = branchStations,
@@ -191,14 +211,14 @@ class MetroView @JvmOverloads constructor(
             }
             canvasLastClickPosition?.let { clickCoordinates ->
                 canvas.drawClickedStation(
-                    stations = city.stations,
+                    stations = metroGraph.stations,
                     clickCoordinates = clickCoordinates,
                 )
             }
-            canvas.drawStations(stations = city.stations)
-            canvas.drawTransitions(city = city, transitions = city.transitions)
+            canvas.drawStations(stations = metroGraph.stations)
+            canvas.drawTransitions(metroGraph = metroGraph, transitions = metroGraph.transitions)
             route?.let { route ->
-                canvas.drawBlackout(city)
+                canvas.drawBlackout(metroGraph)
                 canvas.drawRoute(route)
             }
         }
@@ -224,7 +244,7 @@ class MetroView @JvmOverloads constructor(
     ) {
         stations.forEach { station ->
             if (station.inClickArea(clickCoordinates)) {
-                clickedStationPaint.color = Color.parseColor(station.branch.color)
+                clickedStationPaint.color = Color.parseColor(station.branch.hexColor)
                 drawCircle(
                     station.position.x,
                     station.position.y,
@@ -236,24 +256,11 @@ class MetroView @JvmOverloads constructor(
         }
     }
 
-    private fun Canvas.drawSelectedStation(
-        selectedStation: Station,
-    ) {
-        val paint = Paint()
-        paint.color = Color.parseColor(selectedStation.branch.color)
-        drawCircle(
-            selectedStation.position.x,
-            selectedStation.position.y,
-            STATION_CLICKED_CIRCLE_RADIUS,
-            paint,
-        )
-    }
-
     private fun Canvas.drawStations(
         stations: List<Station>,
     ) {
         stations.forEach { station ->
-            stationsPaint.color = Color.parseColor(station.branch.color)
+            stationsPaint.color = Color.parseColor(station.branch.hexColor)
             drawCircle(
                 station.position.x,
                 station.position.y,
@@ -280,10 +287,10 @@ class MetroView @JvmOverloads constructor(
         }
     }
 
-    private fun Canvas.drawTransitions(city: City, transitions: List<Transition>) {
+    private fun Canvas.drawTransitions(metroGraph: MetroGraph, transitions: List<Transition>) {
         transitions.forEach { transaction ->
             val transactionStations = transaction.stationsIds.mapNotNull { stationId ->
-                city.stations.find { it.id == stationId }
+                metroGraph.stations.find { it.id == stationId }
             }
             transitionPath.reset()
             transitionPath.moveTo(
@@ -296,7 +303,7 @@ class MetroView @JvmOverloads constructor(
             drawPath(transitionPath, transitionOutsidePaint)
             drawPath(transitionPath, transitionInsidePaint)
             transactionStations.forEach { station ->
-                transitionPaint.color = Color.parseColor(station.branch.color)
+                transitionPaint.color = Color.parseColor(station.branch.hexColor)
                 drawCircle(
                     station.position.x,
                     station.position.y,
@@ -307,26 +314,26 @@ class MetroView @JvmOverloads constructor(
         }
     }
 
-    private fun Canvas.drawBlackout(city: City) {
-        val maxX = city.stations.maxOf { it.position.x } / 0.1f
-        val minX = -abs(city.stations.minOf { it.position.x } / 0.1f)
-        val maxY = city.stations.maxOf { it.position.y } / 0.1f
-        val minY = -abs(city.stations.minOf { it.position.y } / 0.1f)
+    private fun Canvas.drawBlackout(metroGraph: MetroGraph) {
+        val maxX = metroGraph.stations.maxOf { it.position.x } / 0.1f
+        val minX = -abs(metroGraph.stations.minOf { it.position.x } / 0.1f)
+        val maxY = metroGraph.stations.maxOf { it.position.y } / 0.1f
+        val minY = -abs(metroGraph.stations.minOf { it.position.y } / 0.1f)
         drawRect(minX, minY, maxX, maxY, blackoutPaint)
     }
 
-    private fun Canvas.drawRoute(route: List<Road>) {
-        val routeStations = route.map { it.station }
+    private fun Canvas.drawRoute(route: Route) {
+        val routeStations = route.routeNodes.map { it.station }
         val branchStations = routeStations.groupBy { it.branch }
-        val transactions = routeStations.groupBy { it.transaction }.mapNotNull { it.key }
+        val transactions = routeStations.groupBy { it.transition }.mapNotNull { it.key }
         for ((branch, stations) in branchStations) {
             drawLines(
                 branchStations = stations,
-                branchColor = Color.parseColor(branch.color),
+                branchColor = Color.parseColor(branch.hexColor),
             )
         }
-        drawStations(route.map { it.station })
-        city?.let { city ->
+        drawStations(routeStations)
+        metroGraph?.let { city ->
             drawTransitions(city, transactions)
         }
     }

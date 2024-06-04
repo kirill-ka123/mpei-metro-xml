@@ -5,7 +5,8 @@ import android.content.Context
 import android.view.View
 import dagger.BindsInstance
 import dagger.Component
-import ru.mpei.metro.domain.model.City
+import ru.mpei.metro.common.DiConstants
+import ru.mpei.metro.domain.usecases.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.di.ActivityComponent
 import ru.mpei.metro.presentation.map.MapViewModel
@@ -23,18 +24,17 @@ interface MapFragmentComponent {
 
     fun onCreateViewListeners(): Set<FragmentOnCreateViewListener>
 
+    fun metroGraphProvider(): MetroGraphProvider
+
     @Component.Builder
     interface Builder {
         fun activityComponent(activityComponent: ActivityComponent): Builder
 
         @BindsInstance
-        fun rootView(@Named(MapFragmentConstants.MAP_FRAGMENT_ROOT_VIEW) rootView: View): Builder
+        fun rootView(@Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW) rootView: View): Builder
 
         @BindsInstance
         fun mapViewModel(mapViewModel: MapViewModel): Builder
-
-        @BindsInstance
-        fun city(city: City): Builder
 
         fun build(): MapFragmentComponent
     }

@@ -1,34 +1,33 @@
-package ru.mpei.metro.data
+package ru.mpei.metro.data.common
 
-import ru.mpei.metro.domain.model.City
-import ru.mpei.metro.data.model.RoadEntity
-import ru.mpei.metro.domain.model.Road
+import ru.mpei.metro.domain.model.MetroGraph
+import ru.mpei.metro.domain.model.Route
+import ru.mpei.metro.domain.model.RouteNode
 import ru.mpei.metro.domain.model.Station
-import ru.mpei.metro.domain.model.getStationById
 import java.util.LinkedList
 import java.util.PriorityQueue
 
-fun City.calculateRoute(fromStation: Station, toStation: Station) =
+fun MetroGraph.calculateRoute(fromStation: Station, toStation: Station) =
     dijkstra(asDijkstraGraph(), fromStation, toStation)
 
 fun dijkstra(
-    graph: Map<Station, Map<Station, Int>>,
+    graph: Map<Station, Map<Station, Long>>,
     startStation: Station,
     targetStation: Station,
-): List<Road> {
-    val distances = graph.mapValues { Int.MAX_VALUE }.toMutableMap()
+): Route {
+    val distances = graph.mapValues { Long.MAX_VALUE }.toMutableMap()
     val previous: MutableMap<Station, Station?> = graph.mapValues { null }.toMutableMap()
 
     distances[startStation] = 0
 
-    val stationsQueue = PriorityQueue<Pair<Station, Int>>(
+    val stationsQueue = PriorityQueue<Pair<Station, Long>>(
         compareBy { it.second }
     ).apply { add(Pair(startStation, 0)) }
 
     while (stationsQueue.isNotEmpty()) {
         val (currentStation, currentDistance) = stationsQueue.poll() ?: continue
 
-        if (currentDistance > (distances[currentStation] ?: Int.MAX_VALUE))
+        if (currentDistance > (distances[currentStation] ?: Long.MAX_VALUE))
             continue
 
         if (currentStation == targetStation)
@@ -38,7 +37,7 @@ fun dijkstra(
         for ((neighbor, distance) in currentStationConnections) {
             val newDistance = currentDistance + distance
 
-            if (newDistance < (distances[neighbor] ?: Int.MIN_VALUE)) {
+            if (newDistance < (distances[neighbor] ?: Long.MIN_VALUE)) {
                 distances[neighbor] = newDistance
                 previous[neighbor] = currentStation
                 stationsQueue.add(Pair(neighbor, newDistance))
@@ -49,26 +48,34 @@ fun dijkstra(
     if (previous[targetStation] == null && startStation != targetStation) {
         throw IllegalArgumentException("No path")
     } else {
-        val result = LinkedList<Road>()
+        val result = LinkedList<RouteNode>()
         var station = targetStation
 
         while (station != startStation) {
-            result.add(Road(station, distances[station] ?: 0))
+            result.add(RouteNode(station, distances[station] ?: 0))
             station = previous[station] ?: startStation
         }
 
-        result.add(Road(startStation, 0))
+        result.add(RouteNode(startStation, 0))
 
-        return result.reversed()
+        return Route(
+            routeNodes = result.reversed(),
+            totalTime = result.fold(
+                initial = 0,
+                operation = { current, node ->
+                    current + node.achieveTime
+                }
+            )
+        )
     }
 }
 
-fun City.asDijkstraGraph() = stations.associateWith { station ->
-    val connections = HashMap<Station, Int>()
-    station.roadConnections.forEach { road ->
-        getStationById(road.stationId)?.let {
-            connections[it] = road.time
-        }
-    }
+fun MetroGraph.asDijkstraGraph() = stations.associateWith { station ->
+    val connections = HashMap<Station, Long>()
+//    station.roadConnections.forEach { road ->
+//        getStationById(road.stationId)?.let {
+//            connections[it] = road.time
+//        }
+//    }
     connections
 }

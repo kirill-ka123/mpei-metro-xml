@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Position(
     val x: Float,
     val y: Float,
-) : Parcelable {
+): Parcelable {
     operator fun plus(value: Int): Position {
         return Position(x - value, y - value)
     }

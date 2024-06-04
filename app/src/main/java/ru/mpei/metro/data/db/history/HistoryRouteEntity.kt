@@ -1,9 +1,10 @@
-package ru.mpei.metro.data.history
+package ru.mpei.metro.data.db.history
 
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.TypeConverters
 import kotlinx.parcelize.Parcelize
+import ru.mpei.metro.data.db.converters.StationConverter
 import ru.mpei.metro.domain.model.Station
 
 @Entity(

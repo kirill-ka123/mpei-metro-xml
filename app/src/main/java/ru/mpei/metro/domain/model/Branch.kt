@@ -7,6 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class Branch(
     val id: String,
     val name: String,
+    val hexColor: String,
     val stationsIds: List<String>,
-    val color: String,
-) : Parcelable
+): Parcelable

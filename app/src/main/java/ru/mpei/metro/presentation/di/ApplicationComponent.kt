@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import ru.mpei.metro.domain.usecases.MetroGraphProvider
 import ru.mpei.metro.presentation.di.scopes.ApplicationScope
 import ru.mpei.metro.presentation.map.MapViewModelFactory
 
@@ -13,6 +14,8 @@ interface ApplicationComponent {
     fun context(): Context
 
     fun mapViewModelFactory(): MapViewModelFactory
+
+    fun metroGraphProvider(): MetroGraphProvider
 
     @Component.Builder
     interface Builder {

@@ -1,4 +1,4 @@
-package ru.mpei.metro.data.history
+package ru.mpei.metro.data.db.history
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -7,6 +7,6 @@ import androidx.room.RoomDatabase
     entities = [HistoryRouteEntity::class],
     version = 1,
 )
-abstract class MetroDatabase: RoomDatabase() {
+abstract class HistoryRouteDatabase: RoomDatabase() {
     abstract val historyRouteDao: HistoryRouteDao
 }

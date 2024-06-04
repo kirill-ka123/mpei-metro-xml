@@ -1,4 +1,4 @@
-package ru.mpei.metro.data.history
+package ru.mpei.metro.data.db.converters
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

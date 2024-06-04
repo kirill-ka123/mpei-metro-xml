@@ -1,4 +1,4 @@
-package ru.mpei.metro.data.history
+package ru.mpei.metro.data.db.history
 
 import androidx.room.Dao
 import androidx.room.Delete

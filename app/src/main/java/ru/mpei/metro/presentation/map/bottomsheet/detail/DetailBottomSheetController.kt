@@ -8,10 +8,10 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.mpei.metro.R
+import ru.mpei.metro.common.DiConstants
 import ru.mpei.metro.databinding.DetailBottomSheetLayoutBinding
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.map.MapViewModel
-import ru.mpei.metro.presentation.map.di.MapFragmentConstants
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
 import javax.inject.Inject
 import javax.inject.Named
@@ -21,7 +21,7 @@ private const val COLLAPSED_HEIGHT = 0
 @MapFragmentScope
 class DetailBottomSheetController @Inject constructor(
     private val activity: Activity,
-    @Named(MapFragmentConstants.MAP_FRAGMENT_ROOT_VIEW)
+    @Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW)
     private val rootView: View,
     private val mapViewModel: MapViewModel,
 ) : FragmentOnCreateViewListener, DefaultLifecycleObserver {
@@ -50,13 +50,13 @@ class DetailBottomSheetController @Inject constructor(
             selectedStations.fromStation?.let { fromStation ->
                 binding.detailBottomSheetContent.routeCardLayout.fromStation.text = fromStation.name
                 binding.detailBottomSheetContent.routeCardLayout.fromStationIcon.setColorFilter(
-                    Color.parseColor(fromStation.branch.color)
+                    Color.parseColor(fromStation.branch.hexColor)
                 )
             }
             selectedStations.toStation?.let { toStation ->
                 binding.detailBottomSheetContent.routeCardLayout.toStation.text = toStation.name
                 binding.detailBottomSheetContent.routeCardLayout.fromStationIcon.setColorFilter(
-                    Color.parseColor(toStation.branch.color)
+                    Color.parseColor(toStation.branch.hexColor)
                 )
             }
         }

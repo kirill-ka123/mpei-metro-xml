@@ -1,6 +1,7 @@
 package ru.mpei.metro.presentation.map.bottomsheet.expanded
 
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -33,11 +34,11 @@ class HistoryRouteAdapter @Inject constructor(
             root.setOnClickListener {
                 itemClickListener?.invoke(historyRoute)
             }
-            val fromStationColor = Color.parseColor(historyRoute.fromStation.branch.color)
+            val fromStationColor = Color.parseColor(historyRoute.fromStation.branch.hexColor)
             fromStationDot.setColorFilter(fromStationColor)
             fromStationName.text = historyRoute.fromStation.name
 
-            val toStationColor = Color.parseColor(historyRoute.toStation.branch.color)
+            val toStationColor = Color.parseColor(historyRoute.toStation.branch.hexColor)
             toStationDot.setColorFilter(toStationColor)
             toStationName.text = historyRoute.toStation.name
         }

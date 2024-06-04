@@ -8,4 +8,4 @@ data class Transition(
     val id: String,
     val time: Int,
     val stationsIds: List<String>,
-) : Parcelable
+): Parcelable

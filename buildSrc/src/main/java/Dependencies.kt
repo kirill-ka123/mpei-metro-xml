@@ -3,6 +3,12 @@ object VersionsDigest {
 
     const val gson = "2.8.6"
 
+    const val retrofit = "2.9.0"
+
+    const val okhttp = "4.12.0"
+
+    const val worker = "2.9.0"
+
     /**
      * [Documentation](https://developer.android.com/jetpack/androidx)
      *
@@ -39,6 +45,8 @@ object VersionsDigest {
 object Dependencies {
 
     const val junit = "junit:junit:${VersionsDigest.junit}"
+    const val gson = "com.google.code.gson:gson:${VersionsDigest.gson}"
+    const val worker = "com.squareup.okhttp3:logging-interceptor:${VersionsDigest.okhttp}"
 
     object AndroidX {
         const val coreKtx = "androidx.core:core-ktx:${VersionsDigest.AndroidX.core}"
@@ -70,7 +78,12 @@ object Dependencies {
             "com.google.dagger:dagger-compiler:${VersionsDigest.Dagger.daggerCompiler}"
     }
 
-    object Gson {
-        const val gson = "com.google.code.gson:gson:${VersionsDigest.gson}"
+    object Retrofit {
+        const val retrofit = "com.squareup.retrofit2:retrofit:${VersionsDigest.retrofit}"
+        const val converter = "com.squareup.retrofit2:converter-gson:${VersionsDigest.retrofit}"
+    }
+
+    object Okhttp {
+        const val logginInterceptor = "com.squareup.okhttp3:logging-interceptor:${VersionsDigest.okhttp}"
     }
 }

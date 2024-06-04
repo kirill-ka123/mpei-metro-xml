@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import ru.mpei.metro.R
-import ru.mpei.metro.data.mock.CityMock
+import ru.mpei.metro.common.Constants
 import ru.mpei.metro.databinding.MapFragmentBinding
 import ru.mpei.metro.presentation.MainActivity
 import ru.mpei.metro.presentation.map.di.DaggerMapFragmentComponent
@@ -40,7 +40,6 @@ class MapFragment : Fragment(R.layout.map_fragment) {
             .activityComponent(activityComponent)
             .rootView(rootView)
             .mapViewModel(mapViewModel)
-            .city(CityMock.MOSCOW.value)
             .build()
 
         mapFragmentComponent?.onCreateViewListeners()?.forEach { listener ->
@@ -52,7 +51,10 @@ class MapFragment : Fragment(R.layout.map_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.metroView.setCity(CityMock.MOSCOW.value)
+        mapViewModel.updateMetroGraph(Constants.DEFAULT_CITY_ID)
+        mapFragmentComponent?.metroGraphProvider()?.let {
+            binding.metroView.setMetroGraph(it.getMetroGraph(Constants.DEFAULT_CITY_ID))
+        }
         mapViewModel.route.observe(viewLifecycleOwner) { route ->
             binding.metroView.setRoute(route)
         }

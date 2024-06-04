@@ -54,7 +54,6 @@ dependencies {
     implementation(Dependencies.AndroidX.navigationFragment)
     implementation(Dependencies.AndroidX.navigationUi)
     implementation(Dependencies.AndroidX.security)
-
     implementation(Dependencies.AndroidX.room)
     implementation(Dependencies.AndroidX.roomKtx)
     kapt(Dependencies.AndroidX.roomCompiler)
@@ -62,7 +61,14 @@ dependencies {
     implementation(Dependencies.Dagger.dagger)
     kapt(Dependencies.Dagger.daggerCompiler)
 
-    implementation(Dependencies.Gson.gson)
+    implementation(Dependencies.Retrofit.retrofit)
+    implementation(Dependencies.Retrofit.converter)
+
+    implementation(Dependencies.Okhttp.logginInterceptor)
+
+    implementation(Dependencies.worker)
+
+    implementation(Dependencies.gson)
 
     testImplementation(Dependencies.junit)
 }

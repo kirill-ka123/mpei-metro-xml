@@ -6,8 +6,9 @@ import android.widget.FrameLayout
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.mpei.metro.R
+import ru.mpei.metro.common.Constants
 import ru.mpei.metro.databinding.BottomSheetLayoutBinding
-import ru.mpei.metro.domain.model.City
+import ru.mpei.metro.domain.usecases.MetroGraphProvider
 import ru.mpei.metro.presentation.map.MapViewModel
 import ru.mpei.metro.presentation.map.bottomsheet.COLLAPSED_HEIGHT
 import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
@@ -21,7 +22,7 @@ private const val COLLAPSED_HEIGHT_WITH_ROUTE_INFO = 240
 class CollapsedBottomSheetController @Inject constructor(
     private val activity: Activity,
     private val mapViewModel: MapViewModel,
-    private val city: City,
+    private val metroGraphProvider: MetroGraphProvider,
     private val detailBottomSheetController: DetailBottomSheetController,
 ) {
     private val density = activity.resources.displayMetrics.density
@@ -81,7 +82,7 @@ class CollapsedBottomSheetController @Inject constructor(
                 binding.collapsedBottomSheet.routeSummary.visibility = View.GONE
                 binding.collapsedBottomSheet.openDetailButton.visibility = View.GONE
             }
-            mapViewModel.getRoute(city, selectedStations)
+            mapViewModel.getRoute(metroGraphProvider.getMetroGraph(Constants.DEFAULT_CITY_ID), selectedStations)
         }
         binding.collapsedBottomSheet.swapButton.setOnClickListener {
             mapViewModel.setSelectedStations(

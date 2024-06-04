@@ -10,9 +10,9 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.ContextCompat
 import ru.mpei.metro.R
-import ru.mpei.metro.domain.model.Road
+import ru.mpei.metro.domain.model.Route
+import ru.mpei.metro.domain.model.RouteNode
 import ru.mpei.metro.domain.model.Station
-
 
 private const val EDGE_STATION_CIRCLE_RADIUS = 35f
 private const val EDGE_STATION_TEXT_SIZE = 31f
@@ -34,11 +34,11 @@ class RouteInfoView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
     defStyleRes: Int = 0,
 ) : View(context, attrs, defStyleAttr, defStyleRes) {
-    private var route: List<Road>? = null
+    private var route: Route? = null
     private val edgeStations: List<Station>
-        get() = (route ?: emptyList()).getEdgeStations()
+        get() = (route?.routeNodes ?: emptyList()).getEdgeStations()
     private val finalStation: Station
-        get() = (route ?: emptyList()).last().station
+        get() = (route?.routeNodes ?: emptyList()).last().station
 
     private val lineColor = ContextCompat.getColor(context, R.color.grey)
     private val edgeStationTextColor = ContextCompat.getColor(context, R.color.green_eagle)
@@ -70,7 +70,7 @@ class RouteInfoView @JvmOverloads constructor(
     private val timeInfoTextBounds = Rect()
     private val stationNameTextBounds = Rect()
 
-    fun setRoute(route: List<Road>?) {
+    fun setRoute(route: Route?) {
         this.route = route
         requestLayout()
     }
@@ -84,21 +84,22 @@ class RouteInfoView @JvmOverloads constructor(
         val maxWidth: Float
         var maxTimeInfoEndCoordinate = 0f
         var maxStationNameEndCoordinate = 0f
-        route.forEachIndexed { index, road ->
-            val nextStation = route.getOrNull(index + 1)?.station
-            maxHeight += getDistanceToNextStation(road.station, nextStation)
+        route.routeNodes.forEachIndexed { index, routeNode ->
+            val nextStation = route.routeNodes.getOrNull(index + 1)?.station
+            maxHeight += getDistanceToNextStation(routeNode.station, nextStation)
 
-            val textPaint = road.station.getStationTextPaint()
-            val radius = road.station.getRadius()
-            val timeInfo = road.time.toString()
+            val textPaint = routeNode.station.getStationTextPaint()
+            val radius = routeNode.station.getRadius()
+            val timeInfo = routeNode.achieveTime.toString()
             textPaint.getTextBounds(timeInfo, 0, timeInfo.length, timeInfoTextBounds)
-            val stationName = road.station.name
+            val stationName = routeNode.station.name
             textPaint.getTextBounds(stationName, 0, stationName.length, stationNameTextBounds)
             val timeInfoEndCoordinate = timeInfoTextBounds.width() + STATION_TEXT_OFFSET + radius
             if (timeInfoEndCoordinate > maxTimeInfoEndCoordinate) {
                 maxTimeInfoEndCoordinate = timeInfoEndCoordinate
             }
-            val stationNameEndCoordinate = stationNameTextBounds.width() + STATION_TEXT_OFFSET + radius
+            val stationNameEndCoordinate =
+                stationNameTextBounds.width() + STATION_TEXT_OFFSET + radius
             if (stationNameEndCoordinate > maxStationNameEndCoordinate) {
                 maxStationNameEndCoordinate = stationNameEndCoordinate
             }
@@ -117,12 +118,12 @@ class RouteInfoView @JvmOverloads constructor(
         val route = route ?: return
         var cursorY = EDGE_STATION_CIRCLE_RADIUS
 
-        route.forEachIndexed { index, road ->
-            val nextStation = route.getOrNull(index + 1)?.station
-            val radius = road.station.getRadius()
+        route.routeNodes.forEachIndexed { index, routeNode ->
+            val nextStation = route.routeNodes.getOrNull(index + 1)?.station
+            val radius = routeNode.station.getRadius()
             val radiusNextStation = nextStation?.getRadius() ?: 0f
-            val distanceToNextStation = getDistanceToNextStation(road.station, nextStation)
-            if (road.station !in edgeStations || nextStation !in edgeStations) {
+            val distanceToNextStation = getDistanceToNextStation(routeNode.station, nextStation)
+            if (routeNode.station !in edgeStations || nextStation !in edgeStations) {
                 canvas.drawLine(
                     timeInfoEndCoordinate,
                     cursorY + radius,
@@ -132,13 +133,13 @@ class RouteInfoView @JvmOverloads constructor(
                 )
             }
             canvas.drawStationCircle(
-                station = road.station,
+                station = routeNode.station,
                 radius = radius,
                 x = timeInfoEndCoordinate,
                 y = cursorY,
             )
             canvas.drawStationInfoText(
-                road = road,
+                routeNode = routeNode,
                 radius = radius,
                 x = timeInfoEndCoordinate,
                 y = cursorY,
@@ -155,7 +156,7 @@ class RouteInfoView @JvmOverloads constructor(
     ) {
         val stationCircleStrokeWidth = station.getCircleStrokeWidth()
         stationCirclePaint.apply {
-            color = Color.parseColor(station.branch.color)
+            color = Color.parseColor(station.branch.hexColor)
             if (stationCircleStrokeWidth != 0f) {
                 strokeWidth = stationCircleStrokeWidth
                 style = Paint.Style.STROKE
@@ -172,13 +173,13 @@ class RouteInfoView @JvmOverloads constructor(
     }
 
     private fun Canvas.drawStationInfoText(
-        road: Road,
+        routeNode: RouteNode,
         radius: Float,
         x: Float,
         y: Float,
     ) {
-        val textPaint = road.station.getStationTextPaint()
-        val timeInfo = road.time.toString()
+        val textPaint = routeNode.station.getStationTextPaint()
+        val timeInfo = routeNode.achieveTime.toString()
         textPaint.getTextBounds(timeInfo, 0, timeInfo.length, timeInfoTextBounds)
         drawText(
             timeInfo,
@@ -186,7 +187,7 @@ class RouteInfoView @JvmOverloads constructor(
             y - timeInfoTextBounds.exactCenterY(),
             textPaint,
         )
-        val stationName = road.station.name
+        val stationName = routeNode.station.name
         textPaint.getTextBounds(stationName, 0, stationName.length, stationNameTextBounds)
         drawText(
             stationName,
@@ -196,7 +197,7 @@ class RouteInfoView @JvmOverloads constructor(
         )
     }
 
-    private fun List<Road>.getEdgeStations(): List<Station> {
+    private fun List<RouteNode>.getEdgeStations(): List<Station> {
         val edgeStations = mutableSetOf(
             first().station,
             last().station,

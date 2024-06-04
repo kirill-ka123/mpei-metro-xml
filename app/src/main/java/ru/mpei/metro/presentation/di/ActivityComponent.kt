@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import dagger.BindsInstance
 import dagger.Component
+import ru.mpei.metro.domain.usecases.MetroGraphProvider
 import ru.mpei.metro.presentation.di.scopes.ActivityScope
 import ru.mpei.metro.presentation.map.MapViewModelFactory
 
@@ -21,6 +22,8 @@ interface ActivityComponent {
     fun activity(): Activity
 
     fun mapViewModelFactory(): MapViewModelFactory
+
+    fun metroGraphProvider(): MetroGraphProvider
 
     @Component.Builder
     interface Builder {

@@ -7,11 +7,11 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.mpei.metro.R
+import ru.mpei.metro.common.DiConstants
 import ru.mpei.metro.databinding.BottomSheetLayoutBinding
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.map.bottomsheet.collapsed.CollapsedBottomSheetController
 import ru.mpei.metro.presentation.map.bottomsheet.expanded.ExpandedBottomSheetController
-import ru.mpei.metro.presentation.map.di.MapFragmentConstants
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
 import javax.inject.Inject
 import javax.inject.Named
@@ -21,7 +21,7 @@ const val COLLAPSED_HEIGHT = 180
 @MapFragmentScope
 class MapBottomSheetController @Inject constructor(
     private val activity: Activity,
-    @Named(MapFragmentConstants.MAP_FRAGMENT_ROOT_VIEW)
+    @Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW)
     private val rootView: View,
     private val collapsedBottomSheetController: CollapsedBottomSheetController,
     private val expandedBottomSheetController: ExpandedBottomSheetController,
