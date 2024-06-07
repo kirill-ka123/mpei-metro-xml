@@ -6,11 +6,12 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Station(
     val id: String,
-    val name: String,
+    val stationId: String,
+    val stationName: String,
+    val branchId: String,
+    val branchName: String,
     val position: Position,
+    val hexColor: String,
     val lat: Float = 0f,
     val lon: Float = 0f,
-    val branch: Branch,
-    val transition: Transition? = null,
-    val transitionsRoads: List<Road>,
 ): Parcelable

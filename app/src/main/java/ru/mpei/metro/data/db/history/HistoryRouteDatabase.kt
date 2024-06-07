@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [HistoryRouteEntity::class],
-    version = 1,
+    version = 2,
 )
 abstract class HistoryRouteDatabase: RoomDatabase() {
     abstract val historyRouteDao: HistoryRouteDao

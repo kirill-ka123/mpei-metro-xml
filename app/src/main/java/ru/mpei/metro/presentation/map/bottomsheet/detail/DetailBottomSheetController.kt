@@ -48,15 +48,15 @@ class DetailBottomSheetController @Inject constructor(
 
         mapViewModel.selectedStations.observe(lifecycleOwner) { selectedStations ->
             selectedStations.fromStation?.let { fromStation ->
-                binding.detailBottomSheetContent.routeCardLayout.fromStation.text = fromStation.name
+                binding.detailBottomSheetContent.routeCardLayout.fromStation.text = fromStation.stationName
                 binding.detailBottomSheetContent.routeCardLayout.fromStationIcon.setColorFilter(
-                    Color.parseColor(fromStation.branch.hexColor)
+                    Color.parseColor(fromStation.hexColor)
                 )
             }
             selectedStations.toStation?.let { toStation ->
-                binding.detailBottomSheetContent.routeCardLayout.toStation.text = toStation.name
+                binding.detailBottomSheetContent.routeCardLayout.toStation.text = toStation.stationName
                 binding.detailBottomSheetContent.routeCardLayout.fromStationIcon.setColorFilter(
-                    Color.parseColor(toStation.branch.hexColor)
+                    Color.parseColor(toStation.hexColor)
                 )
             }
         }

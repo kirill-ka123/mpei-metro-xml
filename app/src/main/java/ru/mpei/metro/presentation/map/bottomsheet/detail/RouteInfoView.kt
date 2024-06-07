@@ -92,7 +92,7 @@ class RouteInfoView @JvmOverloads constructor(
             val radius = routeNode.station.getRadius()
             val timeInfo = routeNode.achieveTime.toString()
             textPaint.getTextBounds(timeInfo, 0, timeInfo.length, timeInfoTextBounds)
-            val stationName = routeNode.station.name
+            val stationName = routeNode.station.stationName
             textPaint.getTextBounds(stationName, 0, stationName.length, stationNameTextBounds)
             val timeInfoEndCoordinate = timeInfoTextBounds.width() + STATION_TEXT_OFFSET + radius
             if (timeInfoEndCoordinate > maxTimeInfoEndCoordinate) {
@@ -156,7 +156,7 @@ class RouteInfoView @JvmOverloads constructor(
     ) {
         val stationCircleStrokeWidth = station.getCircleStrokeWidth()
         stationCirclePaint.apply {
-            color = Color.parseColor(station.branch.hexColor)
+            color = Color.parseColor(station.hexColor)
             if (stationCircleStrokeWidth != 0f) {
                 strokeWidth = stationCircleStrokeWidth
                 style = Paint.Style.STROKE
@@ -187,7 +187,7 @@ class RouteInfoView @JvmOverloads constructor(
             y - timeInfoTextBounds.exactCenterY(),
             textPaint,
         )
-        val stationName = routeNode.station.name
+        val stationName = routeNode.station.stationName
         textPaint.getTextBounds(stationName, 0, stationName.length, stationNameTextBounds)
         drawText(
             stationName,
@@ -205,7 +205,7 @@ class RouteInfoView @JvmOverloads constructor(
         forEachIndexed { index, routeNode ->
             val station = routeNode.station
             val nextStation = getOrNull(index + 1)?.station
-            if (nextStation != null && station.branch != nextStation.branch) {
+            if (nextStation != null && station.hexColor != nextStation.hexColor) {
                 edgeStations.add(station)
                 edgeStations.add(nextStation)
             }

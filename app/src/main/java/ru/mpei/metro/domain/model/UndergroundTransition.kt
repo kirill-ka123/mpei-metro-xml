@@ -4,10 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Branch(
+data class UndergroundTransition(
     val id: String,
-    val name: String,
-    val hexColor: String,
     val stationIds: List<String>,
-    val isBranchLooped: Boolean,
 ): Parcelable

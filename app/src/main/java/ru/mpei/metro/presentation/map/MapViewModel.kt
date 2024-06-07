@@ -9,7 +9,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ru.mpei.metro.domain.model.HistoryRoute
 import ru.mpei.metro.domain.model.MetroGraph
-import ru.mpei.metro.domain.model.Road
 import ru.mpei.metro.domain.model.Route
 import ru.mpei.metro.domain.model.Station
 import ru.mpei.metro.domain.usecases.GetCloseStationsUseCase
@@ -86,7 +85,7 @@ class MapViewModel(
         }
         val filteredStations = ArrayList<Station>()
         metroGraph.stations.forEach { station ->
-            if (station.name.lowercase().contains(query.lowercase())) {
+            if (station.stationName.lowercase().contains(query.lowercase())) {
                 filteredStations.add(station)
             }
         }
@@ -132,6 +131,6 @@ class MapViewModel(
     }
 
     fun updateMetroGraph(cityId: String) = viewModelScope.launch {
-        //updateMetroGraphUseCase.updateMetroGraph(cityId)
+        updateMetroGraphUseCase.updateMetroGraph(cityId)
     }
 }

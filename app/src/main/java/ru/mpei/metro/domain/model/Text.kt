@@ -4,8 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Transition(
-    val id: String,
-    val stationIds: List<String>,
-    val overgroundStationIds: List<String>,
+data class Text(
+    val text: String,
+    val position: Position,
+    val anchor: String,
 ): Parcelable

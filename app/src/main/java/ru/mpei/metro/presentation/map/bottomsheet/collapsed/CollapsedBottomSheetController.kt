@@ -58,9 +58,9 @@ class CollapsedBottomSheetController @Inject constructor(
         }
         mapViewModel.selectedStations.observe(lifecycleOwner) { selectedStations ->
             binding.collapsedBottomSheet.fromStation.text =
-                selectedStations.fromStation?.name ?: activity.getString(R.string.from)
+                selectedStations.fromStation?.stationName ?: activity.getString(R.string.from)
             binding.collapsedBottomSheet.toStation.text =
-                selectedStations.toStation?.name ?: activity.getString(R.string.to)
+                selectedStations.toStation?.stationName ?: activity.getString(R.string.to)
             if (selectedStations.fromStation != null) {
                 binding.collapsedBottomSheet.fromStationClear.visibility = View.VISIBLE
             } else {

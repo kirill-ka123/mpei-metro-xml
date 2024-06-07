@@ -33,10 +33,10 @@ class CloseStationAdapter @Inject constructor(
             root.setOnClickListener {
                 itemClickListener?.invoke(station)
             }
-            val stationColor = Color.parseColor(station.branch.hexColor)
+            val stationColor = Color.parseColor(station.hexColor)
             stationDot.setColorFilter(stationColor)
-            stationName.text = station.name
-            branchName.text = station.branch.name
+            stationName.text = station.stationName
+            branchName.text = station.branchName
         }
     }
 
