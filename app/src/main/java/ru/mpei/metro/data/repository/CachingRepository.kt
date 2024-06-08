@@ -45,9 +45,4 @@ class CachingRepository @Inject constructor(
         }
         return parsedResponse
     }
-
-    fun invalidate() {
-        inMemoryCaching.clear()
-        diskCaching.clear()
-    }
 }

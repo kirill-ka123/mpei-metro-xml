@@ -1,14 +1,11 @@
 package ru.mpei.metro.domain.usecases
 
 import ru.mpei.metro.data.cache.model.DecodeResult
-import ru.mpei.metro.data.common.MetroGraphParser
+import ru.mpei.metro.domain.graph.MetroGraphParser
 import ru.mpei.metro.data.repository.CachingRepository
 import ru.mpei.metro.data.repository.MetroRepository
-import ru.mpei.metro.domain.model.MetroGraph
 import ru.mpei.metro.presentation.di.scopes.ApplicationScope
-import java.io.ByteArrayInputStream
 import java.io.InputStream
-import java.nio.charset.StandardCharsets
 import javax.inject.Inject
 
 @ApplicationScope

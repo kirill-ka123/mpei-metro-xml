@@ -10,8 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.LifecycleOwner
-import ru.mpei.metro.common.Constants
-import ru.mpei.metro.domain.usecases.MetroGraphProvider
+import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.map.MapViewModel
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
@@ -25,7 +24,7 @@ class LocationController @Inject constructor(
     private val activity: AppCompatActivity,
     private val mapViewModel: MapViewModel,
     private val metroGraphProvider: MetroGraphProvider,
-): FragmentOnCreateViewListener {
+) : FragmentOnCreateViewListener {
     private val locationManager =
         activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
     private var lastLocationRequest: LocationRequest? = null
@@ -43,7 +42,7 @@ class LocationController @Inject constructor(
     override fun onCreateView(lifecycleOwner: LifecycleOwner) {
         startLocationUpdatesWithPermissionsRequest(
             listener = { location ->
-                mapViewModel.onLocationChanged(metroGraphProvider.getMetroGraph(Constants.DEFAULT_CITY_ID), location)
+                mapViewModel.onLocationChanged(metroGraphProvider.getMetroGraph(), location)
             }
         )
     }

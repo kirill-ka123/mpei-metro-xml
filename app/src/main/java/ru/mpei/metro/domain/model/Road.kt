@@ -8,5 +8,5 @@ data class Road(
     val id: String,
     val fromStationId: String,
     val toStationId: String,
-    val time: Long,
+    val time: Int,
 ): Parcelable

@@ -53,9 +53,9 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         super.onViewCreated(view, savedInstanceState)
         mapViewModel.updateMetroGraph(Constants.DEFAULT_CITY_ID)
         mapFragmentComponent?.metroGraphProvider()?.let {
-            binding.metroView.setMetroGraph(it.getMetroGraph(Constants.DEFAULT_CITY_ID))
+            binding.metroView.setMetroGraph(it.getMetroGraph())
         }
-        mapViewModel.route.observe(viewLifecycleOwner) { route ->
+        mapViewModel.selectedRoute.observe(viewLifecycleOwner) { route ->
             binding.metroView.setRoute(route)
         }
         mapViewModel.selectedStations.observe(viewLifecycleOwner) { selectedStations ->

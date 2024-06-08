@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import ru.mpei.metro.domain.usecases.MetroGraphProvider
+import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.di.scopes.ApplicationScope
 import ru.mpei.metro.presentation.map.MapViewModelFactory
 

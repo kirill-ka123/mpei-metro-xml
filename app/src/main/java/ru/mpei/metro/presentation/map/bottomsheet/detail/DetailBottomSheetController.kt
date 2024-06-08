@@ -42,7 +42,7 @@ class DetailBottomSheetController @Inject constructor(
                 }
         }
 
-        mapViewModel.route.observe(lifecycleOwner) { route ->
+        mapViewModel.selectedRoute.observe(lifecycleOwner) { route ->
             binding.detailBottomSheetContent.routeInfoView.setRoute(route)
         }
 

@@ -7,9 +7,9 @@ import ru.mpei.metro.presentation.di.scopes.ApplicationScope
 import javax.inject.Inject
 
 @ApplicationScope
-class GetRouteUseCase @Inject constructor(
+class GetRoutesUseCase @Inject constructor(
     private val metroRepository: MetroRepository,
 ) {
-    suspend fun getRoute(metroGraph: MetroGraph, fromStation: Station, toStation: Station) =
-        metroRepository.getRoute(metroGraph, fromStation, toStation)
+    suspend fun getRoutes(metroGraph: MetroGraph, fromStation: Station, toStation: Station) =
+        metroRepository.getRoutes(metroGraph, fromStation, toStation)
 }

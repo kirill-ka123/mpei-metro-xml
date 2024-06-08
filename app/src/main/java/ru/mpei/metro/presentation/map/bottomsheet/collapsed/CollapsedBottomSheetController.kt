@@ -4,11 +4,12 @@ import android.app.Activity
 import android.view.View
 import android.widget.FrameLayout
 import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.mpei.metro.R
-import ru.mpei.metro.common.Constants
 import ru.mpei.metro.databinding.BottomSheetLayoutBinding
-import ru.mpei.metro.domain.usecases.MetroGraphProvider
+import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.map.MapViewModel
 import ru.mpei.metro.presentation.map.bottomsheet.COLLAPSED_HEIGHT
 import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
@@ -16,7 +17,7 @@ import ru.mpei.metro.presentation.map.bottomsheet.detail.DetailBottomSheetContro
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
 import javax.inject.Inject
 
-private const val COLLAPSED_HEIGHT_WITH_ROUTE_INFO = 240
+private const val COLLAPSED_HEIGHT_WITH_ROUTE_INFO = 330
 
 @MapFragmentScope
 class CollapsedBottomSheetController @Inject constructor(
@@ -24,6 +25,7 @@ class CollapsedBottomSheetController @Inject constructor(
     private val mapViewModel: MapViewModel,
     private val metroGraphProvider: MetroGraphProvider,
     private val detailBottomSheetController: DetailBottomSheetController,
+    private val suggestedRoutesAdapter: SuggestedRoutesAdapter,
 ) {
     private val density = activity.resources.displayMetrics.density
 
@@ -82,7 +84,7 @@ class CollapsedBottomSheetController @Inject constructor(
                 binding.collapsedBottomSheet.routeSummary.visibility = View.GONE
                 binding.collapsedBottomSheet.openDetailButton.visibility = View.GONE
             }
-            mapViewModel.getRoute(metroGraphProvider.getMetroGraph(Constants.DEFAULT_CITY_ID), selectedStations)
+            mapViewModel.getRoutes(metroGraphProvider.getMetroGraph(), selectedStations)
         }
         binding.collapsedBottomSheet.swapButton.setOnClickListener {
             mapViewModel.setSelectedStations(
@@ -93,6 +95,20 @@ class CollapsedBottomSheetController @Inject constructor(
         binding.collapsedBottomSheet.openDetailButton.setOnClickListener {
             detailBottomSheetController.doOnBehaviour {
                 it.state = BottomSheetBehavior.STATE_EXPANDED
+            }
+        }
+
+        binding.collapsedBottomSheet.suggestedRoutesRecyclerView.layoutManager =
+            LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
+        binding.collapsedBottomSheet.suggestedRoutesRecyclerView.adapter = suggestedRoutesAdapter
+        suggestedRoutesAdapter.setOnRouteSelectedListener { route ->
+            mapViewModel.setSelectedRoute(route)
+        }
+        mapViewModel.routes.observe(lifecycleOwner) { routes ->
+            if (!routes.isNullOrEmpty()) {
+                suggestedRoutesAdapter.resetSelectedRoute()
+                suggestedRoutesAdapter.differ.submitList(routes)
+                mapViewModel.setSelectedRoute(routes.first())
             }
         }
     }

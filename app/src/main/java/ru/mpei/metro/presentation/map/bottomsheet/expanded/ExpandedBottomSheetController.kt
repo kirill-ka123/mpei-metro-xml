@@ -7,9 +7,8 @@ import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import ru.mpei.metro.common.Constants
 import ru.mpei.metro.databinding.BottomSheetLayoutBinding
-import ru.mpei.metro.domain.usecases.MetroGraphProvider
+import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.map.MapViewModel
 import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
@@ -36,7 +35,7 @@ class ExpandedBottomSheetController @Inject constructor(
         binding.expandedBottomSheet.searchEditText.addTextChangedListener(
             onTextChanged = { text, _, _, _ ->
                 text?.let { changedText ->
-                    mapViewModel.updateSuggestedStationsByQuery(metroGraphProvider.getMetroGraph(Constants.DEFAULT_CITY_ID), changedText.toString())
+                    mapViewModel.updateSuggestedStationsByQuery(changedText.toString())
                 }
             }
         )

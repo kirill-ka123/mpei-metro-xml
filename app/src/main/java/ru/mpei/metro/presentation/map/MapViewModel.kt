@@ -11,9 +11,10 @@ import ru.mpei.metro.domain.model.HistoryRoute
 import ru.mpei.metro.domain.model.MetroGraph
 import ru.mpei.metro.domain.model.Route
 import ru.mpei.metro.domain.model.Station
+import ru.mpei.metro.domain.search.StationsSearchController
 import ru.mpei.metro.domain.usecases.GetCloseStationsUseCase
 import ru.mpei.metro.domain.usecases.GetHistoryRoutesUseCase
-import ru.mpei.metro.domain.usecases.GetRouteUseCase
+import ru.mpei.metro.domain.usecases.GetRoutesUseCase
 import ru.mpei.metro.domain.usecases.InsertHistoryRoutesUseCase
 import ru.mpei.metro.domain.usecases.UpdateMetroGraphUseCase
 import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
@@ -21,14 +22,17 @@ import ru.mpei.metro.presentation.map.model.SelectedStations
 import java.time.LocalDateTime
 
 class MapViewModel(
-    private val getRouteUseCase: GetRouteUseCase,
+    private val getRoutesUseCase: GetRoutesUseCase,
     getHistoryRoutesUseCase: GetHistoryRoutesUseCase,
     private val insertHistoryRoutesUseCase: InsertHistoryRoutesUseCase,
     private val getCloseStationsUseCase: GetCloseStationsUseCase,
     private val updateMetroGraphUseCase: UpdateMetroGraphUseCase,
+    private val stationsSearchController: StationsSearchController,
 ) : ViewModel() {
-    private val _route: MutableLiveData<Route?> = MutableLiveData()
-    val route: LiveData<Route?> = _route
+    private val _selectedRoute: MutableLiveData<Route?> = MutableLiveData()
+    val selectedRoute: LiveData<Route?> = _selectedRoute
+    private val _routes: MutableLiveData<List<Route>?> = MutableLiveData()
+    val routes: LiveData<List<Route>?> = _routes
 
     private val _selectedStations: MutableLiveData<SelectedStations> = MutableLiveData()
     val selectedStations: LiveData<SelectedStations> = _selectedStations
@@ -41,25 +45,29 @@ class MapViewModel(
 
     var stationDirection: StationDirection = StationDirection.TO
 
-    fun getRoute(metroGraph: MetroGraph, selectedStations: SelectedStations) {
+    fun getRoutes(metroGraph: MetroGraph, selectedStations: SelectedStations) {
         if (selectedStations.fromStation != null && selectedStations.toStation != null) {
-            getRoute(metroGraph, selectedStations.fromStation, selectedStations.toStation)
+            getRoutes(metroGraph, selectedStations.fromStation, selectedStations.toStation)
         } else {
-            _route.postValue(null)
+            _routes.postValue(null)
         }
     }
 
-    private fun getRoute(
+    private fun getRoutes(
         metroGraph: MetroGraph,
         fromStation: Station,
         toStation: Station,
     ) = viewModelScope.launch {
-        val route = getRouteUseCase.getRoute(
+        val routes = getRoutesUseCase.getRoutes(
             metroGraph = metroGraph,
             fromStation = fromStation,
             toStation = toStation,
         )
-        _route.postValue(route)
+        _routes.postValue(routes)
+    }
+
+    fun setSelectedRoute(route: Route) {
+        _selectedRoute.value = route
     }
 
     fun insertHistoryRoute(selectedStations: SelectedStations) {
@@ -78,19 +86,14 @@ class MapViewModel(
         insertHistoryRoutesUseCase.insertHistoryRoute(historyRoute)
     }
 
-    fun updateSuggestedStationsByQuery(metroGraph: MetroGraph, query: String?) {
-        if (query.isNullOrEmpty()) {
-            _suggestedStations.value = emptyList()
-            return
-        }
-        val filteredStations = ArrayList<Station>()
-        metroGraph.stations.forEach { station ->
-            if (station.stationName.lowercase().contains(query.lowercase())) {
-                filteredStations.add(station)
+    fun updateSuggestedStationsByQuery(query: String?) =
+        viewModelScope.launch {
+            if (query.isNullOrEmpty()) {
+                _suggestedStations.postValue(emptyList())
+            } else {
+                _suggestedStations.postValue(stationsSearchController.search(query))
             }
         }
-        _suggestedStations.value = filteredStations
-    }
 
     fun setSelectedStations(
         fromStation: Station?,
@@ -131,6 +134,6 @@ class MapViewModel(
     }
 
     fun updateMetroGraph(cityId: String) = viewModelScope.launch {
-        updateMetroGraphUseCase.updateMetroGraph(cityId)
+        //updateMetroGraphUseCase.updateMetroGraph(cityId)
     }
 }

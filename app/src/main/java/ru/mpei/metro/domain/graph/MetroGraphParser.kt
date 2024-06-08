@@ -1,4 +1,4 @@
-package ru.mpei.metro.data.common
+package ru.mpei.metro.domain.graph
 
 import com.google.gson.GsonBuilder
 import ru.mpei.metro.domain.model.MetroGraph

@@ -240,6 +240,9 @@ class MetroView @JvmOverloads constructor(
         branchColor: Int,
         isBranchLooped: Boolean,
     ) {
+        if (branchStations.size < 2) {
+            return
+        }
         linesPath.reset()
         val positions = branchStations.map { it.position } + if (isBranchLooped) {
             listOf(branchStations.first().position)
@@ -387,18 +390,15 @@ class MetroView @JvmOverloads constructor(
     }
 
     private fun Canvas.drawRoute(route: Route) {
-//        val routeStations = route.routeNodes.map { it.station }
-//        val branchStations = routeStations.groupBy { station ->
-//            station.hexColor
-//        }
-//        val transactions = routeStations.groupBy { it.transition }.mapNotNull { it.key }
-//        for ((hexColor, stations) in branchStations) {
-//            drawLines(
-//                branchStops = stations,
-//                branchColor = Color.parseColor(hexColor),
-//            )
-//        }
-//        drawStations(routeStations)
+        val routeStations = route.routeNodes.map { it.station }
+        val branchStations = routeStations.groupBy { station ->
+            station.hexColor
+        }
+        //val transactions = routeStations.groupBy { it.transition }.mapNotNull { it.key }
+        for ((hexColor, stations) in branchStations) {
+            drawBranch(stations, Color.parseColor(hexColor), false)
+        }
+        drawStations(routeStations)
 //        metroGraph?.let { city ->
 //            drawTransitions(city, transactions)
 //        }

@@ -13,8 +13,7 @@ import javax.inject.Inject
 @MapFragmentScope
 class SuggestedStationAdapter @Inject constructor(
     suggestedStationDiffCalculator: SuggestedStationDiffCalculator,
-) :
-    RecyclerView.Adapter<SuggestedStationAdapter.SuggestedStationViewHolder>() {
+) : RecyclerView.Adapter<SuggestedStationAdapter.SuggestedStationViewHolder>() {
     val differ = AsyncListDiffer(this, suggestedStationDiffCalculator)
     private var itemClickListener: ((Station) -> Unit)? = null
 

@@ -6,7 +6,7 @@ import android.view.View
 import dagger.BindsInstance
 import dagger.Component
 import ru.mpei.metro.common.DiConstants
-import ru.mpei.metro.domain.usecases.MetroGraphProvider
+import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.di.ActivityComponent
 import ru.mpei.metro.presentation.map.MapViewModel
