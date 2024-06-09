@@ -46,6 +46,7 @@ android {
 dependencies {
     implementation(Dependencies.AndroidX.coreKtx)
     implementation(Dependencies.AndroidX.appcompat)
+    implementation(Dependencies.AndroidX.acitivity)
     implementation(Dependencies.AndroidX.material)
     implementation(Dependencies.AndroidX.constraintLayout)
     implementation(Dependencies.AndroidX.lifecycleRuntime)

@@ -9,6 +9,7 @@ import ru.mpei.metro.common.DiConstants
 import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.di.ActivityComponent
+import ru.mpei.metro.presentation.map.BranchSplineConstructor
 import ru.mpei.metro.presentation.map.MapViewModel
 import javax.inject.Named
 
@@ -25,6 +26,8 @@ interface MapFragmentComponent {
     fun onCreateViewListeners(): Set<FragmentOnCreateViewListener>
 
     fun metroGraphProvider(): MetroGraphProvider
+
+    fun branchSplineConstructor(): BranchSplineConstructor
 
     @Component.Builder
     interface Builder {

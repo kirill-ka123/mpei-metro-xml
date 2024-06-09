@@ -10,8 +10,8 @@ import ru.mpei.metro.presentation.di.scopes.ApplicationScope
 import java.io.InputStream
 import javax.inject.Inject
 
-fun interface MetroGraphListener {
-    fun onMetroGraphUpdated()
+fun interface MetroGraphUpdateListener {
+    fun onMetroGraphUpdated(metroGraph: MetroGraph)
 }
 
 @ApplicationScope
@@ -19,11 +19,11 @@ class MetroGraphProvider @Inject constructor(
     private val cachingRepository: CachingRepository,
     inMemoryCaching: InMemoryCaching,
     private val metroGraphParser: MetroGraphParser,
-    private val observableDelegate: ObservableDelegate<MetroGraphListener>,
-) : Observable<MetroGraphListener> by observableDelegate {
+    private val observableDelegate: ObservableDelegate<MetroGraphUpdateListener>,
+) : Observable<MetroGraphUpdateListener> by observableDelegate {
     init {
         inMemoryCaching.addObserver {
-            observableDelegate.notify { onMetroGraphUpdated() }
+            observableDelegate.notify { onMetroGraphUpdated(getMetroGraph()) }
         }
     }
 

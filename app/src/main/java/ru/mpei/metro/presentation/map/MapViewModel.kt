@@ -66,7 +66,7 @@ class MapViewModel(
         _routes.postValue(routes)
     }
 
-    fun setSelectedRoute(route: Route) {
+    fun setSelectedRoute(route: Route?) {
         _selectedRoute.value = route
     }
 

@@ -4,7 +4,6 @@
   "stations": [
     {
       "id": "sp46557655",
-      "stationId": "st87623723",
       "stationName": "Печатники",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -18,7 +17,6 @@
     },
     {
       "id": "sp32546423",
-      "stationId": "st90280813",
       "stationName": "Нагатинский Затон",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -32,7 +30,6 @@
     },
     {
       "id": "sp98591833",
-      "stationId": "st73189351",
       "stationName": "Кленовый бульвар",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -46,7 +43,6 @@
     },
     {
       "id": "sp21557436",
-      "stationId": "st21286303",
       "stationName": "Каширская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -60,7 +56,6 @@
     },
     {
       "id": "sp76630084",
-      "stationId": "st29682249",
       "stationName": "Варшавская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -74,7 +69,6 @@
     },
     {
       "id": "sp52045352",
-      "stationId": "st11845733",
       "stationName": "Каховская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -88,7 +82,6 @@
     },
     {
       "id": "sp32716443",
-      "stationId": "st95082552",
       "stationName": "Зюзино",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -102,7 +95,6 @@
     },
     {
       "id": "sp06256267",
-      "stationId": "st87052945",
       "stationName": "Воронцовская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -116,7 +108,6 @@
     },
     {
       "id": "sp53993303",
-      "stationId": "st37829639",
       "stationName": "Новаторская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -130,7 +121,6 @@
     },
     {
       "id": "sp84200333",
-      "stationId": "st35734217",
       "stationName": "Проспект Вернадского",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -144,7 +134,6 @@
     },
     {
       "id": "sp89919939",
-      "stationId": "st94760163",
       "stationName": "Мичуринский проспект",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -158,7 +147,6 @@
     },
     {
       "id": "sp48082038",
-      "stationId": "st94093753",
       "stationName": "Аминьевская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -172,7 +160,6 @@
     },
     {
       "id": "sp41253603",
-      "stationId": "st51593336",
       "stationName": "Давыдково",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -186,7 +173,6 @@
     },
     {
       "id": "sp50873914",
-      "stationId": "st04750702",
       "stationName": "Кунцевская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -200,7 +186,6 @@
     },
     {
       "id": "sp33109462",
-      "stationId": "st81445508",
       "stationName": "Терехово",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -214,7 +199,6 @@
     },
     {
       "id": "sp45755335",
-      "stationId": "st68852492",
       "stationName": "Мнёвники",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -228,7 +212,6 @@
     },
     {
       "id": "sp77564748",
-      "stationId": "st44330518",
       "stationName": "Народное Ополчение",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -242,7 +225,6 @@
     },
     {
       "id": "sp94401382",
-      "stationId": "st58608526",
       "stationName": "Марьина Роща",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -256,7 +238,6 @@
     },
     {
       "id": "sp43103983",
-      "stationId": "st31163901",
       "stationName": "Рижская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -270,7 +251,6 @@
     },
     {
       "id": "sp39011698",
-      "stationId": "st34113723",
       "stationName": "Сокольники",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -284,7 +264,6 @@
     },
     {
       "id": "sp29985241",
-      "stationId": "st28819434",
       "stationName": "Электрозаводская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -298,7 +277,6 @@
     },
     {
       "id": "sp10297829",
-      "stationId": "st57679554",
       "stationName": "Лефортово",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -312,7 +290,6 @@
     },
     {
       "id": "sp99170467",
-      "stationId": "st69169178",
       "stationName": "Авиамоторная",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -326,7 +303,6 @@
     },
     {
       "id": "sp22857121",
-      "stationId": "st79972390",
       "stationName": "Нижегородская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -340,7 +316,6 @@
     },
     {
       "id": "sp92448128",
-      "stationId": "st93777994",
       "stationName": "Текстильщики",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -354,7 +329,6 @@
     },
     {
       "id": "sp70166014",
-      "stationId": "st12062423",
       "stationName": "Нахабино",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -368,7 +342,6 @@
     },
     {
       "id": "sp50415275",
-      "stationId": "st86432498",
       "stationName": "Аникеевка",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -382,7 +355,6 @@
     },
     {
       "id": "sp60499915",
-      "stationId": "st26721318",
       "stationName": "Опалиха",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -396,7 +368,6 @@
     },
     {
       "id": "sp42712995",
-      "stationId": "st07229231",
       "stationName": "Красногорская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -410,7 +381,6 @@
     },
     {
       "id": "sp54543152",
-      "stationId": "st22445775",
       "stationName": "Павшино",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -424,7 +394,6 @@
     },
     {
       "id": "sp72134365",
-      "stationId": "st27059001",
       "stationName": "Пенягино",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -438,7 +407,6 @@
     },
     {
       "id": "sp49069277",
-      "stationId": "st34069360",
       "stationName": "Волоколамская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -452,7 +420,6 @@
     },
     {
       "id": "sp61718487",
-      "stationId": "st05128655",
       "stationName": "Трикотажная",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -466,7 +433,6 @@
     },
     {
       "id": "sp51142423",
-      "stationId": "st27073734",
       "stationName": "Тушинская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -480,7 +446,6 @@
     },
     {
       "id": "sp13041993",
-      "stationId": "st64829903",
       "stationName": "Щукинская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -494,7 +459,6 @@
     },
     {
       "id": "sp68726644",
-      "stationId": "st45771307",
       "stationName": "Стрешнево",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -508,7 +472,6 @@
     },
     {
       "id": "sp69117342",
-      "stationId": "st75253039",
       "stationName": "Красный Балтиец",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -522,7 +485,6 @@
     },
     {
       "id": "sp31327459",
-      "stationId": "st12475667",
       "stationName": "Гражданская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -536,7 +498,6 @@
     },
     {
       "id": "sp43362369",
-      "stationId": "st01267938",
       "stationName": "Дмитровская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -550,7 +511,6 @@
     },
     {
       "id": "sp79472547",
-      "stationId": "st20601264",
       "stationName": "Марьина Роща",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -564,7 +524,6 @@
     },
     {
       "id": "sp60144866",
-      "stationId": "st20601264",
       "stationName": "Марьина Роща",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -578,7 +537,6 @@
     },
     {
       "id": "sp93876286",
-      "stationId": "st12260726",
       "stationName": "Рижская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -592,7 +550,6 @@
     },
     {
       "id": "sp52501245",
-      "stationId": "st78367646",
       "stationName": "Площадь трёх вокзалов",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -606,7 +563,6 @@
     },
     {
       "id": "sp90379603",
-      "stationId": "st78367646",
       "stationName": "Площадь трёх вокзалов",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -620,7 +576,6 @@
     },
     {
       "id": "sp85335043",
-      "stationId": "st83656541",
       "stationName": "Курская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -634,7 +589,6 @@
     },
     {
       "id": "sp69757836",
-      "stationId": "st83656541",
       "stationName": "Курская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -648,7 +602,6 @@
     },
     {
       "id": "sp03369610",
-      "stationId": "st14451918",
       "stationName": "Москва-Товарная",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -662,7 +615,6 @@
     },
     {
       "id": "sp64194943",
-      "stationId": "st30036047",
       "stationName": "Калитники",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -676,7 +628,6 @@
     },
     {
       "id": "sp42494937",
-      "stationId": "st92828519",
       "stationName": "Новохохловская",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -690,7 +641,6 @@
     },
     {
       "id": "sp65047054",
-      "stationId": "st63719858",
       "stationName": "Текстильщики",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -704,7 +654,6 @@
     },
     {
       "id": "sp09153242",
-      "stationId": "st48211185",
       "stationName": "Печатники",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -718,7 +667,6 @@
     },
     {
       "id": "sp41106770",
-      "stationId": "st60395456",
       "stationName": "Люблино",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -732,7 +680,6 @@
     },
     {
       "id": "sp68837075",
-      "stationId": "st77081870",
       "stationName": "Депо",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -746,7 +693,6 @@
     },
     {
       "id": "sp22759694",
-      "stationId": "st56702051",
       "stationName": "Перерва",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -760,7 +706,6 @@
     },
     {
       "id": "sp66754954",
-      "stationId": "st61320245",
       "stationName": "Курьяново",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -774,7 +719,6 @@
     },
     {
       "id": "sp13636161",
-      "stationId": "st54678272",
       "stationName": "Москворечье",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -788,7 +732,6 @@
     },
     {
       "id": "sp29214654",
-      "stationId": "st32345692",
       "stationName": "Царицыно",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -802,7 +745,6 @@
     },
     {
       "id": "sp26666456",
-      "stationId": "st35536629",
       "stationName": "Покровское",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -816,7 +758,6 @@
     },
     {
       "id": "sp25741568",
-      "stationId": "st22209392",
       "stationName": "Красный Строитель",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -830,7 +771,6 @@
     },
     {
       "id": "sp40994154",
-      "stationId": "st85459530",
       "stationName": "Битца",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -844,7 +784,6 @@
     },
     {
       "id": "sp15459449",
-      "stationId": "st72995391",
       "stationName": "Бутово",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -858,7 +797,6 @@
     },
     {
       "id": "sp08264100",
-      "stationId": "st18603687",
       "stationName": "Щербинка",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -872,7 +810,6 @@
     },
     {
       "id": "sp06994752",
-      "stationId": "st90744750",
       "stationName": "Остафьево",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -886,7 +823,6 @@
     },
     {
       "id": "sp93062478",
-      "stationId": "st55694333",
       "stationName": "Силикатная",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -900,7 +836,6 @@
     },
     {
       "id": "sp58524221",
-      "stationId": "st92336396",
       "stationName": "Подольск",
       "branchId": "sr34445516",
       "branchName": "МЦД-2",
@@ -914,7 +849,6 @@
     },
     {
       "id": "sp96585445",
-      "stationId": "st43942813",
       "stationName": "Бульвар Рокоссовского",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -928,7 +862,6 @@
     },
     {
       "id": "sp26538282",
-      "stationId": "st89300033",
       "stationName": "Черкизовская",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -942,7 +875,6 @@
     },
     {
       "id": "sp26848058",
-      "stationId": "st44556533",
       "stationName": "Преображенская площадь",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -956,7 +888,6 @@
     },
     {
       "id": "sp05221367",
-      "stationId": "st82323711",
       "stationName": "Сокольники",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -970,7 +901,6 @@
     },
     {
       "id": "sp87379102",
-      "stationId": "st79163369",
       "stationName": "Красносельская",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -984,7 +914,6 @@
     },
     {
       "id": "sp69597378",
-      "stationId": "st16809028",
       "stationName": "Комсомольская",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -998,7 +927,6 @@
     },
     {
       "id": "sp92439063",
-      "stationId": "st93095765",
       "stationName": "Красные Ворота",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1012,7 +940,6 @@
     },
     {
       "id": "sp86441857",
-      "stationId": "st71967362",
       "stationName": "Чистые пруды",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1026,7 +953,6 @@
     },
     {
       "id": "sp03974984",
-      "stationId": "st37392265",
       "stationName": "Лубянка",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1040,7 +966,6 @@
     },
     {
       "id": "sp88508405",
-      "stationId": "st79973142",
       "stationName": "Охотный Ряд",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1054,7 +979,6 @@
     },
     {
       "id": "sp96805546",
-      "stationId": "st97628957",
       "stationName": "Библиотека имени Ленина",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1068,7 +992,6 @@
     },
     {
       "id": "sp39186626",
-      "stationId": "st09785959",
       "stationName": "Кропоткинская",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1082,7 +1005,6 @@
     },
     {
       "id": "sp18653016",
-      "stationId": "st63562705",
       "stationName": "Парк культуры",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1096,7 +1018,6 @@
     },
     {
       "id": "sp63255268",
-      "stationId": "st24372556",
       "stationName": "Фрунзенская",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1110,7 +1031,6 @@
     },
     {
       "id": "sp98057781",
-      "stationId": "st62244479",
       "stationName": "Спортивная",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1124,7 +1044,6 @@
     },
     {
       "id": "sp25404154",
-      "stationId": "st15485262",
       "stationName": "Воробьёвы горы",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1138,7 +1057,6 @@
     },
     {
       "id": "sp41653791",
-      "stationId": "st10615625",
       "stationName": "Университет",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1152,7 +1070,6 @@
     },
     {
       "id": "sp10154281",
-      "stationId": "st01330343",
       "stationName": "Проспект Вернадского",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1166,7 +1083,6 @@
     },
     {
       "id": "sp00660370",
-      "stationId": "st84881329",
       "stationName": "Юго-Западная",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1180,7 +1096,6 @@
     },
     {
       "id": "sp46626939",
-      "stationId": "st06576402",
       "stationName": "Тропарёво",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1194,7 +1109,6 @@
     },
     {
       "id": "sp30590352",
-      "stationId": "st14824792",
       "stationName": "Румянцево",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1208,7 +1122,6 @@
     },
     {
       "id": "sp30493111",
-      "stationId": "st07847823",
       "stationName": "Саларьево",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1222,7 +1135,6 @@
     },
     {
       "id": "sp87802870",
-      "stationId": "st47991016",
       "stationName": "Филатов Луг",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1236,7 +1148,6 @@
     },
     {
       "id": "sp39761832",
-      "stationId": "st25653595",
       "stationName": "Прокшино",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1250,7 +1161,6 @@
     },
     {
       "id": "sp75729737",
-      "stationId": "st08046181",
       "stationName": "Ольховая",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1264,7 +1174,6 @@
     },
     {
       "id": "sp65791382",
-      "stationId": "st98849475",
       "stationName": "Коммунарка",
       "branchId": "sr70375344",
       "branchName": "Сокольническая линия",
@@ -1278,7 +1187,6 @@
     },
     {
       "id": "sp81661821",
-      "stationId": "st42492362",
       "stationName": "Ховрино",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1292,7 +1200,6 @@
     },
     {
       "id": "sp07758971",
-      "stationId": "st11989360",
       "stationName": "Беломорская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1306,7 +1213,6 @@
     },
     {
       "id": "sp84181627",
-      "stationId": "st38713046",
       "stationName": "Речной вокзал",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1320,7 +1226,6 @@
     },
     {
       "id": "sp93897745",
-      "stationId": "st13506291",
       "stationName": "Водный стадион",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1334,7 +1239,6 @@
     },
     {
       "id": "sp77715428",
-      "stationId": "st42116627",
       "stationName": "Войковская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1348,7 +1252,6 @@
     },
     {
       "id": "sp98028666",
-      "stationId": "st53051395",
       "stationName": "Сокол",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1362,7 +1265,6 @@
     },
     {
       "id": "sp57728311",
-      "stationId": "st42301162",
       "stationName": "Аэропорт",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1376,7 +1278,6 @@
     },
     {
       "id": "sp79600799",
-      "stationId": "st40976893",
       "stationName": "Динамо",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1390,7 +1291,6 @@
     },
     {
       "id": "sp25251174",
-      "stationId": "st61639901",
       "stationName": "Белорусская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1404,7 +1304,6 @@
     },
     {
       "id": "sp22676407",
-      "stationId": "st65666731",
       "stationName": "Маяковская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1418,7 +1317,6 @@
     },
     {
       "id": "sp52567902",
-      "stationId": "st73532673",
       "stationName": "Тверская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1432,7 +1330,6 @@
     },
     {
       "id": "sp67006335",
-      "stationId": "st27293832",
       "stationName": "Театральная",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1446,7 +1343,6 @@
     },
     {
       "id": "sp84117809",
-      "stationId": "st95170220",
       "stationName": "Новокузнецкая",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1460,7 +1356,6 @@
     },
     {
       "id": "sp90931992",
-      "stationId": "st27666339",
       "stationName": "Павелецкая",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1474,7 +1369,6 @@
     },
     {
       "id": "sp48508909",
-      "stationId": "st36742054",
       "stationName": "Автозаводская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1488,7 +1382,6 @@
     },
     {
       "id": "sp76502065",
-      "stationId": "st05913742",
       "stationName": "Технопарк",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1502,7 +1395,6 @@
     },
     {
       "id": "sp32188676",
-      "stationId": "st31799545",
       "stationName": "Коломенская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1516,7 +1408,6 @@
     },
     {
       "id": "sp43921743",
-      "stationId": "st38125030",
       "stationName": "Каширская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1530,7 +1421,6 @@
     },
     {
       "id": "sp32931279",
-      "stationId": "st27502377",
       "stationName": "Кантемировская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1544,7 +1434,6 @@
     },
     {
       "id": "sp40711636",
-      "stationId": "st56891816",
       "stationName": "Царицыно",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1558,7 +1447,6 @@
     },
     {
       "id": "sp85643871",
-      "stationId": "st93091783",
       "stationName": "Орехово",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1572,7 +1460,6 @@
     },
     {
       "id": "sp82606076",
-      "stationId": "st93896107",
       "stationName": "Домодедовская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1586,7 +1473,6 @@
     },
     {
       "id": "sp14002145",
-      "stationId": "st35409060",
       "stationName": "Красногвардейская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1600,7 +1486,6 @@
     },
     {
       "id": "sp80796452",
-      "stationId": "st99655694",
       "stationName": "Алма-Атинская",
       "branchId": "sr52050894",
       "branchName": "Замоскворецкая линия",
@@ -1614,7 +1499,6 @@
     },
     {
       "id": "sp97151226",
-      "stationId": "st02963112",
       "stationName": "Щёлковская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1628,7 +1512,6 @@
     },
     {
       "id": "sp82585600",
-      "stationId": "st69472278",
       "stationName": "Первомайская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1642,7 +1525,6 @@
     },
     {
       "id": "sp22589473",
-      "stationId": "st95387045",
       "stationName": "Измайловская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1656,7 +1538,6 @@
     },
     {
       "id": "sp58364754",
-      "stationId": "st36264335",
       "stationName": "Партизанская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1670,7 +1551,6 @@
     },
     {
       "id": "sp03835004",
-      "stationId": "st64974676",
       "stationName": "Семёновская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1684,7 +1564,6 @@
     },
     {
       "id": "sp87791778",
-      "stationId": "st07434113",
       "stationName": "Электрозаводская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1698,7 +1577,6 @@
     },
     {
       "id": "sp22550859",
-      "stationId": "st42377778",
       "stationName": "Бауманская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1712,7 +1590,6 @@
     },
     {
       "id": "sp04610186",
-      "stationId": "st27003709",
       "stationName": "Курская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1726,7 +1603,6 @@
     },
     {
       "id": "sp89888067",
-      "stationId": "st97075371",
       "stationName": "Площадь Революции",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1740,7 +1616,6 @@
     },
     {
       "id": "sp65899681",
-      "stationId": "st97447355",
       "stationName": "Арбатская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1754,7 +1629,6 @@
     },
     {
       "id": "sp33027169",
-      "stationId": "st30018342",
       "stationName": "Смоленская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1768,7 +1642,6 @@
     },
     {
       "id": "sp08368608",
-      "stationId": "st88033734",
       "stationName": "Киевская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1782,7 +1655,6 @@
     },
     {
       "id": "sp34235957",
-      "stationId": "st90434513",
       "stationName": "Парк Победы",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1796,7 +1668,6 @@
     },
     {
       "id": "sp17103411",
-      "stationId": "st46329297",
       "stationName": "Славянский бульвар",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1810,7 +1681,6 @@
     },
     {
       "id": "sp82407076",
-      "stationId": "st05786744",
       "stationName": "Кунцевская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1824,7 +1694,6 @@
     },
     {
       "id": "sp73824893",
-      "stationId": "st55261951",
       "stationName": "Молодёжная",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1838,7 +1707,6 @@
     },
     {
       "id": "sp36083750",
-      "stationId": "st26423483",
       "stationName": "Крылатское",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1852,7 +1720,6 @@
     },
     {
       "id": "sp16826576",
-      "stationId": "st97440149",
       "stationName": "Строгино",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1866,7 +1733,6 @@
     },
     {
       "id": "sp58062789",
-      "stationId": "st05010804",
       "stationName": "Мякинино",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1880,7 +1746,6 @@
     },
     {
       "id": "sp85770241",
-      "stationId": "st58991941",
       "stationName": "Волоколамская",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1894,7 +1759,6 @@
     },
     {
       "id": "sp08948812",
-      "stationId": "st98450921",
       "stationName": "Митино",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1908,7 +1772,6 @@
     },
     {
       "id": "sp67913907",
-      "stationId": "st88640238",
       "stationName": "Пятницкое шоссе",
       "branchId": "sr76383450",
       "branchName": "Арбатско-Покровская линия",
@@ -1922,7 +1785,6 @@
     },
     {
       "id": "sp16267657",
-      "stationId": "st61292060",
       "stationName": "Кунцевская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -1936,7 +1798,6 @@
     },
     {
       "id": "sp56760912",
-      "stationId": "st15157717",
       "stationName": "Пионерская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -1950,7 +1811,6 @@
     },
     {
       "id": "sp73163837",
-      "stationId": "st54351814",
       "stationName": "Филёвский парк",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -1964,7 +1824,6 @@
     },
     {
       "id": "sp39078193",
-      "stationId": "st31863871",
       "stationName": "Багратионовская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -1978,7 +1837,6 @@
     },
     {
       "id": "sp85956155",
-      "stationId": "st36995787",
       "stationName": "Фили",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -1992,7 +1850,6 @@
     },
     {
       "id": "sp41405477",
-      "stationId": "st39852273",
       "stationName": "Кутузовская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2006,7 +1863,6 @@
     },
     {
       "id": "sp37538830",
-      "stationId": "st75378881",
       "stationName": "Студенческая",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2020,7 +1876,6 @@
     },
     {
       "id": "sp84751102",
-      "stationId": "st41435943",
       "stationName": "Киевская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2034,7 +1889,6 @@
     },
     {
       "id": "sp17373003",
-      "stationId": "st41435943",
       "stationName": "Киевская",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2048,7 +1902,6 @@
     },
     {
       "id": "sp75489336",
-      "stationId": "st61611249",
       "stationName": "Смоленская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2062,7 +1915,6 @@
     },
     {
       "id": "sp95051409",
-      "stationId": "st61611249",
       "stationName": "Смоленская",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2076,7 +1928,6 @@
     },
     {
       "id": "sp73180962",
-      "stationId": "st26071846",
       "stationName": "Арбатская",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2090,7 +1941,6 @@
     },
     {
       "id": "sp92816453",
-      "stationId": "st26071846",
       "stationName": "Арбатская",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2104,7 +1954,6 @@
     },
     {
       "id": "sp93432799",
-      "stationId": "st23821145",
       "stationName": "Александровский сад",
       "branchId": "sr94743730",
       "branchName": "Филёвская линия",
@@ -2118,7 +1967,6 @@
     },
     {
       "id": "sp36333368",
-      "stationId": "st23821145",
       "stationName": "Александровский сад",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2132,7 +1980,6 @@
     },
     {
       "id": "sp35288515",
-      "stationId": "st46292813",
       "stationName": "Москва-Сити",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2146,7 +1993,6 @@
     },
     {
       "id": "sp82888382",
-      "stationId": "st43638038",
       "stationName": "Деловой центр",
       "branchId": "sr22775049",
       "branchName": "Филёвская линия",
@@ -2160,7 +2006,6 @@
     },
     {
       "id": "sp89414561",
-      "stationId": "st05575296",
       "stationName": "Парк культуры",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2174,7 +2019,6 @@
     },
     {
       "id": "sp28802820",
-      "stationId": "st31835388",
       "stationName": "Октябрьская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2188,7 +2032,6 @@
     },
     {
       "id": "sp66503183",
-      "stationId": "st98515780",
       "stationName": "Добрынинская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2202,7 +2045,6 @@
     },
     {
       "id": "sp81988178",
-      "stationId": "st45756040",
       "stationName": "Павелецкая",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2216,7 +2058,6 @@
     },
     {
       "id": "sp86907506",
-      "stationId": "st31188041",
       "stationName": "Таганская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2230,7 +2071,6 @@
     },
     {
       "id": "sp73489008",
-      "stationId": "st58333097",
       "stationName": "Курская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2244,7 +2084,6 @@
     },
     {
       "id": "sp44494127",
-      "stationId": "st25257776",
       "stationName": "Комсомольская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2258,7 +2097,6 @@
     },
     {
       "id": "sp31017216",
-      "stationId": "st88578560",
       "stationName": "Проспект Мира",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2272,7 +2110,6 @@
     },
     {
       "id": "sp91897679",
-      "stationId": "st35167598",
       "stationName": "Новослободская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2286,7 +2123,6 @@
     },
     {
       "id": "sp62519632",
-      "stationId": "st52567621",
       "stationName": "Белорусская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2300,7 +2136,6 @@
     },
     {
       "id": "sp45121577",
-      "stationId": "st61777226",
       "stationName": "Краснопресненская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2314,7 +2149,6 @@
     },
     {
       "id": "sp99638440",
-      "stationId": "st35907222",
       "stationName": "Киевская",
       "branchId": "sr04199500",
       "branchName": "Кольцевая линия",
@@ -2328,7 +2162,6 @@
     },
     {
       "id": "sp01274691",
-      "stationId": "st26948675",
       "stationName": "Медведково",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2342,7 +2175,6 @@
     },
     {
       "id": "sp44698632",
-      "stationId": "st56273671",
       "stationName": "Бабушкинская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2356,7 +2188,6 @@
     },
     {
       "id": "sp57323620",
-      "stationId": "st93131719",
       "stationName": "Свиблово",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2370,7 +2201,6 @@
     },
     {
       "id": "sp12725773",
-      "stationId": "st31259398",
       "stationName": "Ботанический сад",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2384,7 +2214,6 @@
     },
     {
       "id": "sp89093728",
-      "stationId": "st72950287",
       "stationName": "ВДНХ",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2398,7 +2227,6 @@
     },
     {
       "id": "sp08091350",
-      "stationId": "st06975965",
       "stationName": "Алексеевская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2412,7 +2240,6 @@
     },
     {
       "id": "sp92384310",
-      "stationId": "st28875008",
       "stationName": "Рижская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2426,7 +2253,6 @@
     },
     {
       "id": "sp26626975",
-      "stationId": "st31355012",
       "stationName": "Проспект Мира",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2440,7 +2266,6 @@
     },
     {
       "id": "sp23317965",
-      "stationId": "st30779344",
       "stationName": "Сухаревская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2454,7 +2279,6 @@
     },
     {
       "id": "sp06467553",
-      "stationId": "st25772919",
       "stationName": "Тургеневская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2468,7 +2292,6 @@
     },
     {
       "id": "sp32285491",
-      "stationId": "st43664663",
       "stationName": "Китай-город",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2482,7 +2305,6 @@
     },
     {
       "id": "sp37218297",
-      "stationId": "st33930128",
       "stationName": "Третьяковская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2496,7 +2318,6 @@
     },
     {
       "id": "sp15102651",
-      "stationId": "st09854720",
       "stationName": "Октябрьская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2510,7 +2331,6 @@
     },
     {
       "id": "sp06807150",
-      "stationId": "st65530962",
       "stationName": "Шаболовская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2524,7 +2344,6 @@
     },
     {
       "id": "sp29068282",
-      "stationId": "st37182397",
       "stationName": "Ленинский проспект",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2538,7 +2357,6 @@
     },
     {
       "id": "sp99008671",
-      "stationId": "st26575751",
       "stationName": "Академическая",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2552,7 +2370,6 @@
     },
     {
       "id": "sp52181888",
-      "stationId": "st49043121",
       "stationName": "Профсоюзная",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2566,7 +2383,6 @@
     },
     {
       "id": "sp67605331",
-      "stationId": "st02669553",
       "stationName": "Новые Черёмушки",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2580,7 +2396,6 @@
     },
     {
       "id": "sp80116133",
-      "stationId": "st25174961",
       "stationName": "Калужская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2594,7 +2409,6 @@
     },
     {
       "id": "sp37547978",
-      "stationId": "st67714913",
       "stationName": "Беляево",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2608,7 +2422,6 @@
     },
     {
       "id": "sp54881132",
-      "stationId": "st18527214",
       "stationName": "Коньково",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2622,7 +2435,6 @@
     },
     {
       "id": "sp25034808",
-      "stationId": "st15273483",
       "stationName": "Тёплый Стан",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2636,7 +2448,6 @@
     },
     {
       "id": "sp21670119",
-      "stationId": "st63576528",
       "stationName": "Ясенево",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2650,7 +2461,6 @@
     },
     {
       "id": "sp06297133",
-      "stationId": "st08902769",
       "stationName": "Новоясеневская",
       "branchId": "sr00499691",
       "branchName": "Калужско-Рижская линия",
@@ -2664,7 +2474,6 @@
     },
     {
       "id": "sp23813133",
-      "stationId": "st39588621",
       "stationName": "Планерная",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2678,7 +2487,6 @@
     },
     {
       "id": "sp35301693",
-      "stationId": "st50955259",
       "stationName": "Сходненская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2692,7 +2500,6 @@
     },
     {
       "id": "sp54055467",
-      "stationId": "st90181899",
       "stationName": "Тушинская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2706,7 +2513,6 @@
     },
     {
       "id": "sp06650001",
-      "stationId": "st82613979",
       "stationName": "Спартак",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2720,7 +2526,6 @@
     },
     {
       "id": "sp76195339",
-      "stationId": "st85925757",
       "stationName": "Щукинская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2734,7 +2539,6 @@
     },
     {
       "id": "sp86889103",
-      "stationId": "st45202123",
       "stationName": "Октябрьское Поле",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2748,7 +2552,6 @@
     },
     {
       "id": "sp97888904",
-      "stationId": "st99670123",
       "stationName": "Полежаевская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2762,7 +2565,6 @@
     },
     {
       "id": "sp40878362",
-      "stationId": "st78271731",
       "stationName": "Беговая",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2776,7 +2578,6 @@
     },
     {
       "id": "sp83270353",
-      "stationId": "st25864387",
       "stationName": "Улица 1905 года",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2790,7 +2591,6 @@
     },
     {
       "id": "sp29971887",
-      "stationId": "st41059590",
       "stationName": "Баррикадная",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2804,7 +2604,6 @@
     },
     {
       "id": "sp73538262",
-      "stationId": "st20392592",
       "stationName": "Пушкинская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2818,7 +2617,6 @@
     },
     {
       "id": "sp54729801",
-      "stationId": "st02243990",
       "stationName": "Кузнецкий Мост",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2832,7 +2630,6 @@
     },
     {
       "id": "sp13975688",
-      "stationId": "st01145791",
       "stationName": "Китай-город",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2846,7 +2643,6 @@
     },
     {
       "id": "sp05024378",
-      "stationId": "st56233634",
       "stationName": "Таганская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2860,7 +2656,6 @@
     },
     {
       "id": "sp68989070",
-      "stationId": "st65740476",
       "stationName": "Пролетарская",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2874,7 +2669,6 @@
     },
     {
       "id": "sp82292658",
-      "stationId": "st47395218",
       "stationName": "Волгоградский проспект",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2888,7 +2682,6 @@
     },
     {
       "id": "sp79236449",
-      "stationId": "st09865288",
       "stationName": "Текстильщики",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2902,7 +2695,6 @@
     },
     {
       "id": "sp76144544",
-      "stationId": "st37777364",
       "stationName": "Кузьминки",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2916,7 +2708,6 @@
     },
     {
       "id": "sp14022339",
-      "stationId": "st09774188",
       "stationName": "Рязанский проспект",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2930,7 +2721,6 @@
     },
     {
       "id": "sp51861257",
-      "stationId": "st93969014",
       "stationName": "Выхино",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2944,7 +2734,6 @@
     },
     {
       "id": "sp14902216",
-      "stationId": "st52342304",
       "stationName": "Лермонтовский проспект",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2958,7 +2747,6 @@
     },
     {
       "id": "sp68487002",
-      "stationId": "st03033639",
       "stationName": "Жулебино",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2972,7 +2760,6 @@
     },
     {
       "id": "sp59628295",
-      "stationId": "st92859572",
       "stationName": "Котельники",
       "branchId": "sr06317271",
       "branchName": "Таганско-Краснопресненская линия",
@@ -2986,7 +2773,6 @@
     },
     {
       "id": "sp95357172",
-      "stationId": "st96887649",
       "stationName": "Новокосино",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3000,7 +2786,6 @@
     },
     {
       "id": "sp87123042",
-      "stationId": "st51474087",
       "stationName": "Новогиреево",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3014,7 +2799,6 @@
     },
     {
       "id": "sp99313007",
-      "stationId": "st32482388",
       "stationName": "Перово",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3028,7 +2812,6 @@
     },
     {
       "id": "sp83680109",
-      "stationId": "st34086095",
       "stationName": "Шоссе Энтузиастов",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3042,7 +2825,6 @@
     },
     {
       "id": "sp08346904",
-      "stationId": "st51492355",
       "stationName": "Авиамоторная",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3056,7 +2838,6 @@
     },
     {
       "id": "sp59333336",
-      "stationId": "st96029844",
       "stationName": "Площадь Ильича",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3070,7 +2851,6 @@
     },
     {
       "id": "sp86121438",
-      "stationId": "st46767674",
       "stationName": "Марксистская",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3084,7 +2864,6 @@
     },
     {
       "id": "sp60576021",
-      "stationId": "st61365489",
       "stationName": "Третьяковская",
       "branchId": "sr41149468",
       "branchName": "Калининская линия",
@@ -3098,7 +2877,6 @@
     },
     {
       "id": "sp54408093",
-      "stationId": "st88663235",
       "stationName": "Деловой центр",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3112,7 +2890,6 @@
     },
     {
       "id": "sp39733844",
-      "stationId": "st17001462",
       "stationName": "Парк Победы",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3126,7 +2903,6 @@
     },
     {
       "id": "sp35989138",
-      "stationId": "st40410715",
       "stationName": "Минская",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3140,7 +2916,6 @@
     },
     {
       "id": "sp99375264",
-      "stationId": "st21193358",
       "stationName": "Ломоносовский проспект",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3154,7 +2929,6 @@
     },
     {
       "id": "sp73620466",
-      "stationId": "st83336771",
       "stationName": "Раменки",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3168,7 +2942,6 @@
     },
     {
       "id": "sp51147740",
-      "stationId": "st38193962",
       "stationName": "Мичуринский проспект",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3182,7 +2955,6 @@
     },
     {
       "id": "sp06680777",
-      "stationId": "st03108971",
       "stationName": "Озёрная",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3196,7 +2968,6 @@
     },
     {
       "id": "sp21507930",
-      "stationId": "st96068657",
       "stationName": "Говорово",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3210,7 +2981,6 @@
     },
     {
       "id": "sp60217228",
-      "stationId": "st20493304",
       "stationName": "Солнцево",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3224,7 +2994,6 @@
     },
     {
       "id": "sp27417300",
-      "stationId": "st75173436",
       "stationName": "Боровское шоссе",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3238,7 +3007,6 @@
     },
     {
       "id": "sp92103542",
-      "stationId": "st89877855",
       "stationName": "Новопеределкино",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3252,7 +3020,6 @@
     },
     {
       "id": "sp83975787",
-      "stationId": "st13083728",
       "stationName": "Рассказовка",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3266,7 +3033,6 @@
     },
     {
       "id": "sp54897113",
-      "stationId": "st42323020",
       "stationName": "Пыхтино",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3280,7 +3046,6 @@
     },
     {
       "id": "sp14208329",
-      "stationId": "st52443840",
       "stationName": "Аэропорт Внуково",
       "branchId": "sr82887848",
       "branchName": "Солнцевская линия",
@@ -3294,7 +3059,6 @@
     },
     {
       "id": "sp09119108",
-      "stationId": "st28176206",
       "stationName": "Алтуфьево",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3308,7 +3072,6 @@
     },
     {
       "id": "sp73802921",
-      "stationId": "st19241529",
       "stationName": "Бибирево",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3322,7 +3085,6 @@
     },
     {
       "id": "sp82066523",
-      "stationId": "st99850240",
       "stationName": "Отрадное",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3336,7 +3098,6 @@
     },
     {
       "id": "sp90383944",
-      "stationId": "st79876972",
       "stationName": "Владыкино",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3350,7 +3111,6 @@
     },
     {
       "id": "sp84489778",
-      "stationId": "st64456800",
       "stationName": "Петровско-Разумовская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3364,7 +3124,6 @@
     },
     {
       "id": "sp10359232",
-      "stationId": "st20821541",
       "stationName": "Тимирязевская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3378,7 +3137,6 @@
     },
     {
       "id": "sp76917036",
-      "stationId": "st97054999",
       "stationName": "Дмитровская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3392,7 +3150,6 @@
     },
     {
       "id": "sp51759627",
-      "stationId": "st43618334",
       "stationName": "Савёловская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3406,7 +3163,6 @@
     },
     {
       "id": "sp33560300",
-      "stationId": "st22563179",
       "stationName": "Менделеевская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3420,7 +3176,6 @@
     },
     {
       "id": "sp29478238",
-      "stationId": "st66212131",
       "stationName": "Цветной бульвар",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3434,7 +3189,6 @@
     },
     {
       "id": "sp14753515",
-      "stationId": "st20386865",
       "stationName": "Чеховская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3448,7 +3202,6 @@
     },
     {
       "id": "sp95978996",
-      "stationId": "st53446417",
       "stationName": "Боровицкая",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3462,7 +3215,6 @@
     },
     {
       "id": "sp91101068",
-      "stationId": "st29322650",
       "stationName": "Полянка",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3476,7 +3228,6 @@
     },
     {
       "id": "sp79399829",
-      "stationId": "st78934871",
       "stationName": "Серпуховская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3490,7 +3241,6 @@
     },
     {
       "id": "sp10983955",
-      "stationId": "st35784298",
       "stationName": "Тульская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3504,7 +3254,6 @@
     },
     {
       "id": "sp22716782",
-      "stationId": "st38386919",
       "stationName": "Нагатинская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3518,7 +3267,6 @@
     },
     {
       "id": "sp86176576",
-      "stationId": "st08228301",
       "stationName": "Нагорная",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3532,7 +3280,6 @@
     },
     {
       "id": "sp32137032",
-      "stationId": "st17146105",
       "stationName": "Нахимовский проспект",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3546,7 +3293,6 @@
     },
     {
       "id": "sp44324250",
-      "stationId": "st12113512",
       "stationName": "Севастопольская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3560,7 +3306,6 @@
     },
     {
       "id": "sp99632355",
-      "stationId": "st04927476",
       "stationName": "Чертановская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3574,7 +3319,6 @@
     },
     {
       "id": "sp48092952",
-      "stationId": "st99715743",
       "stationName": "Южная",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3588,7 +3332,6 @@
     },
     {
       "id": "sp34140437",
-      "stationId": "st82168372",
       "stationName": "Пражская",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3602,7 +3345,6 @@
     },
     {
       "id": "sp15762878",
-      "stationId": "st86293103",
       "stationName": "Улица Академика Янгеля",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3616,7 +3358,6 @@
     },
     {
       "id": "sp64014284",
-      "stationId": "st44270245",
       "stationName": "Аннино",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3630,7 +3371,6 @@
     },
     {
       "id": "sp25301437",
-      "stationId": "st20757637",
       "stationName": "Бульвар Дмитрия Донского",
       "branchId": "sr48950819",
       "branchName": "Серпуховско-Тимирязевская линия",
@@ -3644,7 +3384,6 @@
     },
     {
       "id": "sp59633408",
-      "stationId": "st39844144",
       "stationName": "Физтех",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3658,7 +3397,6 @@
     },
     {
       "id": "sp16999781",
-      "stationId": "st66397291",
       "stationName": "Лианозово",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3672,7 +3410,6 @@
     },
     {
       "id": "sp91729373",
-      "stationId": "st59467297",
       "stationName": "Яхромская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3686,7 +3423,6 @@
     },
     {
       "id": "sp68910833",
-      "stationId": "st88616952",
       "stationName": "Селигерская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3700,7 +3436,6 @@
     },
     {
       "id": "sp10156672",
-      "stationId": "st88725290",
       "stationName": "Верхние Лихоборы",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3714,7 +3449,6 @@
     },
     {
       "id": "sp43079111",
-      "stationId": "st00961456",
       "stationName": "Окружная",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3728,7 +3462,6 @@
     },
     {
       "id": "sp42062830",
-      "stationId": "st66323569",
       "stationName": "Петровско-Разумовская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3742,7 +3475,6 @@
     },
     {
       "id": "sp80189600",
-      "stationId": "st78967689",
       "stationName": "Фонвизинская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3756,7 +3488,6 @@
     },
     {
       "id": "sp85750328",
-      "stationId": "st76774040",
       "stationName": "Бутырская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3770,7 +3501,6 @@
     },
     {
       "id": "sp62728095",
-      "stationId": "st44317896",
       "stationName": "Марьина Роща",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3784,7 +3514,6 @@
     },
     {
       "id": "sp13525216",
-      "stationId": "st24816161",
       "stationName": "Достоевская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3798,7 +3527,6 @@
     },
     {
       "id": "sp39431860",
-      "stationId": "st12918074",
       "stationName": "Трубная",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3812,7 +3540,6 @@
     },
     {
       "id": "sp75826826",
-      "stationId": "st57688244",
       "stationName": "Сретенский бульвар",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3826,7 +3553,6 @@
     },
     {
       "id": "sp97642150",
-      "stationId": "st82349419",
       "stationName": "Чкаловская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3840,7 +3566,6 @@
     },
     {
       "id": "sp89811596",
-      "stationId": "st27875586",
       "stationName": "Римская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3854,7 +3579,6 @@
     },
     {
       "id": "sp79168908",
-      "stationId": "st80166830",
       "stationName": "Крестьянская Застава",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3868,7 +3592,6 @@
     },
     {
       "id": "sp33692951",
-      "stationId": "st02355686",
       "stationName": "Дубровка",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3882,7 +3605,6 @@
     },
     {
       "id": "sp58996129",
-      "stationId": "st38979773",
       "stationName": "Кожуховская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3896,7 +3618,6 @@
     },
     {
       "id": "sp64664557",
-      "stationId": "st26489114",
       "stationName": "Печатники",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3910,7 +3631,6 @@
     },
     {
       "id": "sp81170680",
-      "stationId": "st46100208",
       "stationName": "Волжская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3924,7 +3644,6 @@
     },
     {
       "id": "sp99199283",
-      "stationId": "st85415363",
       "stationName": "Люблино",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3938,7 +3657,6 @@
     },
     {
       "id": "sp78712246",
-      "stationId": "st03530007",
       "stationName": "Братиславская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3952,7 +3670,6 @@
     },
     {
       "id": "sp17983494",
-      "stationId": "st58422918",
       "stationName": "Марьино",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3966,7 +3683,6 @@
     },
     {
       "id": "sp23251791",
-      "stationId": "st17140069",
       "stationName": "Борисово",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3980,7 +3696,6 @@
     },
     {
       "id": "sp52370437",
-      "stationId": "st97360792",
       "stationName": "Шипиловская",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -3994,7 +3709,6 @@
     },
     {
       "id": "sp89331821",
-      "stationId": "st55580787",
       "stationName": "Зябликово",
       "branchId": "sr32481266",
       "branchName": "Люблинско-Дмитровская линия",
@@ -4008,7 +3722,6 @@
     },
     {
       "id": "sp20469804",
-      "stationId": "st41274700",
       "stationName": "Деловой центр",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4022,7 +3735,6 @@
     },
     {
       "id": "sp33588374",
-      "stationId": "st60259223",
       "stationName": "Шелепиха",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4036,7 +3748,6 @@
     },
     {
       "id": "sp08300756",
-      "stationId": "st16575549",
       "stationName": "Хорошёвская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -4050,7 +3761,6 @@
     },
     {
       "id": "sp02503920",
-      "stationId": "st16575549",
       "stationName": "Хорошёвская",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4064,7 +3774,6 @@
     },
     {
       "id": "sp83858190",
-      "stationId": "st16720381",
       "stationName": "ЦСКА",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -4078,7 +3787,6 @@
     },
     {
       "id": "sp81352892",
-      "stationId": "st16720381",
       "stationName": "ЦСКА",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4092,7 +3800,6 @@
     },
     {
       "id": "sp17051309",
-      "stationId": "st70830493",
       "stationName": "Петровский парк",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -4106,7 +3813,6 @@
     },
     {
       "id": "sp78235974",
-      "stationId": "st70830493",
       "stationName": "Петровский парк",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4120,7 +3826,6 @@
     },
     {
       "id": "sp72057138",
-      "stationId": "st23331215",
       "stationName": "Савёловская",
       "branchId": "sr44357304",
       "branchName": "Большая кольцевая линия",
@@ -4134,7 +3839,6 @@
     },
     {
       "id": "sp20303799",
-      "stationId": "st23331215",
       "stationName": "Савёловская",
       "branchId": "sr04892293",
       "branchName": "Большая кольцевая линия",
@@ -4148,7 +3852,6 @@
     },
     {
       "id": "sp86882928",
-      "stationId": "st64434032",
       "stationName": "Битцевский парк",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4162,7 +3865,6 @@
     },
     {
       "id": "sp95260217",
-      "stationId": "st24880476",
       "stationName": "Лесопарковая",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4176,7 +3878,6 @@
     },
     {
       "id": "sp77564360",
-      "stationId": "st26753929",
       "stationName": "Улица Старокачаловская",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4190,7 +3891,6 @@
     },
     {
       "id": "sp01704504",
-      "stationId": "st10620942",
       "stationName": "Улица Скобелевская",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4204,7 +3904,6 @@
     },
     {
       "id": "sp54812897",
-      "stationId": "st26941611",
       "stationName": "Бульвар Адмирала Ушакова",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4218,7 +3917,6 @@
     },
     {
       "id": "sp95205545",
-      "stationId": "st82035329",
       "stationName": "Улица Горчакова",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4232,7 +3930,6 @@
     },
     {
       "id": "sp92837381",
-      "stationId": "st45748336",
       "stationName": "Бунинская Аллея",
       "branchId": "sr56012232",
       "branchName": "Бутовская линия",
@@ -4246,7 +3943,6 @@
     },
     {
       "id": "sp26001309",
-      "stationId": "st35150425",
       "stationName": "Ботанический сад",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4260,7 +3956,6 @@
     },
     {
       "id": "sp07158221",
-      "stationId": "st82128726",
       "stationName": "Владыкино",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4274,7 +3969,6 @@
     },
     {
       "id": "sp15021150",
-      "stationId": "st02170430",
       "stationName": "Окружная",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4288,7 +3982,6 @@
     },
     {
       "id": "sp69136811",
-      "stationId": "st06045020",
       "stationName": "Лихоборы",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4302,7 +3995,6 @@
     },
     {
       "id": "sp35987321",
-      "stationId": "st47640510",
       "stationName": "Коптево",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4316,7 +4008,6 @@
     },
     {
       "id": "sp32817489",
-      "stationId": "st29613420",
       "stationName": "Балтийская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4330,7 +4021,6 @@
     },
     {
       "id": "sp80470350",
-      "stationId": "st07694055",
       "stationName": "Стрешнево",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4344,7 +4034,6 @@
     },
     {
       "id": "sp34169294",
-      "stationId": "st75121608",
       "stationName": "Панфиловская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4358,7 +4047,6 @@
     },
     {
       "id": "sp76616953",
-      "stationId": "st70694925",
       "stationName": "Зорге",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4372,7 +4060,6 @@
     },
     {
       "id": "sp18572948",
-      "stationId": "st72919088",
       "stationName": "Хорошёво",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4386,7 +4073,6 @@
     },
     {
       "id": "sp71461165",
-      "stationId": "st61820736",
       "stationName": "Шелепиха",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4400,7 +4086,6 @@
     },
     {
       "id": "sp44350626",
-      "stationId": "st48097510",
       "stationName": "Москва-Сити",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4414,7 +4099,6 @@
     },
     {
       "id": "sp89658669",
-      "stationId": "st30785398",
       "stationName": "Кутузовская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4428,7 +4112,6 @@
     },
     {
       "id": "sp38945919",
-      "stationId": "st21420784",
       "stationName": "Лужники",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4442,7 +4125,6 @@
     },
     {
       "id": "sp91914745",
-      "stationId": "st79569528",
       "stationName": "Площадь Гагарина",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4456,7 +4138,6 @@
     },
     {
       "id": "sp02602119",
-      "stationId": "st97385029",
       "stationName": "Крымская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4470,7 +4151,6 @@
     },
     {
       "id": "sp27670898",
-      "stationId": "st25448966",
       "stationName": "Верхние Котлы",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4484,7 +4164,6 @@
     },
     {
       "id": "sp41560048",
-      "stationId": "st56668873",
       "stationName": "ЗИЛ",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4498,7 +4177,6 @@
     },
     {
       "id": "sp75065249",
-      "stationId": "st96003358",
       "stationName": "Автозаводская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4512,7 +4190,6 @@
     },
     {
       "id": "sp54942348",
-      "stationId": "st46960102",
       "stationName": "Дубровка",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4526,7 +4203,6 @@
     },
     {
       "id": "sp64571202",
-      "stationId": "st02930351",
       "stationName": "Угрешская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4540,7 +4216,6 @@
     },
     {
       "id": "sp25453858",
-      "stationId": "st45166260",
       "stationName": "Новохохловская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4554,7 +4229,6 @@
     },
     {
       "id": "sp96713182",
-      "stationId": "st87591701",
       "stationName": "Нижегородская",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4568,7 +4242,6 @@
     },
     {
       "id": "sp27410040",
-      "stationId": "st49626288",
       "stationName": "Андроновка",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4582,7 +4255,6 @@
     },
     {
       "id": "sp07934066",
-      "stationId": "st82326306",
       "stationName": "Шоссе Энтузиастов",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4596,7 +4268,6 @@
     },
     {
       "id": "sp95180222",
-      "stationId": "st04403553",
       "stationName": "Соколиная Гора",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4610,7 +4281,6 @@
     },
     {
       "id": "sp58718772",
-      "stationId": "st49926221",
       "stationName": "Измайлово",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4624,7 +4294,6 @@
     },
     {
       "id": "sp99628046",
-      "stationId": "st70952536",
       "stationName": "Локомотив",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4638,7 +4307,6 @@
     },
     {
       "id": "sp25992132",
-      "stationId": "st74447980",
       "stationName": "Бульвар Рокоссовского",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4652,7 +4320,6 @@
     },
     {
       "id": "sp32033142",
-      "stationId": "st47891881",
       "stationName": "Белокаменная",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4666,7 +4333,6 @@
     },
     {
       "id": "sp97550156",
-      "stationId": "st70040302",
       "stationName": "Ростокино",
       "branchId": "sr74502923",
       "branchName": "Московское центральное кольцо",
@@ -4680,7 +4346,6 @@
     },
     {
       "id": "sp75204137",
-      "stationId": "st14282584",
       "stationName": "Нижегородская",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4694,7 +4359,6 @@
     },
     {
       "id": "sp44304685",
-      "stationId": "st68759038",
       "stationName": "Стахановская",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4708,7 +4372,6 @@
     },
     {
       "id": "sp74497823",
-      "stationId": "st93560112",
       "stationName": "Окская",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4722,7 +4385,6 @@
     },
     {
       "id": "sp39454034",
-      "stationId": "st75178188",
       "stationName": "Юго-Восточная",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4736,7 +4398,6 @@
     },
     {
       "id": "sp33018687",
-      "stationId": "st42452180",
       "stationName": "Косино",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4750,7 +4411,6 @@
     },
     {
       "id": "sp89769637",
-      "stationId": "st16544387",
       "stationName": "Улица Дмитриевского",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4764,7 +4424,6 @@
     },
     {
       "id": "sp17317607",
-      "stationId": "st24741970",
       "stationName": "Лухмановская",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4778,7 +4437,6 @@
     },
     {
       "id": "sp76802318",
-      "stationId": "st88449201",
       "stationName": "Некрасовка",
       "branchId": "sr91887910",
       "branchName": "Некрасовская линия",
@@ -4792,7 +4450,6 @@
     },
     {
       "id": "sp67979482",
-      "stationId": "st13781158",
       "stationName": "Лобня",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4806,7 +4463,6 @@
     },
     {
       "id": "sp83460226",
-      "stationId": "st08681945",
       "stationName": "Шереметьевская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4820,7 +4476,6 @@
     },
     {
       "id": "sp87154177",
-      "stationId": "st83092588",
       "stationName": "Хлебниково",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4834,7 +4489,6 @@
     },
     {
       "id": "sp06739943",
-      "stationId": "st30464877",
       "stationName": "Водники",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4848,7 +4502,6 @@
     },
     {
       "id": "sp83735996",
-      "stationId": "st65697042",
       "stationName": "Долгопрудная",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4862,7 +4515,6 @@
     },
     {
       "id": "sp87526374",
-      "stationId": "st02190477",
       "stationName": "Новодачная",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4876,7 +4528,6 @@
     },
     {
       "id": "sp63355494",
-      "stationId": "st89580890",
       "stationName": "Марк",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4890,7 +4541,6 @@
     },
     {
       "id": "sp78149933",
-      "stationId": "st61876566",
       "stationName": "Лианозово",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4904,7 +4554,6 @@
     },
     {
       "id": "sp66983496",
-      "stationId": "st24505002",
       "stationName": "Бескудниково",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4918,7 +4567,6 @@
     },
     {
       "id": "sp05880144",
-      "stationId": "st72775652",
       "stationName": "Дегунино",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4932,7 +4580,6 @@
     },
     {
       "id": "sp25725086",
-      "stationId": "st51193745",
       "stationName": "Окружная",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4946,7 +4593,6 @@
     },
     {
       "id": "sp75895285",
-      "stationId": "st89881853",
       "stationName": "Тимирязевская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4960,7 +4606,6 @@
     },
     {
       "id": "sp02895583",
-      "stationId": "st49524039",
       "stationName": "Савёловская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4974,7 +4619,6 @@
     },
     {
       "id": "sp32675911",
-      "stationId": "st79790407",
       "stationName": "Белорусская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -4988,7 +4632,6 @@
     },
     {
       "id": "sp73697609",
-      "stationId": "st79790407",
       "stationName": "Белорусская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5002,7 +4645,6 @@
     },
     {
       "id": "sp49485903",
-      "stationId": "st51139402",
       "stationName": "Беговая",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5016,7 +4658,6 @@
     },
     {
       "id": "sp03948652",
-      "stationId": "st51970914",
       "stationName": "Тестовская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5030,7 +4671,6 @@
     },
     {
       "id": "sp54710189",
-      "stationId": "st58517565",
       "stationName": "Фили",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5044,7 +4684,6 @@
     },
     {
       "id": "sp03821103",
-      "stationId": "st57752120",
       "stationName": "Славянский бульвар",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5058,7 +4697,6 @@
     },
     {
       "id": "sp66113485",
-      "stationId": "st68365351",
       "stationName": "Кунцевская",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5072,7 +4710,6 @@
     },
     {
       "id": "sp98964230",
-      "stationId": "st73098369",
       "stationName": "Рабочий Посёлок",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5086,7 +4723,6 @@
     },
     {
       "id": "sp00750148",
-      "stationId": "st00607984",
       "stationName": "Сетунь",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5100,7 +4736,6 @@
     },
     {
       "id": "sp20343475",
-      "stationId": "st71069007",
       "stationName": "Немчиновка",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5114,7 +4749,6 @@
     },
     {
       "id": "sp86660871",
-      "stationId": "st42857826",
       "stationName": "Сколково",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5128,7 +4762,6 @@
     },
     {
       "id": "sp10570437",
-      "stationId": "st01522779",
       "stationName": "Баковка",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5142,7 +4775,6 @@
     },
     {
       "id": "sp73617944",
-      "stationId": "st05462425",
       "stationName": "Одинцово",
       "branchId": "sr39753652",
       "branchName": "МЦД-1",
@@ -5156,7 +4788,6 @@
     },
     {
       "id": "sp44668916",
-      "stationId": "st25813893",
       "stationName": "Апрелевка",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5170,7 +4801,6 @@
     },
     {
       "id": "sp45525588",
-      "stationId": "st78397785",
       "stationName": "Победа",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5184,7 +4814,6 @@
     },
     {
       "id": "sp48024361",
-      "stationId": "st48118541",
       "stationName": "Крёкшино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5198,7 +4827,6 @@
     },
     {
       "id": "sp37583942",
-      "stationId": "st14883281",
       "stationName": "Санино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5212,7 +4840,6 @@
     },
     {
       "id": "sp94980723",
-      "stationId": "st44123641",
       "stationName": "Кокошкино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5226,7 +4853,6 @@
     },
     {
       "id": "sp93182462",
-      "stationId": "st39794892",
       "stationName": "Толстопальцево",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5240,7 +4866,6 @@
     },
     {
       "id": "sp09898871",
-      "stationId": "st55253629",
       "stationName": "Лесной Городок",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5254,7 +4879,6 @@
     },
     {
       "id": "sp70703332",
-      "stationId": "st81062630",
       "stationName": "Внуково",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5268,7 +4892,6 @@
     },
     {
       "id": "sp24928202",
-      "stationId": "st47621697",
       "stationName": "Мичуринец",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5282,7 +4905,6 @@
     },
     {
       "id": "sp68362545",
-      "stationId": "st23345924",
       "stationName": "Переделкино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5296,7 +4918,6 @@
     },
     {
       "id": "sp89381022",
-      "stationId": "st59375650",
       "stationName": "Солнечная",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5310,7 +4931,6 @@
     },
     {
       "id": "sp40029388",
-      "stationId": "st59375650",
       "stationName": "Солнечная",
       "branchId": "sr68468105",
       "branchName": "МЦД-4А",
@@ -5324,7 +4944,6 @@
     },
     {
       "id": "sp11517003",
-      "stationId": "st97261240",
       "stationName": "Новопеределкино",
       "branchId": "sr68468105",
       "branchName": "МЦД-4А",
@@ -5338,7 +4957,6 @@
     },
     {
       "id": "sp91605682",
-      "stationId": "st04256020",
       "stationName": "Мещерская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5352,7 +4970,6 @@
     },
     {
       "id": "sp81086863",
-      "stationId": "st40624323",
       "stationName": "Очаково",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5366,7 +4983,6 @@
     },
     {
       "id": "sp93732672",
-      "stationId": "st41505735",
       "stationName": "Аминьевская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5380,7 +4996,6 @@
     },
     {
       "id": "sp66056906",
-      "stationId": "st73876268",
       "stationName": "Матвеевская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5394,7 +5009,6 @@
     },
     {
       "id": "sp12064322",
-      "stationId": "st14722407",
       "stationName": "Минская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5408,7 +5022,6 @@
     },
     {
       "id": "sp20519193",
-      "stationId": "st45563276",
       "stationName": "Поклонная",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5422,7 +5035,6 @@
     },
     {
       "id": "sp76735763",
-      "stationId": "st49171942",
       "stationName": "Кутузовская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5436,7 +5048,6 @@
     },
     {
       "id": "sp45613653",
-      "stationId": "st14973909",
       "stationName": "Москва-Сити",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5450,7 +5061,6 @@
     },
     {
       "id": "sp43629472",
-      "stationId": "st47526830",
       "stationName": "Савёловская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5464,7 +5074,6 @@
     },
     {
       "id": "sp79073803",
-      "stationId": "st18021240",
       "stationName": "Серп и Молот",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5478,7 +5087,6 @@
     },
     {
       "id": "sp81282801",
-      "stationId": "st28761688",
       "stationName": "Нижегородская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5492,7 +5100,6 @@
     },
     {
       "id": "sp70609462",
-      "stationId": "st30259184",
       "stationName": "Чухлинка",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5506,7 +5113,6 @@
     },
     {
       "id": "sp08975175",
-      "stationId": "st01594489",
       "stationName": "Кусково",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5520,7 +5126,6 @@
     },
     {
       "id": "sp19794931",
-      "stationId": "st06317162",
       "stationName": "Новогиреево",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5534,7 +5139,6 @@
     },
     {
       "id": "sp12825917",
-      "stationId": "st71671018",
       "stationName": "Реутов",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5548,7 +5152,6 @@
     },
     {
       "id": "sp14426899",
-      "stationId": "st74397852",
       "stationName": "Никольское",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5562,7 +5165,6 @@
     },
     {
       "id": "sp76553117",
-      "stationId": "st02681830",
       "stationName": "Салтыковская",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5576,7 +5178,6 @@
     },
     {
       "id": "sp63622032",
-      "stationId": "st27818266",
       "stationName": "Кучино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5590,7 +5191,6 @@
     },
     {
       "id": "sp78299508",
-      "stationId": "st35108869",
       "stationName": "Ольгино",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5604,7 +5204,6 @@
     },
     {
       "id": "sp52385590",
-      "stationId": "st08735882",
       "stationName": "Железнодорожная",
       "branchId": "sr84080640",
       "branchName": "МЦД-4",
@@ -5618,7 +5217,6 @@
     },
     {
       "id": "sp68483929",
-      "stationId": "st55718183",
       "stationName": "Зеленоград — Крюково",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5632,7 +5230,6 @@
     },
     {
       "id": "sp83895444",
-      "stationId": "st55718183",
       "stationName": "Зеленоград — Крюково",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5646,7 +5243,6 @@
     },
     {
       "id": "sp96581711",
-      "stationId": "st13227051",
       "stationName": "Фирсановская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5660,7 +5256,6 @@
     },
     {
       "id": "sp46937618",
-      "stationId": "st13227051",
       "stationName": "Фирсановская",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5674,7 +5269,6 @@
     },
     {
       "id": "sp46553516",
-      "stationId": "st78417492",
       "stationName": "Сходня",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5688,7 +5282,6 @@
     },
     {
       "id": "sp51557259",
-      "stationId": "st78417492",
       "stationName": "Сходня",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5702,7 +5295,6 @@
     },
     {
       "id": "sp15055042",
-      "stationId": "st22803524",
       "stationName": "Подрезково",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5716,7 +5308,6 @@
     },
     {
       "id": "sp91994022",
-      "stationId": "st22803524",
       "stationName": "Подрезково",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5730,7 +5321,6 @@
     },
     {
       "id": "sp39082004",
-      "stationId": "st41885691",
       "stationName": "Новоподрезково",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5744,7 +5334,6 @@
     },
     {
       "id": "sp49085291",
-      "stationId": "st41885691",
       "stationName": "Новоподрезково",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5758,7 +5347,6 @@
     },
     {
       "id": "sp96905141",
-      "stationId": "st75635954",
       "stationName": "Молжаниново",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5772,7 +5360,6 @@
     },
     {
       "id": "sp78942786",
-      "stationId": "st75635954",
       "stationName": "Молжаниново",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5786,7 +5373,6 @@
     },
     {
       "id": "sp20261773",
-      "stationId": "st47589082",
       "stationName": "Химки",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5800,7 +5386,6 @@
     },
     {
       "id": "sp67568209",
-      "stationId": "st47589082",
       "stationName": "Химки",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5814,7 +5399,6 @@
     },
     {
       "id": "sp24594140",
-      "stationId": "st43873256",
       "stationName": "Левобережная",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5828,7 +5412,6 @@
     },
     {
       "id": "sp63871774",
-      "stationId": "st43873256",
       "stationName": "Левобережная",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5842,7 +5425,6 @@
     },
     {
       "id": "sp47735949",
-      "stationId": "st35670226",
       "stationName": "Ховрино",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5856,7 +5438,6 @@
     },
     {
       "id": "sp96670152",
-      "stationId": "st35670226",
       "stationName": "Ховрино",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5870,7 +5451,6 @@
     },
     {
       "id": "sp11359926",
-      "stationId": "st61063415",
       "stationName": "Грачёвская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5884,7 +5464,6 @@
     },
     {
       "id": "sp06560363",
-      "stationId": "st61063415",
       "stationName": "Грачёвская",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5898,7 +5477,6 @@
     },
     {
       "id": "sp05263252",
-      "stationId": "st31157638",
       "stationName": "Моссельмаш",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5912,7 +5490,6 @@
     },
     {
       "id": "sp29384459",
-      "stationId": "st31157638",
       "stationName": "Моссельмаш",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5926,7 +5503,6 @@
     },
     {
       "id": "sp87442097",
-      "stationId": "st71166958",
       "stationName": "Лихоборы",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5940,7 +5516,6 @@
     },
     {
       "id": "sp66529404",
-      "stationId": "st71166958",
       "stationName": "Лихоборы",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5954,7 +5529,6 @@
     },
     {
       "id": "sp04567745",
-      "stationId": "st02963543",
       "stationName": "Петровско-Разумовская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5968,7 +5542,6 @@
     },
     {
       "id": "sp84706759",
-      "stationId": "st02963543",
       "stationName": "Петровско-Разумовская",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -5982,7 +5555,6 @@
     },
     {
       "id": "sp28640487",
-      "stationId": "st75942897",
       "stationName": "Останкино",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -5996,7 +5568,6 @@
     },
     {
       "id": "sp69525066",
-      "stationId": "st75942897",
       "stationName": "Останкино",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -6010,7 +5581,6 @@
     },
     {
       "id": "sp29784998",
-      "stationId": "st33779025",
       "stationName": "Ленинградский вокзал",
       "branchId": "sr64032190",
       "branchName": "МЦД-3",
@@ -6024,7 +5594,6 @@
     },
     {
       "id": "sp46647428",
-      "stationId": "st59619767",
       "stationName": "Казанский вокзал",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6038,7 +5607,6 @@
     },
     {
       "id": "sp36669202",
-      "stationId": "st85491541",
       "stationName": "Электрозаводская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6052,7 +5620,6 @@
     },
     {
       "id": "sp07388289",
-      "stationId": "st85491541",
       "stationName": "Электрозаводская",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6066,7 +5633,6 @@
     },
     {
       "id": "sp26005771",
-      "stationId": "st89168704",
       "stationName": "Сортировочная",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6080,7 +5646,6 @@
     },
     {
       "id": "sp53283748",
-      "stationId": "st89168704",
       "stationName": "Сортировочная",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6094,7 +5659,6 @@
     },
     {
       "id": "sp36623075",
-      "stationId": "st57558718",
       "stationName": "Авиамоторная",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6108,7 +5672,6 @@
     },
     {
       "id": "sp82048843",
-      "stationId": "st57558718",
       "stationName": "Авиамоторная",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6122,7 +5685,6 @@
     },
     {
       "id": "sp18985080",
-      "stationId": "st94158342",
       "stationName": "Андроновка",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6136,7 +5698,6 @@
     },
     {
       "id": "sp38976605",
-      "stationId": "st94158342",
       "stationName": "Андроновка",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6150,7 +5711,6 @@
     },
     {
       "id": "sp73459064",
-      "stationId": "st77397978",
       "stationName": "Перово",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6164,7 +5724,6 @@
     },
     {
       "id": "sp24817356",
-      "stationId": "st77397978",
       "stationName": "Перово",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6178,7 +5737,6 @@
     },
     {
       "id": "sp36320185",
-      "stationId": "st91378107",
       "stationName": "Плющево",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6192,7 +5750,6 @@
     },
     {
       "id": "sp50379696",
-      "stationId": "st91378107",
       "stationName": "Плющево",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6206,7 +5763,6 @@
     },
     {
       "id": "sp79888305",
-      "stationId": "st13456702",
       "stationName": "Вешняки",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6220,7 +5776,6 @@
     },
     {
       "id": "sp74590096",
-      "stationId": "st13456702",
       "stationName": "Вешняки",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6234,7 +5789,6 @@
     },
     {
       "id": "sp84014290",
-      "stationId": "st40503615",
       "stationName": "Выхино",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6248,7 +5802,6 @@
     },
     {
       "id": "sp88874628",
-      "stationId": "st40503615",
       "stationName": "Выхино",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6262,7 +5815,6 @@
     },
     {
       "id": "sp38721238",
-      "stationId": "st50656544",
       "stationName": "Косино",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6276,7 +5828,6 @@
     },
     {
       "id": "sp00657370",
-      "stationId": "st50656544",
       "stationName": "Косино",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6290,7 +5841,6 @@
     },
     {
       "id": "sp23107019",
-      "stationId": "st60640622",
       "stationName": "Ухтомская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6304,7 +5854,6 @@
     },
     {
       "id": "sp57257449",
-      "stationId": "st60640622",
       "stationName": "Ухтомская",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6318,7 +5867,6 @@
     },
     {
       "id": "sp15435456",
-      "stationId": "st05030250",
       "stationName": "Люберцы",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6332,7 +5880,6 @@
     },
     {
       "id": "sp69627701",
-      "stationId": "st05030250",
       "stationName": "Люберцы",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6346,7 +5893,6 @@
     },
     {
       "id": "sp60640319",
-      "stationId": "st01640335",
       "stationName": "Панки",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6360,7 +5906,6 @@
     },
     {
       "id": "sp93378068",
-      "stationId": "st01640335",
       "stationName": "Панки",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6374,7 +5919,6 @@
     },
     {
       "id": "sp27964014",
-      "stationId": "st84530034",
       "stationName": "Томилино",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6388,7 +5932,6 @@
     },
     {
       "id": "sp64361393",
-      "stationId": "st84530034",
       "stationName": "Томилино",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6402,7 +5945,6 @@
     },
     {
       "id": "sp12434388",
-      "stationId": "st02447442",
       "stationName": "Красково",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6416,7 +5958,6 @@
     },
     {
       "id": "sp67095088",
-      "stationId": "st02447442",
       "stationName": "Красково",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6430,7 +5971,6 @@
     },
     {
       "id": "sp33413154",
-      "stationId": "st95009273",
       "stationName": "Малаховка",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6444,7 +5984,6 @@
     },
     {
       "id": "sp46443531",
-      "stationId": "st95009273",
       "stationName": "Малаховка",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6458,7 +5997,6 @@
     },
     {
       "id": "sp92875961",
-      "stationId": "st44339294",
       "stationName": "Удельная",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6472,7 +6010,6 @@
     },
     {
       "id": "sp67170507",
-      "stationId": "st44339294",
       "stationName": "Удельная",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6486,7 +6023,6 @@
     },
     {
       "id": "sp24939646",
-      "stationId": "st17897571",
       "stationName": "Быково",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6500,7 +6036,6 @@
     },
     {
       "id": "sp24772164",
-      "stationId": "st17897571",
       "stationName": "Быково",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6514,7 +6049,6 @@
     },
     {
       "id": "sp47447067",
-      "stationId": "st52446816",
       "stationName": "Ильинская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6528,7 +6062,6 @@
     },
     {
       "id": "sp65574912",
-      "stationId": "st52446816",
       "stationName": "Ильинская",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6542,7 +6075,6 @@
     },
     {
       "id": "sp94365483",
-      "stationId": "st29545915",
       "stationName": "Отдых",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6556,7 +6088,6 @@
     },
     {
       "id": "sp28057106",
-      "stationId": "st29545915",
       "stationName": "Отдых",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6570,7 +6101,6 @@
     },
     {
       "id": "sp17914227",
-      "stationId": "st63231880",
       "stationName": "Кратово",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6584,7 +6114,6 @@
     },
     {
       "id": "sp14802673",
-      "stationId": "st63231880",
       "stationName": "Кратово",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6598,7 +6127,6 @@
     },
     {
       "id": "sp44354908",
-      "stationId": "st72028011",
       "stationName": "Есенинская",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6612,7 +6140,6 @@
     },
     {
       "id": "sp21865293",
-      "stationId": "st72028011",
       "stationName": "Есенинская",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6626,7 +6153,6 @@
     },
     {
       "id": "sp88760138",
-      "stationId": "st76387281",
       "stationName": "Фабричная",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6640,7 +6166,6 @@
     },
     {
       "id": "sp84748124",
-      "stationId": "st76387281",
       "stationName": "Фабричная",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6654,7 +6179,6 @@
     },
     {
       "id": "sp64759576",
-      "stationId": "st88865343",
       "stationName": "Раменское",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6668,7 +6192,6 @@
     },
     {
       "id": "sp48856283",
-      "stationId": "st88865343",
       "stationName": "Раменское",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6682,7 +6205,6 @@
     },
     {
       "id": "sp87495444",
-      "stationId": "st96964472",
       "stationName": "Ипподром",
       "branchId": "sr45521770",
       "branchName": "МЦД-3",
@@ -6696,7 +6218,6 @@
     },
     {
       "id": "sp96362998",
-      "stationId": "st96964472",
       "stationName": "Ипподром",
       "branchId": "sr86187099",
       "branchName": "МЦД-3",
@@ -6905,28 +6426,29 @@
       "name": "МЦД-4",
       "hexColor": "#3cb183",
       "stationIds": [
-        "sp60144866",
-        "sp43629472",
-        "sp73697609",
-        "sp45613653",
-        "sp76735763",
-        "sp20519193",
-        "sp12064322",
-        "sp66056906",
-        "sp93732672",
-        "sp81086863",
-        "sp91605682",
-        "sp89381022",
-        "sp68362545",
-        "sp24928202",
-        "sp70703332",
-        "sp09898871",
-        "sp93182462",
-        "sp94980723",
-        "sp37583942",
-        "sp48024361",
-        "sp45525588",
         "sp44668916",
+        "sp45525588",
+        "sp48024361",
+        "sp37583942",
+        "sp94980723",
+        "sp93182462",
+        "sp09898871",
+        "sp70703332",
+        "sp24928202",
+        "sp68362545",
+        "sp89381022",
+        "sp91605682",
+        "sp81086863",
+        "sp93732672",
+        "sp66056906",
+        "sp12064322",
+        "sp20519193",
+        "sp76735763",
+        "sp45613653",
+        "sp73697609",
+        "sp43629472",
+        "sp60144866",
+        "sp90379603",
         "sp69757836",
         "sp79073803",
         "sp81282801",
@@ -6938,10 +6460,9 @@
         "sp76553117",
         "sp63622032",
         "sp78299508",
-        "sp52385590",
-        "sp90379603"
+        "sp52385590"
       ],
-      "isBranchLooped": true
+      "isBranchLooped": false
     },
     {
       "id": "sr70375344",
@@ -7063,10 +6584,10 @@
       "name": "Филёвская линия",
       "hexColor": "#00c1f3",
       "stationIds": [
-        "sp17373003",
-        "sp95051409",
-        "sp92816453",
         "sp36333368",
+        "sp92816453",
+        "sp95051409",
+        "sp17373003",
         "sp82888382",
         "sp35288515"
       ],
@@ -7948,292 +7469,502 @@
   ],
   "groundTransitions": [
     {
-      "id": "100",
-      "fromStationId": "sp51759627",
-      "toStationId": "sp02895583"
+      "id": "th01626472",
+      "fromStationId": "sp84489778",
+      "toStationId": "sp04567745"
     },
     {
-      "id": "29",
-      "fromStationId": "sp40711636",
-      "toStationId": "sp29214654"
+      "id": "th01626472",
+      "fromStationId": "sp84489778",
+      "toStationId": "sp04567745"
     },
     {
-      "id": "103",
-      "fromStationId": "sp62519632",
-      "toStationId": "sp32675911"
+      "id": "th01626472",
+      "fromStationId": "sp42062830",
+      "toStationId": "sp04567745"
     },
     {
-      "id": "45",
-      "fromStationId": "sp54055467",
-      "toStationId": "sp51142423"
+      "id": "th01626472",
+      "fromStationId": "sp42062830",
+      "toStationId": "sp04567745"
     },
     {
-      "id": "31",
-      "fromStationId": "sp85770241",
-      "toStationId": "sp49069277"
+      "id": "th22558974",
+      "fromStationId": "sp12725773",
+      "toStationId": "sp26001309"
     },
     {
-      "id": "64",
-      "fromStationId": "sp08346904",
-      "toStationId": "sp99170467"
+      "id": "th42006503",
+      "fromStationId": "sp25992132",
+      "toStationId": "sp96585445"
     },
     {
-      "id": "21",
-      "fromStationId": "sp25251174",
-      "toStationId": "sp32675911"
+      "id": "th05801366",
+      "fromStationId": "sp58718772",
+      "toStationId": "sp58364754"
     },
     {
-      "id": "47",
-      "fromStationId": "sp76195339",
-      "toStationId": "sp13041993"
+      "id": "th64610551",
+      "fromStationId": "sp83680109",
+      "toStationId": "sp07934066"
     },
     {
-      "id": "113",
-      "fromStationId": "sp89811596",
-      "toStationId": "sp03369610"
+      "id": "th13825138",
+      "fromStationId": "sp33692951",
+      "toStationId": "sp54942348"
     },
     {
-      "id": "112",
-      "fromStationId": "sp59333336",
-      "toStationId": "sp03369610"
+      "id": "th87275599",
+      "fromStationId": "sp48508909",
+      "toStationId": "sp75065249"
     },
     {
-      "id": "41",
-      "fromStationId": "sp85956155",
-      "toStationId": "sp54710189"
+      "id": "th06893454",
+      "fromStationId": "sp27670898",
+      "toStationId": "sp22716782"
     },
     {
-      "id": "82",
-      "fromStationId": "sp76917036",
-      "toStationId": "sp43362369"
+      "id": "th34524531",
+      "fromStationId": "sp38945919",
+      "toStationId": "sp98057781"
     },
     {
-      "id": "9",
+      "id": "th39953563",
+      "fromStationId": "sp18572948",
+      "toStationId": "sp97888904"
+    },
+    {
+      "id": "th39953563",
+      "fromStationId": "sp18572948",
+      "toStationId": "sp08300756"
+    },
+    {
+      "id": "th39953563",
+      "fromStationId": "sp18572948",
+      "toStationId": "sp08300756"
+    },
+    {
+      "id": "th96502573",
+      "fromStationId": "sp86889103",
+      "toStationId": "sp34169294"
+    },
+    {
+      "id": "th00311785",
+      "fromStationId": "sp86889103",
+      "toStationId": "sp76616953"
+    },
+    {
+      "id": "th55401257",
+      "fromStationId": "sp77715428",
+      "toStationId": "sp32817489"
+    },
+    {
+      "id": "th07377667",
       "fromStationId": "sp69597378",
       "toStationId": "sp52501245"
     },
     {
-      "id": "44",
-      "fromStationId": "sp92384310",
-      "toStationId": "sp93876286"
+      "id": "th07377667",
+      "fromStationId": "sp69597378",
+      "toStationId": "sp90379603"
     },
     {
-      "id": "18",
-      "fromStationId": "sp77715428",
-      "toStationId": "sp68726644"
+      "id": "th07377667",
+      "fromStationId": "sp69597378",
+      "toStationId": "sp29784998"
     },
     {
-      "id": "129",
-      "fromStationId": "sp87791778",
-      "toStationId": "sp29985241"
-    },
-    {
-      "id": "106",
-      "fromStationId": "sp16267657",
-      "toStationId": "sp66113485"
-    },
-    {
-      "id": "121",
-      "fromStationId": "sp72057138",
-      "toStationId": "sp02895583"
-    },
-    {
-      "id": "160",
-      "fromStationId": "sp64664557",
-      "toStationId": "sp09153242"
-    },
-    {
-      "id": "231",
-      "fromStationId": "sp62728095",
-      "toStationId": "sp79472547"
-    },
-    {
-      "id": "229",
-      "fromStationId": "sp43103983",
-      "toStationId": "sp93876286"
-    },
-    {
-      "id": "228",
-      "fromStationId": "sp43103983",
-      "toStationId": "sp92384310"
-    },
-    {
-      "id": "227",
-      "fromStationId": "sp39011698",
-      "toStationId": "sp05221367"
-    },
-    {
-      "id": "226",
-      "fromStationId": "sp46557655",
-      "toStationId": "sp09153242"
-    },
-    {
-      "id": "225",
-      "fromStationId": "sp46557655",
-      "toStationId": "sp64664557"
-    },
-    {
-      "id": "223",
-      "fromStationId": "sp92448128",
-      "toStationId": "sp65047054"
-    },
-    {
-      "id": "232",
-      "fromStationId": "sp94401382",
-      "toStationId": "sp79472547"
-    },
-    {
-      "id": "142",
-      "fromStationId": "sp50873914",
-      "toStationId": "sp66113485"
-    },
-    {
-      "id": "230",
-      "fromStationId": "sp94401382",
-      "toStationId": "sp62728095"
-    },
-    {
-      "id": "224",
-      "fromStationId": "sp92448128",
-      "toStationId": "sp79236449"
-    },
-    {
-      "id": "240",
-      "fromStationId": "sp04567745",
-      "toStationId": "sp42062830"
-    },
-    {
-      "id": "251",
-      "fromStationId": "sp38721238",
-      "toStationId": "sp33018687"
-    },
-    {
-      "id": "242",
-      "fromStationId": "sp28640487",
-      "toStationId": "sp85750328"
-    },
-    {
-      "id": "250",
-      "fromStationId": "sp38721238",
-      "toStationId": "sp14902216"
-    },
-    {
-      "id": "239",
-      "fromStationId": "sp04567745",
-      "toStationId": "sp84489778"
-    },
-    {
-      "id": "253",
-      "fromStationId": "sp19794931",
-      "toStationId": "sp87123042"
-    },
-    {
-      "id": "252",
-      "fromStationId": "sp12825917",
-      "toStationId": "sp95357172"
-    },
-    {
-      "id": "271",
-      "fromStationId": "sp43629472",
-      "toStationId": "sp02895583"
-    },
-    {
-      "id": "32",
-      "fromStationId": "sp82407076",
-      "toStationId": "sp66113485"
-    },
-    {
-      "id": "283",
-      "fromStationId": "sp89381022",
-      "toStationId": "sp40029388"
-    },
-    {
-      "id": "280",
-      "fromStationId": "sp20519193",
-      "toStationId": "sp34235957"
-    },
-    {
-      "id": "267",
+      "id": "th07377667",
       "fromStationId": "sp44494127",
       "toStationId": "sp52501245"
     },
     {
-      "id": "279",
-      "fromStationId": "sp20519193",
-      "toStationId": "sp39733844"
+      "id": "th07377667",
+      "fromStationId": "sp44494127",
+      "toStationId": "sp90379603"
     },
     {
-      "id": "276",
-      "fromStationId": "sp73697609",
-      "toStationId": "sp25251174"
+      "id": "th07377667",
+      "fromStationId": "sp44494127",
+      "toStationId": "sp29784998"
     },
     {
-      "id": "275",
-      "fromStationId": "sp73697609",
-      "toStationId": "sp62519632"
+      "id": "th07377667",
+      "fromStationId": "sp46647428",
+      "toStationId": "sp52501245"
     },
     {
-      "id": "270",
-      "fromStationId": "sp60144866",
-      "toStationId": "sp94401382"
+      "id": "th07377667",
+      "fromStationId": "sp46647428",
+      "toStationId": "sp90379603"
     },
     {
-      "id": "269",
-      "fromStationId": "sp60144866",
-      "toStationId": "sp62728095"
+      "id": "th07377667",
+      "fromStationId": "sp46647428",
+      "toStationId": "sp29784998"
     },
     {
-      "id": "266",
+      "id": "th07377667",
+      "fromStationId": "sp52501245",
+      "toStationId": "sp90379603"
+    },
+    {
+      "id": "th07377667",
+      "fromStationId": "sp52501245",
+      "toStationId": "sp29784998"
+    },
+    {
+      "id": "th07377667",
       "fromStationId": "sp90379603",
-      "toStationId": "sp44494127"
+      "toStationId": "sp29784998"
     },
     {
-      "id": "265",
-      "fromStationId": "sp90379603",
-      "toStationId": "sp69597378"
+      "id": "th24929294",
+      "fromStationId": "sp62519632",
+      "toStationId": "sp32675911"
     },
     {
-      "id": "260",
-      "fromStationId": "sp79073803",
-      "toStationId": "sp03369610"
+      "id": "th24929294",
+      "fromStationId": "sp62519632",
+      "toStationId": "sp73697609"
     },
     {
-      "id": "259",
+      "id": "th24929294",
+      "fromStationId": "sp25251174",
+      "toStationId": "sp32675911"
+    },
+    {
+      "id": "th24929294",
+      "fromStationId": "sp25251174",
+      "toStationId": "sp73697609"
+    },
+    {
+      "id": "th24929294",
+      "fromStationId": "sp32675911",
+      "toStationId": "sp73697609"
+    },
+    {
+      "id": "th69498688",
+      "fromStationId": "sp34235957",
+      "toStationId": "sp20519193"
+    },
+    {
+      "id": "th69498688",
+      "fromStationId": "sp39733844",
+      "toStationId": "sp20519193"
+    },
+    {
+      "id": "th76957842",
+      "fromStationId": "sp82407076",
+      "toStationId": "sp66113485"
+    },
+    {
+      "id": "th76957842",
+      "fromStationId": "sp16267657",
+      "toStationId": "sp66113485"
+    },
+    {
+      "id": "th76957842",
+      "fromStationId": "sp50873914",
+      "toStationId": "sp66113485"
+    },
+    {
+      "id": "th17598843",
+      "fromStationId": "sp71461165",
+      "toStationId": "sp03948652"
+    },
+    {
+      "id": "th17598843",
+      "fromStationId": "sp33588374",
+      "toStationId": "sp03948652"
+    },
+    {
+      "id": "th44445976",
+      "fromStationId": "sp03369610",
+      "toStationId": "sp79073803"
+    },
+    {
+      "id": "th44445976",
+      "fromStationId": "sp03369610",
+      "toStationId": "sp89811596"
+    },
+    {
+      "id": "th44445976",
+      "fromStationId": "sp03369610",
+      "toStationId": "sp59333336"
+    },
+    {
+      "id": "th44445976",
       "fromStationId": "sp79073803",
       "toStationId": "sp89811596"
     },
     {
-      "id": "258",
+      "id": "th44445976",
       "fromStationId": "sp79073803",
       "toStationId": "sp59333336"
     },
     {
-      "id": "254",
-      "fromStationId": "sp70609462",
-      "toStationId": "sp73459064"
+      "id": "th77733133",
+      "fromStationId": "sp02895583",
+      "toStationId": "sp43629472"
     },
     {
-      "id": "244",
+      "id": "th77733133",
+      "fromStationId": "sp02895583",
+      "toStationId": "sp51759627"
+    },
+    {
+      "id": "th77733133",
+      "fromStationId": "sp02895583",
+      "toStationId": "sp72057138"
+    },
+    {
+      "id": "th77733133",
+      "fromStationId": "sp02895583",
+      "toStationId": "sp72057138"
+    },
+    {
+      "id": "th04827001",
+      "fromStationId": "sp14902216",
+      "toStationId": "sp38721238"
+    },
+    {
+      "id": "th04827001",
+      "fromStationId": "sp14902216",
+      "toStationId": "sp38721238"
+    },
+    {
+      "id": "th04827001",
+      "fromStationId": "sp33018687",
+      "toStationId": "sp38721238"
+    },
+    {
+      "id": "th04827001",
+      "fromStationId": "sp33018687",
+      "toStationId": "sp38721238"
+    },
+    {
+      "id": "th88962553",
+      "fromStationId": "sp40878362",
+      "toStationId": "sp49485903"
+    },
+    {
+      "id": "th86636855",
+      "fromStationId": "sp54710189",
+      "toStationId": "sp85956155"
+    },
+    {
+      "id": "th31475086",
+      "fromStationId": "sp85770241",
+      "toStationId": "sp49069277"
+    },
+    {
+      "id": "th86243365",
+      "fromStationId": "sp54055467",
+      "toStationId": "sp51142423"
+    },
+    {
+      "id": "th31113237",
+      "fromStationId": "sp76195339",
+      "toStationId": "sp13041993"
+    },
+    {
+      "id": "th25393391",
+      "fromStationId": "sp77715428",
+      "toStationId": "sp68726644"
+    },
+    {
+      "id": "th25393391",
+      "fromStationId": "sp77715428",
+      "toStationId": "sp80470350"
+    },
+    {
+      "id": "th15446281",
+      "fromStationId": "sp76917036",
+      "toStationId": "sp43362369"
+    },
+    {
+      "id": "th57045013",
+      "fromStationId": "sp79472547",
+      "toStationId": "sp60144866"
+    },
+    {
+      "id": "th57045013",
+      "fromStationId": "sp79472547",
+      "toStationId": "sp62728095"
+    },
+    {
+      "id": "th57045013",
+      "fromStationId": "sp79472547",
+      "toStationId": "sp94401382"
+    },
+    {
+      "id": "th57045013",
+      "fromStationId": "sp60144866",
+      "toStationId": "sp62728095"
+    },
+    {
+      "id": "th57045013",
+      "fromStationId": "sp60144866",
+      "toStationId": "sp94401382"
+    },
+    {
+      "id": "th87823391",
+      "fromStationId": "sp93876286",
+      "toStationId": "sp92384310"
+    },
+    {
+      "id": "th87823391",
+      "fromStationId": "sp93876286",
+      "toStationId": "sp43103983"
+    },
+    {
+      "id": "th69232068",
       "fromStationId": "sp36669202",
       "toStationId": "sp29985241"
     },
     {
-      "id": "243",
+      "id": "th69232068",
       "fromStationId": "sp36669202",
       "toStationId": "sp87791778"
     },
     {
-      "id": "246",
-      "fromStationId": "sp36623075",
+      "id": "th69232068",
+      "fromStationId": "sp36669202",
+      "toStationId": "sp29985241"
+    },
+    {
+      "id": "th69232068",
+      "fromStationId": "sp36669202",
+      "toStationId": "sp87791778"
+    },
+    {
+      "id": "th69232068",
+      "fromStationId": "sp29985241",
+      "toStationId": "sp87791778"
+    },
+    {
+      "id": "th45275131",
+      "fromStationId": "sp08346904",
       "toStationId": "sp99170467"
     },
     {
-      "id": "245",
-      "fromStationId": "sp36623075",
-      "toStationId": "sp08346904"
+      "id": "th45275131",
+      "fromStationId": "sp08346904",
+      "toStationId": "sp36623075"
+    },
+    {
+      "id": "th45275131",
+      "fromStationId": "sp08346904",
+      "toStationId": "sp36623075"
+    },
+    {
+      "id": "th45275131",
+      "fromStationId": "sp99170467",
+      "toStationId": "sp36623075"
+    },
+    {
+      "id": "th45275131",
+      "fromStationId": "sp99170467",
+      "toStationId": "sp36623075"
+    },
+    {
+      "id": "th81467082",
+      "fromStationId": "sp25453858",
+      "toStationId": "sp42494937"
+    },
+    {
+      "id": "th99324350",
+      "fromStationId": "sp65047054",
+      "toStationId": "sp92448128"
+    },
+    {
+      "id": "th99324350",
+      "fromStationId": "sp79236449",
+      "toStationId": "sp92448128"
+    },
+    {
+      "id": "th89519048",
+      "fromStationId": "sp09153242",
+      "toStationId": "sp64664557"
+    },
+    {
+      "id": "th89519048",
+      "fromStationId": "sp09153242",
+      "toStationId": "sp46557655"
+    },
+    {
+      "id": "th35783705",
+      "fromStationId": "sp40711636",
+      "toStationId": "sp29214654"
+    },
+    {
+      "id": "th40313031",
+      "fromStationId": "sp44350626",
+      "toStationId": "sp54408093"
+    },
+    {
+      "id": "th27149236",
+      "fromStationId": "sp12064322",
+      "toStationId": "sp35989138"
+    },
+    {
+      "id": "th38229074",
+      "fromStationId": "sp70609462",
+      "toStationId": "sp73459064"
+    },
+    {
+      "id": "th77551393",
+      "fromStationId": "sp19794931",
+      "toStationId": "sp87123042"
+    },
+    {
+      "id": "th67660675",
+      "fromStationId": "sp12825917",
+      "toStationId": "sp95357172"
+    },
+    {
+      "id": "th76581038",
+      "fromStationId": "sp47735949",
+      "toStationId": "sp81661821"
+    },
+    {
+      "id": "th76581038",
+      "fromStationId": "sp47735949",
+      "toStationId": "sp81661821"
+    },
+    {
+      "id": "th85249633",
+      "fromStationId": "sp28640487",
+      "toStationId": "sp85750328"
+    },
+    {
+      "id": "th85249633",
+      "fromStationId": "sp28640487",
+      "toStationId": "sp85750328"
+    },
+    {
+      "id": "th74703994",
+      "fromStationId": "sp27410040",
+      "toStationId": "sp18985080"
+    },
+    {
+      "id": "th74703994",
+      "fromStationId": "sp27410040",
+      "toStationId": "sp18985080"
+    },
+    {
+      "id": "th15580778",
+      "fromStationId": "sp51861257",
+      "toStationId": "sp84014290"
+    },
+    {
+      "id": "th15580778",
+      "fromStationId": "sp51861257",
+      "toStationId": "sp84014290"
     }
   ],
-  "schedule": [
+  "connections": [
     {
       "id": "lk73232890",
       "fromStationId": "sp62728095",

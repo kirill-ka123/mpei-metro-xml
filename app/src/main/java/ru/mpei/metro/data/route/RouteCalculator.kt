@@ -141,7 +141,7 @@ object RouteCalculator {
 
     private fun MetroGraph.buildGraph(): Graph {
         val graph = Graph()
-        for (edge in schedule) {
+        for (edge in connections) {
             graph.addEdge(edge.fromStationId, edge.toStationId, edge.time)
         }
         return graph

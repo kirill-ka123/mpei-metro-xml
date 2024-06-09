@@ -1,6 +1,5 @@
 package ru.mpei.metro.presentation.map.bottomsheet.detail
 
-import android.app.Activity
 import android.graphics.Color
 import android.view.View
 import android.widget.FrameLayout
@@ -16,11 +15,8 @@ import ru.mpei.metro.presentation.map.di.MapFragmentScope
 import javax.inject.Inject
 import javax.inject.Named
 
-private const val COLLAPSED_HEIGHT = 0
-
 @MapFragmentScope
 class DetailBottomSheetController @Inject constructor(
-    private val activity: Activity,
     @Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW)
     private val rootView: View,
     private val mapViewModel: MapViewModel,
@@ -32,8 +28,7 @@ class DetailBottomSheetController @Inject constructor(
         lifecycleOwner.lifecycle.addObserver(this)
         val binding = DetailBottomSheetLayoutBinding.bind(rootView.findViewById(R.id.detail_bottom_sheet))
         bottomSheetBehavior = BottomSheetBehavior.from(binding.detailBottomSheet).apply {
-            val density = activity.resources.displayMetrics.density
-            peekHeight = (COLLAPSED_HEIGHT * density).toInt()
+            peekHeight = 0
             state = BottomSheetBehavior.STATE_COLLAPSED
             isHideable = false
             bottomSheetBehaviorCallback =

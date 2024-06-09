@@ -6,7 +6,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Station(
     val id: String,
-    val stationId: String,
     val stationName: String,
     val branchId: String,
     val branchName: String,

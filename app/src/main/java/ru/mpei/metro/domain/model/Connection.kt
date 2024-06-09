@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Road(
+data class Connection(
     val id: String,
     val fromStationId: String,
     val toStationId: String,

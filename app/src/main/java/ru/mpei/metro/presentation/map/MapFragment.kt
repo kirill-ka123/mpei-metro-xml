@@ -55,6 +55,9 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         mapFragmentComponent?.metroGraphProvider()?.let {
             binding.metroView.setMetroGraph(it.getMetroGraph())
         }
+        mapFragmentComponent?.branchSplineConstructor()?.let {
+            binding.metroView.setBranchSplineConstructor(it)
+        }
         mapViewModel.selectedRoute.observe(viewLifecycleOwner) { route ->
             binding.metroView.setRoute(route)
         }

@@ -14,7 +14,6 @@ import android.view.MotionEvent
 import android.view.MotionEvent.INVALID_POINTER_ID
 import android.view.ScaleGestureDetector
 import android.view.View
-import androidx.annotation.ColorInt
 import ru.mpei.metro.R
 import ru.mpei.metro.domain.model.MetroGraph
 import ru.mpei.metro.domain.model.Position
@@ -41,11 +40,6 @@ private const val STATION_CLICKED_CIRCLE_RADIUS = 15f
 private const val STATION_NAME_TEXT_SIZE = 10.5f
 private const val CLICK_AREA = 25f
 private const val STATION_TEXT_SIZE = 25f
-private const val CLICKED_STATION_ACTIONS_LAYOUT_WIDTH = 200f
-private const val CLICKED_STATION_ACTIONS_LAYOUT_HEIGHT = 200f
-private const val CLICKED_STATION_ACTION_BUTTON_OFFSET = 20f
-private const val CLICKED_STATION_ACTION_BUTTON_WIDTH = CLICKED_STATION_ACTIONS_LAYOUT_WIDTH
-private const val CLICKED_STATION_ACTION_BUTTON_HEIGHT = CLICKED_STATION_ACTIONS_LAYOUT_HEIGHT / 2
 
 class MetroView @JvmOverloads constructor(
     context: Context,
@@ -56,6 +50,7 @@ class MetroView @JvmOverloads constructor(
     private var metroGraph: MetroGraph? = null
     private var route: Route? = null
     private var selectedStations: SelectedStations? = null
+    private var branchSplineConstructor: BranchSplineConstructor? = null
 
     private var scale = 1.0f
     private var posX = 0f
@@ -73,18 +68,6 @@ class MetroView @JvmOverloads constructor(
     }
     private val linesPath = Path()
     private val clickedStationPaint = Paint()
-    private val clickedStationActionsLayoutPaint: Paint = Paint().apply {
-        color = Color.WHITE
-        setShadowLayer(10f, 0f, 5f, Color.DKGRAY)
-    }
-    private val clickedStationActionButtonPaint = Paint().apply {
-        color = context.getColor(R.color.green_eagle)
-    }
-    private val clickedStationActionTextPaint = Paint().apply {
-        color = Color.WHITE
-        textSize = 40f
-    }
-
     private val stationsNamesPaint = Paint().apply {
         textSize = STATION_NAME_TEXT_SIZE
         color = Color.BLACK
@@ -157,6 +140,10 @@ class MetroView @JvmOverloads constructor(
         invalidate()
     }
 
+    fun setBranchSplineConstructor(branchSplineConstructor: BranchSplineConstructor) {
+        this.branchSplineConstructor = branchSplineConstructor
+    }
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         scaleGestureDetector.onTouchEvent(event)
         gestureDetector.onTouchEvent(event)
@@ -215,11 +202,12 @@ class MetroView @JvmOverloads constructor(
             canvas.translate(posX * (1 / scale), posY * (1 / scale))
 
             metroGraph.branches.forEach { branch ->
-                val branchColor = Color.parseColor(branch.hexColor)
-                val branchStations = branch.stationIds.mapNotNull { stationId ->
-                    metroGraph.stations.find { it.id == stationId }
-                }
-                canvas.drawBranch(branchStations, branchColor, branch.isBranchLooped)
+                linesPaint.color = Color.parseColor(branch.hexColor)
+                branchSplineConstructor?.drawBranch(
+                    canvas = canvas,
+                    paint = linesPaint,
+                    branch = branch,
+                )
             }
             canvasLastClickPosition?.let { clickCoordinates ->
                 canvas.drawClickedStation(metroGraph.stations, clickCoordinates)
@@ -232,26 +220,6 @@ class MetroView @JvmOverloads constructor(
                 canvas.drawRoute(route)
             }
         }
-    }
-
-    private fun Canvas.drawBranch(
-        branchStations: List<Station>,
-        @ColorInt
-        branchColor: Int,
-        isBranchLooped: Boolean,
-    ) {
-        if (branchStations.size < 2) {
-            return
-        }
-        linesPath.reset()
-        val positions = branchStations.map { it.position } + if (isBranchLooped) {
-            listOf(branchStations.first().position)
-        } else {
-            emptyList()
-        }
-        SplineConstructor.constructSpline(linesPath, positions)
-        linesPaint.color = branchColor
-        drawPath(linesPath, linesPaint)
     }
 
     private fun Canvas.drawClickedStation(
@@ -335,9 +303,10 @@ class MetroView @JvmOverloads constructor(
             }
         }
         metroGraph.undergroundTransitions.forEach { undergroundTransition ->
-            val undergroundTransitionStations = undergroundTransition.stationIds.mapNotNull { stationId ->
-                metroGraph.stations.find { it.id == stationId }
-            }
+            val undergroundTransitionStations =
+                undergroundTransition.stationIds.mapNotNull { stationId ->
+                    metroGraph.stations.find { it.id == stationId }
+                }
             drawUndergroundTransition(undergroundTransitionStations)
         }
     }
@@ -390,18 +359,33 @@ class MetroView @JvmOverloads constructor(
     }
 
     private fun Canvas.drawRoute(route: Route) {
+        val branchSplineConstructor = branchSplineConstructor ?: return
         val routeStations = route.routeNodes.map { it.station }
-        val branchStations = routeStations.groupBy { station ->
-            station.hexColor
+        val branchWithStationsToDraw = routeStations.groupBy { station ->
+            station.branchId
+        }.mapNotNull {
+            val branchId = it.key
+            val stationsToDraw = it.value
+            val branch = metroGraph?.branches?.find { branch ->
+                branch.id == branchId
+            } ?: return@mapNotNull null
+
+            branch to stationsToDraw
         }
-        //val transactions = routeStations.groupBy { it.transition }.mapNotNull { it.key }
-        for ((hexColor, stations) in branchStations) {
-            drawBranch(stations, Color.parseColor(hexColor), false)
+        for ((branch, stations) in branchWithStationsToDraw) {
+            if (branchWithStationsToDraw.size < 2) {
+                continue
+            }
+            linesPaint.color = Color.parseColor(branch.hexColor)
+            branchSplineConstructor.drawSegmentOfBranch(
+                canvas = this,
+                paint = linesPaint,
+                branch = branch,
+                fromStation = stations.first(),
+                toStation = stations.last(),
+            )
         }
         drawStations(routeStations)
-//        metroGraph?.let { city ->
-//            drawTransitions(city, transactions)
-//        }
     }
 
     private fun Station.inClickArea(clickCoordinates: Position) =

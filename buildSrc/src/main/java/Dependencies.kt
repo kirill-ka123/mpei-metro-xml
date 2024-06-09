@@ -19,11 +19,13 @@ object VersionsDigest {
      */
     object AndroidX {
 
-        const val core = "1.9.0"
+        const val core = "1.13.1"
 
-        const val appcompat = "1.6.0"
+        const val appcompat = "1.6.1"
 
-        const val material = "1.8.0"
+        const val acitivity = "1.8.0"
+
+        const val material = "1.12.0"
 
         const val constraintLayout = "2.1.4"
 
@@ -51,6 +53,7 @@ object Dependencies {
     object AndroidX {
         const val coreKtx = "androidx.core:core-ktx:${VersionsDigest.AndroidX.core}"
         const val appcompat = "androidx.appcompat:appcompat:${VersionsDigest.AndroidX.appcompat}"
+        const val acitivity = "androidx.activity:activity:${VersionsDigest.AndroidX.acitivity}"
         const val material =
             "com.google.android.material:material:${VersionsDigest.AndroidX.material}"
         const val constraintLayout =

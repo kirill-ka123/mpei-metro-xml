@@ -11,6 +11,6 @@ data class MetroGraph(
     val branches: List<Branch>,
     val undergroundTransitions: List<UndergroundTransition>,
     val groundTransitions: List<GroundTransition>,
-    val schedule: List<Road>,
+    val connections: List<Connection>,
     val texts: List<Text>,
 ): Parcelable

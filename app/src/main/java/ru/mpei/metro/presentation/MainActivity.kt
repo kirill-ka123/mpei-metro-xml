@@ -6,16 +6,14 @@ import androidx.appcompat.app.AppCompatDelegate
 import ru.mpei.metro.MetroApplication
 import ru.mpei.metro.R
 import ru.mpei.metro.presentation.di.ActivityComponent
-import ru.mpei.metro.presentation.di.ApplicationComponent
 import ru.mpei.metro.presentation.di.DaggerActivityComponent
 
 class MainActivity : AppCompatActivity() {
     lateinit var activityComponent: ActivityComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        super.onCreate(savedInstanceState)
 
         val applicationComponent = (applicationContext as MetroApplication).applicationComponent
         activityComponent = DaggerActivityComponent.builder()

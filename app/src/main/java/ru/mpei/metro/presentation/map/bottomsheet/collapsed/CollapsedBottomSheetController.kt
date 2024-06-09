@@ -109,6 +109,9 @@ class CollapsedBottomSheetController @Inject constructor(
                 suggestedRoutesAdapter.resetSelectedRoute()
                 suggestedRoutesAdapter.differ.submitList(routes)
                 mapViewModel.setSelectedRoute(routes.first())
+            } else {
+                mapViewModel.setSelectedRoute(null)
+                suggestedRoutesAdapter.differ.submitList(emptyList())
             }
         }
     }
