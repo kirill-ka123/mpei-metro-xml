@@ -2,10 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mapFragment">
+    app:startDestination="@id/metroFragment">
 
     <fragment
-        android:id="@+id/mapFragment"
-        android:name="ru.mpei.metro.presentation.map.MapFragment"
+        android:id="@+id/metroFragment"
+        android:name="ru.mpei.metro.presentation.metro.MetroFragment"
         android:label="TodoFragment" />
 </navigation>
