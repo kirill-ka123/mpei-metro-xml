@@ -10,6 +10,17 @@ import javax.inject.Inject
 class GetRoutesUseCase @Inject constructor(
     private val metroRepository: MetroRepository,
 ) {
-    suspend fun getRoutes(metroGraph: MetroGraph, fromStation: Station, toStation: Station) =
-        metroRepository.getRoutes(metroGraph, fromStation, toStation)
+    suspend fun getRoutes(
+        metroGraph: MetroGraph,
+        fromStation: Station,
+        toStation: Station,
+        timeWeight: Float,
+        comfortWeight: Float,
+    ) = metroRepository.getRoutes(
+        metroGraph,
+        fromStation,
+        toStation,
+        timeWeight,
+        comfortWeight
+    )
 }

@@ -13,6 +13,7 @@ import ru.mpei.metro.R
 import ru.mpei.metro.domain.model.Route
 import ru.mpei.metro.domain.model.RouteNode
 import ru.mpei.metro.domain.model.Station
+import ru.mpei.metro.domain.route.constructTimeOfRoute
 
 private const val EDGE_STATION_CIRCLE_RADIUS = 35f
 private const val EDGE_STATION_TEXT_SIZE = 31f
@@ -90,7 +91,7 @@ class RouteInfoView @JvmOverloads constructor(
 
             val textPaint = routeNode.station.getStationTextPaint()
             val radius = routeNode.station.getRadius()
-            val timeInfo = routeNode.achieveTime.toString()
+            val timeInfo = constructTimeOfRoute(routeNode.achieveTime)
             textPaint.getTextBounds(timeInfo, 0, timeInfo.length, timeInfoTextBounds)
             val stationName = routeNode.station.stationName
             textPaint.getTextBounds(stationName, 0, stationName.length, stationNameTextBounds)
@@ -179,7 +180,7 @@ class RouteInfoView @JvmOverloads constructor(
         y: Float,
     ) {
         val textPaint = routeNode.station.getStationTextPaint()
-        val timeInfo = routeNode.achieveTime.toString()
+        val timeInfo = constructTimeOfRoute(routeNode.achieveTime)
         textPaint.getTextBounds(timeInfo, 0, timeInfo.length, timeInfoTextBounds)
         drawText(
             timeInfo,

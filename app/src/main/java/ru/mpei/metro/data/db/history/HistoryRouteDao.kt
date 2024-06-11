@@ -1,11 +1,11 @@
 package ru.mpei.metro.data.db.history
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface HistoryRouteDao {
@@ -15,6 +15,9 @@ interface HistoryRouteDao {
     @Delete
     suspend fun deleteRoute(route: HistoryRouteEntity)
 
-    @Query("SELECT * FROM history_route")
-    fun getAllRoutes(): Flow<List<HistoryRouteEntity>>
+    @Query("DELETE FROM history_routes WHERE id = (SELECT id FROM history_routes ORDER BY timestamp ASC LIMIT 1)")
+    fun deleteOldestRoute()
+
+    @Query("SELECT * FROM history_routes ORDER BY timestamp DESC")
+    fun getAllRoutes(): LiveData<List<HistoryRouteEntity>>
 }

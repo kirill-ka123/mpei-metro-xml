@@ -12,7 +12,7 @@ import ru.mpei.metro.domain.search.StationsSearchController
 import javax.inject.Inject
 
 @ApplicationScope
-class MapViewModelFactory @Inject constructor(
+class MetroViewModelFactory @Inject constructor(
     private val getRoutesUseCase: GetRoutesUseCase,
     private val getHistoryRoutesUseCase: GetHistoryRoutesUseCase,
     private val insertHistoryRoutesUseCase: InsertHistoryRoutesUseCase,
@@ -21,7 +21,7 @@ class MapViewModelFactory @Inject constructor(
     private val stationsSearchController: StationsSearchController,
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return MapViewModel(
+        return MetroViewModel(
             getRoutesUseCase,
             getHistoryRoutesUseCase,
             insertHistoryRoutesUseCase,

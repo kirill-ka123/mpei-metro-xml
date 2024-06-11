@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.multibindings.IntoSet
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.map.BranchSplineConstructor
-import ru.mpei.metro.presentation.map.bottomsheet.MapBottomSheetController
+import ru.mpei.metro.presentation.map.bottomsheet.MetroBottomSheetController
 import ru.mpei.metro.presentation.map.bottomsheet.detail.DetailBottomSheetController
 import ru.mpei.metro.presentation.map.location.LocationController
 
@@ -13,7 +13,7 @@ import ru.mpei.metro.presentation.map.location.LocationController
 interface MapFragmentModule {
     @Binds
     @IntoSet
-    fun bindMapBottomSheetController(i: MapBottomSheetController): FragmentOnCreateViewListener
+    fun bindMetroBottomSheetController(i: MetroBottomSheetController): FragmentOnCreateViewListener
 
     @Binds
     @IntoSet

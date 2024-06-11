@@ -10,7 +10,7 @@ import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
 import ru.mpei.metro.presentation.di.ActivityComponent
 import ru.mpei.metro.presentation.map.BranchSplineConstructor
-import ru.mpei.metro.presentation.map.MapViewModel
+import ru.mpei.metro.presentation.map.MetroViewModel
 import javax.inject.Named
 
 @Component(
@@ -37,7 +37,7 @@ interface MapFragmentComponent {
         fun rootView(@Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW) rootView: View): Builder
 
         @BindsInstance
-        fun mapViewModel(mapViewModel: MapViewModel): Builder
+        fun metroViewModel(metroViewModel: MetroViewModel): Builder
 
         fun build(): MapFragmentComponent
     }

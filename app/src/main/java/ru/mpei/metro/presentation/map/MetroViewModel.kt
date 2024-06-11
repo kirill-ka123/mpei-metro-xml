@@ -4,7 +4,6 @@ import android.location.Location
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ru.mpei.metro.domain.model.HistoryRoute
@@ -17,11 +16,10 @@ import ru.mpei.metro.domain.usecases.GetHistoryRoutesUseCase
 import ru.mpei.metro.domain.usecases.GetRoutesUseCase
 import ru.mpei.metro.domain.usecases.InsertHistoryRoutesUseCase
 import ru.mpei.metro.domain.usecases.UpdateMetroGraphUseCase
-import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
 import ru.mpei.metro.presentation.map.model.SelectedStations
 import java.time.LocalDateTime
 
-class MapViewModel(
+class MetroViewModel(
     private val getRoutesUseCase: GetRoutesUseCase,
     getHistoryRoutesUseCase: GetHistoryRoutesUseCase,
     private val insertHistoryRoutesUseCase: InsertHistoryRoutesUseCase,
@@ -40,16 +38,21 @@ class MapViewModel(
     val suggestedStations: LiveData<List<Station>> = _suggestedStations
     private val _closeStations: MutableLiveData<List<Station>> = MutableLiveData()
     val closeStations: LiveData<List<Station>> = _closeStations
+    private val _selectedComfortWeight: MutableLiveData<Float> = MutableLiveData()
+    val selectedComfortWeight: LiveData<Float> = _selectedComfortWeight
 
-    val historyRoutes = getHistoryRoutesUseCase.getHistoryRoutes().asLiveData()
+    val historyRoutes = getHistoryRoutesUseCase.getHistoryRoutes()
 
-    var stationDirection: StationDirection = StationDirection.TO
-
-    fun getRoutes(metroGraph: MetroGraph, selectedStations: SelectedStations) {
-        if (selectedStations.fromStation != null && selectedStations.toStation != null) {
-            getRoutes(metroGraph, selectedStations.fromStation, selectedStations.toStation)
+    fun getRoutes(metroGraph: MetroGraph) {
+        val comfortWeight = selectedComfortWeight.value ?: 0f
+        val timeWeight = 1 - comfortWeight
+        val fromStation = selectedStations.value?.fromStation
+        val toStation = selectedStations.value?.toStation
+        if (fromStation != null && toStation != null) {
+            getRoutes(metroGraph, fromStation, toStation, timeWeight, comfortWeight)
         } else {
             _routes.postValue(null)
+            _selectedRoute.postValue(null)
         }
     }
 
@@ -57,13 +60,18 @@ class MapViewModel(
         metroGraph: MetroGraph,
         fromStation: Station,
         toStation: Station,
+        timeWeight: Float,
+        comfortWeight: Float,
     ) = viewModelScope.launch {
         val routes = getRoutesUseCase.getRoutes(
             metroGraph = metroGraph,
             fromStation = fromStation,
             toStation = toStation,
+            timeWeight = timeWeight,
+            comfortWeight = comfortWeight,
         )
         _routes.postValue(routes)
+        _selectedRoute.postValue(routes.first())
     }
 
     fun setSelectedRoute(route: Route?) {
@@ -125,6 +133,10 @@ class MapViewModel(
             currentSelectedStations
         }
         _selectedStations.value = newSelectedStations
+    }
+
+    fun setSelectedComfortWeight(comfortWeight: Float) {
+        _selectedComfortWeight.value = comfortWeight
     }
 
     fun onLocationChanged(metroGraph: MetroGraph, location: Location) = viewModelScope.launch {

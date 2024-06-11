@@ -18,8 +18,8 @@ class MapFragment : Fragment(R.layout.map_fragment) {
     private val activityComponent
         get() = (requireActivity() as MainActivity).activityComponent
 
-    private val mapViewModel: MapViewModel by viewModels {
-        activityComponent.mapViewModelFactory()
+    private val metroViewModel: MetroViewModel by viewModels {
+        activityComponent.metroViewModelFactory()
     }
 
     private var _binding: MapFragmentBinding? = null
@@ -39,7 +39,7 @@ class MapFragment : Fragment(R.layout.map_fragment) {
             .builder()
             .activityComponent(activityComponent)
             .rootView(rootView)
-            .mapViewModel(mapViewModel)
+            .metroViewModel(metroViewModel)
             .build()
 
         mapFragmentComponent?.onCreateViewListeners()?.forEach { listener ->
@@ -51,18 +51,24 @@ class MapFragment : Fragment(R.layout.map_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mapViewModel.updateMetroGraph(Constants.DEFAULT_CITY_ID)
-        mapFragmentComponent?.metroGraphProvider()?.let {
-            binding.metroView.setMetroGraph(it.getMetroGraph())
-        }
+        metroViewModel.updateMetroGraph(Constants.DEFAULT_CITY_ID)
+        val metroGraph = mapFragmentComponent?.metroGraphProvider()?.getMetroGraph()
+        metroGraph?.let { binding.metroView.setMetroGraph(it) }
         mapFragmentComponent?.branchSplineConstructor()?.let {
             binding.metroView.setBranchSplineConstructor(it)
         }
-        mapViewModel.selectedRoute.observe(viewLifecycleOwner) { route ->
+        metroViewModel.selectedRoute.observe(viewLifecycleOwner) { route ->
             binding.metroView.setRoute(route)
         }
-        mapViewModel.selectedStations.observe(viewLifecycleOwner) { selectedStations ->
+        metroViewModel.selectedStations.observe(viewLifecycleOwner) { selectedStations ->
             binding.metroView.setSelectedStations(selectedStations)
+            metroGraph?.let { metroViewModel.getRoutes(it) }
+            if (selectedStations.fromStation != null && selectedStations.toStation != null) {
+                metroViewModel.insertHistoryRoute(selectedStations)
+            }
+        }
+        metroViewModel.selectedComfortWeight.observe(viewLifecycleOwner) { _ ->
+            metroGraph?.let { metroViewModel.getRoutes(it) }
         }
     }
 

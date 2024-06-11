@@ -73,15 +73,17 @@ class BranchSplineConstructor @Inject constructor(
             }
             val startStationPathLength = branchStationsPathInfo.stationToPathLength[startStation]
             val endStationPathLength = branchStationsPathInfo.stationToPathLength[endStation]
+            if (startStationPathLength == null || endStationPathLength == null) {
+                return
+            }
 
             val pathMeasure = PathMeasure(branchStationsPathInfo.path, false)
             val clippedBranchPath = Path()
-            clippedBranchPath.moveTo(startStation.position.x, startStation.position.y)
             pathMeasure.getSegment(
-                startStationPathLength ?: 0f,
-                endStationPathLength ?: pathMeasure.length,
+                minOf(startStationPathLength, endStationPathLength),
+                maxOf(startStationPathLength, endStationPathLength),
                 clippedBranchPath,
-                false,
+                true,
             )
 
             canvas.drawPath(clippedBranchPath, paint)
@@ -116,9 +118,12 @@ class BranchSplineConstructor @Inject constructor(
 
                 path.cubicTo(c0.x, c0.y, c1.x, c1.y, p1.x, p1.y)
 
-                stationToPathLength[station] = PathMeasure(path, false).length
+                if (!stationToPathLength.containsKey(station)) {
+                    stationToPathLength[station] = PathMeasure(path, false).length
+                }
             }
         }
+
         if (branch.isBranchLooped) {
             path.close()
         }

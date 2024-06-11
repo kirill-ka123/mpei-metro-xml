@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import androidx.activity.result.contract.ActivityResultContracts
@@ -12,7 +13,7 @@ import androidx.core.app.ActivityCompat
 import androidx.lifecycle.LifecycleOwner
 import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.common.FragmentOnCreateViewListener
-import ru.mpei.metro.presentation.map.MapViewModel
+import ru.mpei.metro.presentation.map.MetroViewModel
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
 import javax.inject.Inject
 
@@ -22,7 +23,7 @@ private const val DEFAULT_LOCATION_MIN_DISTANCE = 10F
 @MapFragmentScope
 class LocationController @Inject constructor(
     private val activity: AppCompatActivity,
-    private val mapViewModel: MapViewModel,
+    private val metroViewModel: MetroViewModel,
     private val metroGraphProvider: MetroGraphProvider,
 ) : FragmentOnCreateViewListener {
     private val locationManager =
@@ -40,9 +41,10 @@ class LocationController @Inject constructor(
     }
 
     override fun onCreateView(lifecycleOwner: LifecycleOwner) {
+        metroViewModel.onLocationChanged(metroGraphProvider.getMetroGraph(), Location(""))
         startLocationUpdatesWithPermissionsRequest(
             listener = { location ->
-                mapViewModel.onLocationChanged(metroGraphProvider.getMetroGraph(), location)
+                metroViewModel.onLocationChanged(metroGraphProvider.getMetroGraph(), location)
             }
         )
     }

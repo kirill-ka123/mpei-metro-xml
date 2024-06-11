@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.mpei.metro.databinding.HistoryRouteLayoutBinding
 import ru.mpei.metro.domain.model.HistoryRoute
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 import javax.inject.Inject
 
 @MapFragmentScope
@@ -40,6 +42,10 @@ class HistoryRouteAdapter @Inject constructor(
             val toStationColor = Color.parseColor(historyRoute.toStation.hexColor)
             toStationDot.setColorFilter(toStationColor)
             toStationName.text = historyRoute.toStation.stationName
+
+            val pattern = "d MMM | H:mm"
+            val formatter = DateTimeFormatter.ofPattern(pattern, Locale.getDefault())
+            descriptionDate.text = historyRoute.date.format(formatter)
         }
     }
 

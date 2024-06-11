@@ -19,4 +19,5 @@
     <string name="history_is_empty_title">История пуста</string>
     <string name="minutes">%1$s мин</string>
     <string name="comfort">Комфортность: %1$s</string>
+    <string name="comfort_label">Комфортность:</string>
 </resources>

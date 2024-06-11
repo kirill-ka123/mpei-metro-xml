@@ -8,18 +8,18 @@ import java.time.format.DateTimeFormatter
 import java.util.Locale
 import javax.inject.Inject
 
-const val MAX_HISTORY_ROUTES = 4
+const val MAX_HISTORY_ROUTES = 8
 
 @ApplicationScope
 class InsertHistoryRoutesUseCase @Inject constructor(
     private val metroRepository: MetroRepository,
 ) {
     suspend fun insertHistoryRoute(historyRoute: HistoryRoute) {
-        metroRepository.getHistoryRoutes().collect { historyRoutes ->
-            if (historyRoutes.size < MAX_HISTORY_ROUTES) {
-                metroRepository.insertHistoryRoute(historyRoute.mapHistoryRoute())
-            }
+        val historyRoutesSize = metroRepository.getHistoryRoutes().value?.size ?: 0
+        if (historyRoutesSize > MAX_HISTORY_ROUTES) {
+            metroRepository.deleteOldestHistoryRoute()
         }
+        metroRepository.insertHistoryRoute(historyRoute.mapHistoryRoute())
     }
 
     private fun HistoryRoute.mapHistoryRoute(): HistoryRouteEntity {

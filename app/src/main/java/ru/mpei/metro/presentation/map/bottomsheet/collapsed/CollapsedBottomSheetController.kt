@@ -1,30 +1,36 @@
 package ru.mpei.metro.presentation.map.bottomsheet.collapsed
 
 import android.app.Activity
+import android.graphics.Color
 import android.view.View
 import android.widget.FrameLayout
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.slider.LabelFormatter
 import ru.mpei.metro.R
 import ru.mpei.metro.databinding.BottomSheetLayoutBinding
-import ru.mpei.metro.domain.graph.MetroGraphProvider
-import ru.mpei.metro.presentation.map.MapViewModel
+import ru.mpei.metro.domain.model.Station
+import ru.mpei.metro.domain.route.constructFullTimeOfRoute
+import ru.mpei.metro.presentation.map.MetroViewModel
 import ru.mpei.metro.presentation.map.bottomsheet.COLLAPSED_HEIGHT
 import ru.mpei.metro.presentation.map.bottomsheet.StationDirection
 import ru.mpei.metro.presentation.map.bottomsheet.detail.DetailBottomSheetController
+import ru.mpei.metro.presentation.map.bottomsheet.expanded.ExpandedBottomSheetController
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
+import ru.mpei.metro.presentation.map.model.SelectedStations
 import javax.inject.Inject
 
-private const val COLLAPSED_HEIGHT_WITH_ROUTE_INFO = 330
+private const val COLLAPSED_HEIGHT_WITH_ROUTE_INFO = 380
 
 @MapFragmentScope
 class CollapsedBottomSheetController @Inject constructor(
     private val activity: Activity,
-    private val mapViewModel: MapViewModel,
-    private val metroGraphProvider: MetroGraphProvider,
+    private val metroViewModel: MetroViewModel,
     private val detailBottomSheetController: DetailBottomSheetController,
+    private val expandedBottomSheetController: ExpandedBottomSheetController,
     private val suggestedRoutesAdapter: SuggestedRoutesAdapter,
 ) {
     private val density = activity.resources.displayMetrics.density
@@ -34,62 +40,47 @@ class CollapsedBottomSheetController @Inject constructor(
         binding: BottomSheetLayoutBinding,
         bottomSheetBehavior: BottomSheetBehavior<FrameLayout>,
     ) {
+        binding.collapsedBottomSheet.comfortSlider.labelBehavior = LabelFormatter.LABEL_FLOATING
+        binding.collapsedBottomSheet.comfortSlider.addOnChangeListener { _, value, fromUser ->
+            if (!fromUser) {
+                return@addOnChangeListener
+            }
+            val comfortWeight = value / 10f
+            metroViewModel.setSelectedComfortWeight(comfortWeight)
+        }
         binding.collapsedBottomSheet.fromStation.setOnClickListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
             binding.expandedBottomSheet.searchEditText.hint =
                 activity.resources.getString(R.string.from)
-            mapViewModel.stationDirection = StationDirection.FROM
+            expandedBottomSheetController.stationDirection = StationDirection.FROM
         }
         binding.collapsedBottomSheet.toStation.setOnClickListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
             binding.expandedBottomSheet.searchEditText.hint =
                 activity.resources.getString(R.string.to)
-            mapViewModel.stationDirection = StationDirection.TO
+            expandedBottomSheetController.stationDirection = StationDirection.TO
         }
         binding.collapsedBottomSheet.fromStationClear.setOnClickListener {
-            mapViewModel.setSelectedStations(
+            metroViewModel.setSelectedStations(
                 fromStation = null,
-                toStation = mapViewModel.selectedStations.value?.toStation,
+                toStation = metroViewModel.selectedStations.value?.toStation,
             )
         }
         binding.collapsedBottomSheet.toStationClear.setOnClickListener {
-            mapViewModel.setSelectedStations(
-                fromStation = mapViewModel.selectedStations.value?.fromStation,
+            metroViewModel.setSelectedStations(
+                fromStation = metroViewModel.selectedStations.value?.fromStation,
                 toStation = null,
             )
         }
-        mapViewModel.selectedStations.observe(lifecycleOwner) { selectedStations ->
-            binding.collapsedBottomSheet.fromStation.text =
-                selectedStations.fromStation?.stationName ?: activity.getString(R.string.from)
-            binding.collapsedBottomSheet.toStation.text =
-                selectedStations.toStation?.stationName ?: activity.getString(R.string.to)
-            if (selectedStations.fromStation != null) {
-                binding.collapsedBottomSheet.fromStationClear.visibility = View.VISIBLE
-            } else {
-                binding.collapsedBottomSheet.fromStationClear.visibility = View.GONE
-            }
-            if (selectedStations.toStation != null) {
-                binding.collapsedBottomSheet.toStationClear.visibility = View.VISIBLE
-            } else {
-                binding.collapsedBottomSheet.toStationClear.visibility = View.GONE
-            }
-            if (selectedStations.toStation != null && selectedStations.fromStation != null) {
-                mapViewModel.insertHistoryRoute(selectedStations)
-                bottomSheetBehavior.peekHeight =
-                    (COLLAPSED_HEIGHT_WITH_ROUTE_INFO * density).toInt()
-                binding.collapsedBottomSheet.routeSummary.visibility = View.VISIBLE
-                binding.collapsedBottomSheet.openDetailButton.visibility = View.VISIBLE
-            } else {
-                bottomSheetBehavior.peekHeight = (COLLAPSED_HEIGHT * density).toInt()
-                binding.collapsedBottomSheet.routeSummary.visibility = View.GONE
-                binding.collapsedBottomSheet.openDetailButton.visibility = View.GONE
-            }
-            mapViewModel.getRoutes(metroGraphProvider.getMetroGraph(), selectedStations)
+        metroViewModel.selectedStations.observe(lifecycleOwner) { selectedStations ->
+            binding.handleFromStation(selectedStations.fromStation)
+            binding.handleToStation(selectedStations.toStation)
+            binding.handleSelectedStations(bottomSheetBehavior, selectedStations)
         }
         binding.collapsedBottomSheet.swapButton.setOnClickListener {
-            mapViewModel.setSelectedStations(
-                fromStation = mapViewModel.selectedStations.value?.toStation,
-                toStation = mapViewModel.selectedStations.value?.fromStation,
+            metroViewModel.setSelectedStations(
+                fromStation = metroViewModel.selectedStations.value?.toStation,
+                toStation = metroViewModel.selectedStations.value?.fromStation,
             )
         }
         binding.collapsedBottomSheet.openDetailButton.setOnClickListener {
@@ -102,17 +93,78 @@ class CollapsedBottomSheetController @Inject constructor(
             LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
         binding.collapsedBottomSheet.suggestedRoutesRecyclerView.adapter = suggestedRoutesAdapter
         suggestedRoutesAdapter.setOnRouteSelectedListener { route ->
-            mapViewModel.setSelectedRoute(route)
+            metroViewModel.setSelectedRoute(route)
         }
-        mapViewModel.routes.observe(lifecycleOwner) { routes ->
+        metroViewModel.routes.observe(lifecycleOwner) { routes ->
             if (!routes.isNullOrEmpty()) {
                 suggestedRoutesAdapter.resetSelectedRoute()
                 suggestedRoutesAdapter.differ.submitList(routes)
-                mapViewModel.setSelectedRoute(routes.first())
+                binding.collapsedBottomSheet.sliderContainer.visibility = View.VISIBLE
             } else {
-                mapViewModel.setSelectedRoute(null)
                 suggestedRoutesAdapter.differ.submitList(emptyList())
+                binding.collapsedBottomSheet.sliderContainer.visibility = View.GONE
             }
+        }
+        metroViewModel.selectedRoute.observe(lifecycleOwner) { route ->
+            route?.constructFullTimeOfRoute()?.let {
+                binding.collapsedBottomSheet.routeSummary.text = it
+            }
+        }
+    }
+
+    private fun BottomSheetLayoutBinding.handleFromStation(fromStation: Station?) {
+        if (fromStation != null) {
+            collapsedBottomSheet.fromStationClear.visibility = View.VISIBLE
+            collapsedBottomSheet.fromStation.text = fromStation.stationName
+            collapsedBottomSheet.fromStationIcon.setImageDrawable(
+                AppCompatResources.getDrawable(activity, R.drawable.ic_small_circle)
+            )
+            collapsedBottomSheet.fromStationIcon.setColorFilter(
+                Color.parseColor(fromStation.hexColor)
+            )
+        } else {
+            collapsedBottomSheet.fromStationClear.visibility = View.GONE
+            collapsedBottomSheet.fromStation.text = activity.getString(R.string.from)
+            collapsedBottomSheet.fromStationIcon.setImageDrawable(
+                AppCompatResources.getDrawable(activity, R.drawable.ic_medium_circle)
+            )
+            collapsedBottomSheet.fromStationIcon.clearColorFilter()
+        }
+    }
+
+    private fun BottomSheetLayoutBinding.handleToStation(toStation: Station?) {
+        if (toStation != null) {
+            collapsedBottomSheet.toStationClear.visibility = View.VISIBLE
+            collapsedBottomSheet.toStation.text = toStation.stationName
+            collapsedBottomSheet.toStationIcon.setImageDrawable(
+                AppCompatResources.getDrawable(activity, R.drawable.ic_small_circle)
+            )
+            collapsedBottomSheet.toStationIcon.setColorFilter(
+                Color.parseColor(toStation.hexColor)
+            )
+        } else {
+            collapsedBottomSheet.toStationClear.visibility = View.GONE
+            collapsedBottomSheet.toStation.text = activity.getString(R.string.to)
+            collapsedBottomSheet.toStationIcon.setImageDrawable(
+                AppCompatResources.getDrawable(activity, R.drawable.ic_location_pin)
+            )
+            collapsedBottomSheet.toStationIcon.clearColorFilter()
+        }
+    }
+
+    private fun BottomSheetLayoutBinding.handleSelectedStations(
+        bottomSheetBehavior: BottomSheetBehavior<FrameLayout>,
+        selectedStations: SelectedStations,
+    ) {
+        if (selectedStations.fromStation != null && selectedStations.toStation != null) {
+            bottomSheetBehavior.peekHeight =
+                (COLLAPSED_HEIGHT_WITH_ROUTE_INFO * density).toInt()
+            collapsedBottomSheet.routeSummary.visibility = View.VISIBLE
+            collapsedBottomSheet.openDetailButton.visibility = View.VISIBLE
+        } else {
+            bottomSheetBehavior.peekHeight = (COLLAPSED_HEIGHT * density).toInt()
+            collapsedBottomSheet.routeSummary.visibility = View.GONE
+            collapsedBottomSheet.openDetailButton.visibility = View.GONE
         }
     }
 }

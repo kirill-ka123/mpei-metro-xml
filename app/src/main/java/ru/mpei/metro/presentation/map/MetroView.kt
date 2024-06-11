@@ -9,6 +9,7 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.Typeface
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.MotionEvent.INVALID_POINTER_ID
@@ -29,17 +30,16 @@ private const val MAX_SCALE = 3.0f
 private const val MIN_POS = -1000f
 private const val MAX_POS = 1000f
 
-private const val LINE_WIDTH = 8f
-private const val TRANSITION_WIDTH = 20f
-private const val TRANSITION_INSIDE_WIDTH = 15f
-private const val OVERGROUND_TRANSITION_WIDTH = 5f
-private const val TRANSITION_STATION_RADIUS = 3f
-private const val STATION_CIRCLE_RADIUS = 6f
-private const val STATION_CIRCLE_STROKE_WIDTH = 3f
-private const val STATION_CLICKED_CIRCLE_RADIUS = 15f
-private const val STATION_NAME_TEXT_SIZE = 10.5f
-private const val CLICK_AREA = 25f
-private const val STATION_TEXT_SIZE = 25f
+private const val LINE_WIDTH = 2.5f
+private const val TRANSITION_WIDTH = 6f
+private const val TRANSITION_INSIDE_WIDTH = 4.2f
+private const val OVERGROUND_TRANSITION_WIDTH = 1f
+private const val TRANSITION_STATION_RADIUS = 1f
+private const val STATION_CIRCLE_RADIUS = 2.2f
+private const val STATION_CIRCLE_STROKE_WIDTH = 1f
+private const val STATION_CLICKED_CIRCLE_RADIUS = 5.5f
+private const val CLICK_AREA = 10f
+private const val STATION_TEXT_SIZE = 6f
 
 class MetroView @JvmOverloads constructor(
     context: Context,
@@ -61,34 +61,33 @@ class MetroView @JvmOverloads constructor(
     private var canvasLastClickPosition: Position? = null
 
     private val linesPaint = Paint().apply {
-        strokeWidth = LINE_WIDTH
+        strokeWidth = LINE_WIDTH.dpToPx()
         strokeCap = Paint.Cap.ROUND
         style = Paint.Style.STROKE
-        pathEffect = CornerPathEffect(50f)
     }
-    private val linesPath = Path()
     private val clickedStationPaint = Paint()
-    private val stationsNamesPaint = Paint().apply {
-        textSize = STATION_NAME_TEXT_SIZE
+    private val stationPaint = Paint()
+    private val stationTextPaint = Paint().apply {
         color = Color.BLACK
         typeface = Typeface.create(Typeface.DEFAULT, Typeface.NORMAL)
+        textSize = STATION_TEXT_SIZE.spToPx()
     }
     private val transitionPaint = Paint()
     private val transitionInsidePaint = Paint().apply {
         color = Color.WHITE
-        strokeWidth = TRANSITION_INSIDE_WIDTH
+        strokeWidth = TRANSITION_INSIDE_WIDTH.dpToPx()
         style = Paint.Style.STROKE
         pathEffect = CornerPathEffect(5f)
     }
     private val transitionOutsidePaint = Paint().apply {
         color = context.getColor(R.color.green_eagle)
-        strokeWidth = TRANSITION_WIDTH
+        strokeWidth = TRANSITION_WIDTH.dpToPx()
         style = Paint.Style.STROKE
         pathEffect = CornerPathEffect(5f)
     }
     private val groundTransitionPaint = Paint().apply {
         color = context.getColor(R.color.green_eagle)
-        strokeWidth = OVERGROUND_TRANSITION_WIDTH
+        strokeWidth = OVERGROUND_TRANSITION_WIDTH.dpToPx()
         style = Paint.Style.STROKE
         pathEffect = DashPathEffect(floatArrayOf(5f, 5f), 0f)
     }
@@ -209,15 +208,15 @@ class MetroView @JvmOverloads constructor(
                     branch = branch,
                 )
             }
-            canvasLastClickPosition?.let { clickCoordinates ->
-                canvas.drawClickedStation(metroGraph.stations, clickCoordinates)
-            }
             canvas.drawStations(metroGraph.stations)
             canvas.drawTransitions(metroGraph)
             canvas.drawStationNames(metroGraph.texts)
             route?.let { route ->
                 canvas.drawBlackout(metroGraph)
                 canvas.drawRoute(route)
+            }
+            canvasLastClickPosition?.let { clickCoordinates ->
+                canvas.drawClickedStation(metroGraph.stations, clickCoordinates)
             }
         }
     }
@@ -232,7 +231,14 @@ class MetroView @JvmOverloads constructor(
                 drawCircle(
                     station.position.x,
                     station.position.y,
-                    STATION_CLICKED_CIRCLE_RADIUS,
+                    STATION_CLICKED_CIRCLE_RADIUS.dpToPx(),
+                    clickedStationPaint,
+                )
+                clickedStationPaint.color = Color.WHITE
+                drawCircle(
+                    station.position.x,
+                    station.position.y,
+                    STATION_CIRCLE_STROKE_WIDTH.dpToPx(),
                     clickedStationPaint,
                 )
                 return
@@ -244,36 +250,33 @@ class MetroView @JvmOverloads constructor(
         stations: List<Station>,
     ) {
         stations.forEach { station ->
-            stationsNamesPaint.color = Color.parseColor(station.hexColor)
+            stationPaint.color = Color.parseColor(station.hexColor)
             drawCircle(
                 station.position.x,
                 station.position.y,
-                STATION_CIRCLE_RADIUS,
-                stationsNamesPaint,
+                STATION_CIRCLE_RADIUS.dpToPx(),
+                stationPaint,
             )
 
-            stationsNamesPaint.color = Color.WHITE
+            stationPaint.color = Color.WHITE
             drawCircle(
                 station.position.x,
                 station.position.y,
-                STATION_CIRCLE_STROKE_WIDTH,
-                stationsNamesPaint,
+                STATION_CIRCLE_STROKE_WIDTH.dpToPx(),
+                stationPaint,
             )
-
-            stationsNamesPaint.color = context.getColor(R.color.black)
-            stationsNamesPaint.textSize = STATION_TEXT_SIZE
         }
     }
 
     private fun Canvas.drawStationNames(texts: List<Text>) {
         texts.forEach { text ->
             val lines = text.text.split("\n")
-            val metrics = stationsNamesPaint.fontMetrics
+            val metrics = stationTextPaint.fontMetrics
             val lineHeight = metrics.descent - metrics.ascent + metrics.leading
             val textHeight = lineHeight * lines.size
 
             lines.forEachIndexed { index, line ->
-                val textWidth = stationsNamesPaint.measureText(line)
+                val textWidth = stationTextPaint.measureText(line)
 
                 val (textX, baseY) = when (text.anchor) {
                     "a" -> text.position.x to text.position.y + textHeight / 2
@@ -288,7 +291,7 @@ class MetroView @JvmOverloads constructor(
                 }
 
                 val textY = baseY + index * lineHeight
-                drawText(line, textX, textY, stationsNamesPaint)
+                drawText(line, textX, textY, stationTextPaint)
             }
         }
     }
@@ -337,7 +340,7 @@ class MetroView @JvmOverloads constructor(
             drawCircle(
                 station.position.x,
                 station.position.y,
-                TRANSITION_STATION_RADIUS,
+                TRANSITION_STATION_RADIUS.dpToPx(),
                 transitionPaint,
             )
         }
@@ -389,6 +392,17 @@ class MetroView @JvmOverloads constructor(
     }
 
     private fun Station.inClickArea(clickCoordinates: Position) =
-        abs(position.x - clickCoordinates.x) < CLICK_AREA &&
-                abs(position.y - clickCoordinates.y) < CLICK_AREA
+        abs(position.x - clickCoordinates.x) < CLICK_AREA.dpToPx() &&
+                abs(position.y - clickCoordinates.y) < CLICK_AREA.dpToPx()
+
+    fun Float.dpToPx(): Float {
+        val density = context.resources.displayMetrics.density
+        return this * density
+    }
+
+    private fun Float.spToPx() = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_SP,
+        this,
+        context.resources.displayMetrics
+    )
 }

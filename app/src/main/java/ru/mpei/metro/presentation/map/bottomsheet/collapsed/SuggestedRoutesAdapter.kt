@@ -9,6 +9,7 @@ import ru.mpei.metro.R
 import ru.mpei.metro.databinding.SuggestedRoutesLayoutBinding
 import ru.mpei.metro.domain.model.Route
 import ru.mpei.metro.presentation.map.di.MapFragmentScope
+import java.text.DecimalFormat
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -42,7 +43,10 @@ class SuggestedRoutesAdapter @Inject constructor(
             val routeTimeText = context.getString(R.string.minutes, routeTimeInMinutes.toString())
             routeTime.text = routeTimeText
 
-            val routeComfortText = context.getString(R.string.comfort, route.comfort.toString())
+            val routeComfortText = context.getString(
+                R.string.comfort,
+                DecimalFormat("0.0").format(route.totalComfort * 10)
+            )
             routeComfort.text = routeComfortText
 
             if (position == selectedRoutePosition) {
@@ -58,7 +62,7 @@ class SuggestedRoutesAdapter @Inject constructor(
     }
 
     fun resetSelectedRoute() {
-        updateSelectedRoutePosition(position = 0)
+        selectedRoutePosition = 0
     }
 
     private fun updateSelectedRoutePosition(position: Int) {

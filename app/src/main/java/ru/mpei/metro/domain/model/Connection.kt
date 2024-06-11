@@ -9,4 +9,5 @@ data class Connection(
     val fromStationId: String,
     val toStationId: String,
     val time: Int,
+    val comfort: Float,
 ): Parcelable

@@ -7,7 +7,7 @@ import dagger.BindsInstance
 import dagger.Component
 import ru.mpei.metro.domain.graph.MetroGraphProvider
 import ru.mpei.metro.presentation.di.scopes.ActivityScope
-import ru.mpei.metro.presentation.map.MapViewModelFactory
+import ru.mpei.metro.presentation.map.MetroViewModelFactory
 
 @Component(
     modules = [ActivityModule::class],
@@ -21,7 +21,7 @@ interface ActivityComponent {
 
     fun activity(): Activity
 
-    fun mapViewModelFactory(): MapViewModelFactory
+    fun metroViewModelFactory(): MetroViewModelFactory
 
     fun metroGraphProvider(): MetroGraphProvider
 

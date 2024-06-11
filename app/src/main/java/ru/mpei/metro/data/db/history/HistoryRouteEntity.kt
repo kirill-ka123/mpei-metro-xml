@@ -8,7 +8,7 @@ import ru.mpei.metro.data.db.converters.StationConverter
 import ru.mpei.metro.domain.model.Station
 
 @Entity(
-    tableName = "history_route",
+    tableName = "history_routes",
     primaryKeys = ["fromStation", "toStation"]
 )
 @TypeConverters(StationConverter::class)

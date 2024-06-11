@@ -1,7 +1,7 @@
 package ru.mpei.metro.domain.usecases
 
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.map
 import ru.mpei.metro.data.db.history.HistoryRouteEntity
 import ru.mpei.metro.data.repository.MetroRepository
 import ru.mpei.metro.domain.model.HistoryRoute
@@ -15,9 +15,9 @@ import javax.inject.Inject
 class GetHistoryRoutesUseCase @Inject constructor(
     private val metroRepository: MetroRepository,
 ) {
-    fun getHistoryRoutes(): Flow<List<HistoryRoute>> {
-        val historyRoutesFlow = metroRepository.getHistoryRoutes()
-        return historyRoutesFlow.map { historyRoutes ->
+    fun getHistoryRoutes(): LiveData<List<HistoryRoute>> {
+        val historyRoutesLiveData = metroRepository.getHistoryRoutes()
+        return historyRoutesLiveData.map { historyRoutes ->
             historyRoutes.map { historyRoute ->
                 historyRoute.mapHistoryRoutes()
             }

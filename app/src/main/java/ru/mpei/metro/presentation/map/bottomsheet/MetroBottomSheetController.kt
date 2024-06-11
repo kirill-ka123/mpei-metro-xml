@@ -19,7 +19,7 @@ import javax.inject.Named
 const val COLLAPSED_HEIGHT = 180
 
 @MapFragmentScope
-class MapBottomSheetController @Inject constructor(
+class MetroBottomSheetController @Inject constructor(
     private val activity: Activity,
     @Named(DiConstants.MAP_FRAGMENT_ROOT_VIEW)
     private val rootView: View,

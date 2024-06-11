@@ -17,7 +17,7 @@ class StationsPrefixTrie @Inject constructor() {
     }
 
     private fun collectAllStations(node: PrefixTrieNode, results: MutableList<Station>) {
-        node.station?.let { results.add(it) }
+        results.addAll(node.stations)
         node.children.forEach { (_, childNode) ->
             collectAllStations(childNode, results)
         }
@@ -34,12 +34,12 @@ class StationsPrefixTrie @Inject constructor() {
                 }
                 node = node.children[it]!!
             }
-            node.station = station
+            node.stations.add(station)
         }
     }
 
     private data class PrefixTrieNode(
         val children: MutableMap<Char, PrefixTrieNode> = mutableMapOf(),
-        var station: Station? = null,
+        val stations: MutableList<Station> = mutableListOf(),
     )
 }
